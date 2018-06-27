@@ -325,8 +325,10 @@ def run_distributed5(command, argument_type='single', kwargs_list=None, jobs_per
             stdout_template = '/home/ubuntu/stdout_%d.log'
             stderr_template = '/home/ubuntu/stderr_%d.log'
         else:
-            stdout_template = '/home/yuncong/stdout_%d.log'
-            stderr_template = '/home/yuncong/stderr_%d.log'
+            stdout_template = '/home/alexn/stdout_%d.log'
+            stderr_template = '/home/alexn/stderr_%d.log'
+            #stdout_template = '/home/yuncong/stdout_%d.log'
+            #stderr_template = '/home/yuncong/stderr_%d.log'
         
         if local_only:
             stdout_f = open(stdout_template % node_i, "w")
