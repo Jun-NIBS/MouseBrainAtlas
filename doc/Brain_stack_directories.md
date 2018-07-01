@@ -1,4 +1,6 @@
 aws s3 ls mousebrainatlas-rawdata/CSHL_data/
+
+```
                            PRE MD175/
                            PRE MD585/
                            PRE MD589/
@@ -25,3 +27,4 @@ aws s3 ls mousebrainatlas-rawdata/CSHL_data/
                            PRE MD662_MD661_incoming/
                            PRE macros/
                            PRE macros_annotated/
+                           ```
