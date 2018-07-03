@@ -1,7 +1,7 @@
 # Alex N's notes for running through the code
 
-
-
+## Pre-Preprocessing
+Files will come in raw as .CZI files or Nanozoomer files (.NDPI). These files need to be converted to .TIFF files and have all of the surrounding, non-brain, area cut out of the image so that it does not slow down the rest of the code or interfere with anything.
 
 ## Preprocessing
 ### Neurotrace (CSHL)
