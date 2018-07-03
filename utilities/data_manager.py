@@ -1025,8 +1025,9 @@ class DataManager(object):
     def load_section_limits_v2(stack, anchor_fn=None, prep_id=2):
         """
         """
-
+        
         d = load_data(DataManager.get_section_limits_filename_v2(stack=stack, anchor_fn=anchor_fn, prep_id=prep_id))
+        
         return np.r_[d['left_section_limit'], d['right_section_limit']]
     
     @staticmethod
@@ -5307,15 +5308,20 @@ def generate_metadata_cache():
     metadata_cache['valid_sections_all'] = {}
     metadata_cache['valid_filenames_all'] = {}
     for stack in all_stacks:
-
         try:
             metadata_cache['anchor_fn'][stack] = DataManager.load_anchor_filename(stack)
-        except:
-            pass
+        except Exception as ex:
+            template = "An exception of type {0} occurred setting metadata_cache parameter anchor_fn. Arguments:\n{1!r}"
+            message = template.format(type(ex).__name__, ex.args)
+            print(message)
+            print('Failed for '+stack)
         try:
             metadata_cache['sections_to_filenames'][stack] = DataManager.load_sorted_filenames(stack)[1]
-        except:
-            pass
+        except Exception as ex:
+            template = "An exception of type {0} occurred setting metadata_cache parameter sections_to_filenames. Arguments:\n{1!r}"
+            message = template.format(type(ex).__name__, ex.args)
+            print(message)
+            print('Failed for '+stack)
         try:
             metadata_cache['filenames_to_sections'][stack] = DataManager.load_sorted_filenames(stack)[0]
             metadata_cache['filenames_to_sections'][stack].pop('Placeholder')
@@ -5325,14 +5331,25 @@ def generate_metadata_cache():
             pass
         try:
             metadata_cache['section_limits'][stack] = DataManager.load_section_limits_v2(stack, prep_id=2)
-        except:
-            pass
+        except Exception as ex:
+            template = "An exception of type {0} occurred setting metadata_cache parameter section_limits. Arguments:\n{1!r}"
+            message = template.format(type(ex).__name__, ex.args)
+            print(message)
+            print('Failed for '+stack)
         try:
             # alignedBrainstemCrop cropping box
             metadata_cache['cropbox'][stack] = DataManager.load_cropbox_v2(stack, prep_id=2)
         except:
             pass
-
+        #test
+        try:
+            first_sec,last_sec = metadata_cache['section_limits'][stack]# TEST
+            metadata_cache['valid_sections'][stack] = [sec for sec in range(first_sec, last_sec+1) if not is_invalid(stack=stack, sec=sec)]
+            metadata_cache['valid_filenames'][stack] = [metadata_cache['sections_to_filenames'][stack][sec] for sec in
+                                                       metadata_cache['valid_sections'][stack]]
+        except KeyError:
+            print("KEY ERROR ADN 999111")
+        '''
         try:
             first_sec, last_sec = metadata_cache['section_limits'][stack]
             metadata_cache['valid_sections'][stack] = [sec for sec in range(first_sec, last_sec+1) if not is_invalid(stack=stack, sec=sec)]
@@ -5340,6 +5357,8 @@ def generate_metadata_cache():
                                                        metadata_cache['valid_sections'][stack]]
         except:
             pass
+        '''
+# TEST
 
         try:
             metadata_cache['valid_sections_all'][stack] = [sec for sec, fn in metadata_cache['sections_to_filenames'][stack].iteritems() if not is_invalid(fn=fn)]

@@ -172,10 +172,10 @@ elif hostname == 'yuncong-Precision-WorkStation-T7500' and username == 'alexn':
         DATA_ROOTDIR = '/media/alexn/BstemAtlasDataBackup'
         #DATA_ROOTDIR = '/media/alexn/data'
 
-    if 'THUMBNAIL_DATA_ROOTDIR' in os.environ:
+    if 'THUMBNAIL_DATA_ROOTDIR' in os.environ: # NOT True for AlexN , else is performed
         THUMBNAIL_DATA_ROOTDIR = os.environ['THUMBNAIL_DATA_ROOTDIR']
-    else:
-        THUMBNAIL_DATA_ROOTDIR = '/media/alexn/BstemAtlasDataBackup'
+    else: 
+        THUMBNAIL_DATA_ROOTDIR = '/media/alexn/BstemAtlasDataBackup' # This executes
         #THUMBNAIL_DATA_ROOTDIR = '/home/alexn/data'
 
     RAW_DATA_DIR = os.path.join(DATA_ROOTDIR, 'CSHL_data')
