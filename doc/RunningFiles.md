@@ -1,7 +1,9 @@
 # Alex N's notes for running through the code
 
 ## Pre-Preprocessing
-Files will come in raw as .CZI files or Nanozoomer files (.NDPI). These files need to be converted to .TIFF files and have all of the surrounding, non-brain, area cut out of the image so that it does not slow down the rest of the code or interfere with anything.
+Files will come in raw as .CZI files or Nanozoomer files (.NDPI). NDPI files are from CSHL and can only be converted into JP2000 directly which is why that is how the raw, lossless data is stored. Yuncong converts these into TIFF files so they are useable but it requires conversion of 16bit to 8bit and Hannah said nobody understands how that works nor has Yuncong told anyone.
+
+These files need to be converted to .TIFF files and have all of the surrounding, non-brain, area cut out of the image so that it does not slow down the rest of the code or interfere with anything.
 
 ## Preprocessing
 ### Neurotrace (CSHL)
