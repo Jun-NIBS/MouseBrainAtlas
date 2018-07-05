@@ -4,20 +4,20 @@
 ## Guides
 - [Alex User Guide](doc/RunningFiles.md)
   - Running Guide made by AlexN to assist with running the code [INC]
-- [Yuncong User Guide](doc/User%20Manuals/UserGuide.md)
+- **[Historical]** [Yuncong User Guide](doc/User%20Manuals/UserGuide.md)
   - User Guide made by Yuncong to assist with running the code
 
-###### Incomplete to-be guide of entire running process [INC]
-- [Dev Guide](doc/DeveloperGuide.md)
-###### Guide for Registration with list of relevant scripts [INC?]
-- [Registration Steps](doc/Analysis.md)
-###### Yuncong's old README
-- [Old README](doc/old_readme.md)
+- **[Historical/Incomplete]** [Dev Guide](doc/DeveloperGuide.md)
+  - Incomplete to-be guide of entire running process
+- **[Historical]** [Registration Steps](doc/Analysis.md)
+  - Guide for Registration with list of relevant scripts
+- **[Historical]** [Old README](doc/old_readme.md)
+  - Yuncong's old README
 
 ## Server Information
 ###### Guide for transferring files to/from AWS S3 and Birdstore
 - [File Transfer](doc/TransferFiles.md)
-###### Guide for Registration with list of relevant scripts
+###### AWS instruction manual
 - [AWS Instructions](doc/writeup/AWS_instruction.md)
 
 ## File Organization
