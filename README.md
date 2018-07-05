@@ -15,19 +15,19 @@
   - Yuncong's old README
 
 ## Server Information
-###### Guide for transferring files to/from AWS S3 and Birdstore
 - [File Transfer](doc/TransferFiles.md)
-###### AWS instruction manual
+  - Guide for transferring files to/from AWS S3 and Birdstore
 - [AWS Instructions](doc/writeup/AWS_instruction.md)
+  - AWS instruction manual
 
 ## File Organization
-###### Naming conventions in S3 storage [INC]
-- [S3 File Organization](doc/writeup/S3_file_organization.md)
-###### Description of every stack, all relevant information [INC]
+- **[Incomplete]** [S3 File Organization](doc/writeup/S3_file_organization.md)
+  - Naming conventions in S3 storage [INC]
 - [Stack Directories](doc/Brain_stack_directories.md)
+  - Description of every stack, all relevant information
 
-## Atlas Building
-###### Parameters and associated uncertainty in Atlas building process
+## Machine Learning Documents
 - [Bayesian Parameters](doc/writeup/bayesian.md)
-###### Z-score and Hessians used to quantify uncertainty
+  - Parameters and associated uncertainty in Atlas building process
 - [Uncertainty](doc/writeup/zscore_hessian.md)
+  - Z-score and Hessians used to quantify uncertainty
