@@ -1,38 +1,39 @@
 ## Brain Table
 
-| Brain ID |  Stain | Lab | Annotated | Description  |
-| ---------|  ----- | --- | --------- |:-------------|
-| MD175 |     |     |      |            |
-| MD585 |     |     |      |            |
-| MD589 |     |     |      |            |
-| MD590 |     |     |      |            |
-| MD591 |     |     |      |            |
-| MD592 |     |     |      |            |
-| MD593 |     |     |      |            |
-| MD594 |     |     |      |            |
-| MD595 |     |     |      |            |
-| MD598 |     |     |      |            |
-| MD599 |     |     |      |            |
-| MD602 |     |     |      |            |
-| MD603 |     |     |      |            |
-| MD635 |     |     |      |            |
-| MD636 |     |     |      |            |
-| MD642 |     |     |      |            |
-| MD652 |     |     |      |            |
-| MD653 |     |     |      |            |
-| MD657 |     |     |      |            |
-| MD658 |     |     |      |            |
-| MD661 |     |     |      |            |
-| MD662 |     |     |      |            |
+| Brain ID |  Stain    | Lab | Annotated | Orientation (if not sagittal)  |
+| ---------|  -------- | --- | --------- |--------------------------------|
+| MD175 | thionin      | CSHL |      | Coronal    |
+| MD585 | thionin      | CSHL | Yes  |            |
+| MD589 | thionin      | CSHL | Yes  |            |
+| MD590 | thionin      | CSHL |      |            |
+| MD591 | thionin      | CSHL |      |            |
+| MD592 | thionin      | CSHL |      |            |
+| MD593 | thionin      | CSHL |      |            |
+| MD594 | thionin      | CSHL | Yes  |            |
+| MD595 | thionin      | CSHL |      |            |
+| MD598 | thionin      | CSHL |      |            |
+| MD599 | thionin      | CSHL |      |            |
+| MD602 | thionin      | CSHL |      |            |
+| MD603 | thionin      | CSHL |      |            |
+| MD635 | NTB          | CSHL |      |            |
+| MD636 | thionin      | CSHL |      | Horizontal |
+| MD642 | NTB/thionin  | CSHL |      | Coronal    |
+| MD652 | NTB/thionin  | CSHL |      |            |
+| MD653 | NTB/thionin  | CSHL |      |            |
+| MD657 | NTB/PRV-eGFP | CSHL |      |            |
+| MD658 | NTB/PRV      | CSHL |      |            |
+| MD661 | NTB/dGRV     | CSHL |      |            |
+| MD662 | NTB/dGRV     | CSHL |      |            |
+| CHATM2 | NTB/ChAT    | UCSD |      |            |
+| CHATM3 | NTB/ChAT    | UCSD |      |            |
+
+**Stain types:**
+ - NTB: NeuroTrace Blue
+ - ChAT: 
+ - PRV-eGFP:
+ - Thionin:
 
 
-CHATM2  
-CHATM3  
-CHATM4  
-CHATM5  
-CHATM6  
-CHATM7  
-MD662  
 
 ## Fies on birdstore
 
