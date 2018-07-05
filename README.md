@@ -2,10 +2,11 @@
 * src: code
 
 ## Guides
-###### User Guide made by Yuncong to assist with running the code
-- [User Guide](doc/User%20Manuals/UserGuide.md)
-###### Running Guide made by AlexN to assist with running the code [INC]
-- [Running Guide](doc/RunningFiles.md)
+- [Alex User Guide](doc/RunningFiles.md)
+  - Running Guide made by AlexN to assist with running the code [INC]
+- [Yuncong User Guide](doc/User%20Manuals/UserGuide.md)
+  - User Guide made by Yuncong to assist with running the code
+
 ###### Incomplete to-be guide of entire running process [INC]
 - [Dev Guide](doc/DeveloperGuide.md)
 ###### Guide for Registration with list of relevant scripts [INC?]
