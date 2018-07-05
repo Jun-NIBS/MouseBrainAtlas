@@ -22,6 +22,8 @@
 ## File Organization
 ###### Naming conventions in S3 storage [INC]
 - [S3 File Organization](doc/writeup/S3_file_organization.md)
+###### Description of every stack, all relevant information [INC]
+- [Stack Directories](doc/Brain_stack_directories.md)
 
 ## Atlas Building
 ###### Parameters and associated uncertainty in Atlas building process
