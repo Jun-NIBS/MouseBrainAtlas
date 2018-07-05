@@ -1,3 +1,35 @@
+## Brain Table
+
+| Brain ID |  Stain | Lab | Annotated | Description  |
+| ---------|  ----- | --- | --------- |:-------------|
+| MD175 |     |     |      |            |
+| MD585 |     |     |      |            |
+| MD589 |     |     |      |            |
+| MD590 |     |     |      |            |
+| MD591 |     |     |      |            |
+| MD592 |     |     |      |            |
+| MD593 |     |     |      |            |
+| MD594 |     |     |      |            |
+| MD595 |     |     |      |            |
+| MD598 |     |     |      |            |
+| MD599 |     |     |      |            |
+| MD602 |     |     |      |            |
+| MD603 |     |     |      |            |
+| MD635 |     |     |      |            |
+| MD636 |     |     |      |            |
+| MD642 |     |     |      |            |
+| MD652 |     |     |      |            |
+| MD653 |     |     |      |            |
+| MD657 |     |     |      |            |
+| MD658 |     |     |      |            |
+| MD661 |     |     |      |            |
+| MD662 |     |     |      |            |
+
+
+## Fies on birdstore
+
+## Files on S3
+
 aws s3 ls mousebrainatlas-rawdata/CSHL_data/
 
 ```
