@@ -29,9 +29,9 @@
 
 **Stain types:**
  - NTB: NeuroTrace Blue
- - ChAT: 
- - PRV-eGFP:
- - Thionin:
+ - ChAT: 'Acetylcholine' Choline acetyltransferase - stains motor nuclei
+ - PRV-eGFP: Pseudorabies (retrograde - injected in the muscle)
+ - Thionin: Nissl - all cell bodies
 
 
 
