@@ -9,15 +9,29 @@ These files need to be converted to .TIFF files and have all of the surrounding,
 ### Neurotrace (CSHL)
 Requires files from pre-preprocessing step including [name]_anchor.txt, [name]_sorted_filenames.txt, and a collection of other text, json files, and pkl files (< I will elaborate on this soon).
 
+Neutrace data typically is stained with another indicator, data has multiple channels that are a part of the preprocessing stage.
+
 Run **preprocess_cshl_data_v2_neurotrace.ipynb**, it will complete every step of the preprocessing stage for neurotrace brains as outlined below:
-1) Prepare data
+* Prepare data
   - set 'stack' equal to brain name, make sure raw files are on S3:///mousebrainatlas-rawdata/...
-2) Download raw scanner files from S3 and Specify raw file locations
-  - Specify raw file locations
-3) Convert JPEG2000 to TIFF
-4) Extract Neurotrace channel
-5) Generate thumbnails and linearly contrast stretch
-  i) Requires file 'CSHL_data_processed/MD662/MD662_sorted_filenames.txt' in 
+* Download raw scanner files from S3 and Specify raw file locations
+  - Specify where to download all raw files, for me was `~/MD###/`
+* Convert raw JPEG2000 to TIFF format [JP2 -> TIF]
+  - CSHL uses NanoZoomer, gives CSHL format which apparently can onlly be converted to jp2
+  - input:  `~/MD###/*.jp2`  (Location of ALL raw files, defined earlier)
+  - output: `~/CSHL_data_processed/MD###/MD###_raw/*_raw.tif`
+  - NOTE: may have discrepency with defined input/output directories
+* Extract Neurotrace channel [raw -> raw_Ntb]
+  - input:  `~/CSHL_data_processed/MD###/MD###_raw/*_raw.tif`
+  - output: `~/CSHL_data_processed/MD###/MD###_raw_Ntb/*_raw_Ntb.tif`
+* Generate thumbnails and linearly contrast stretch [raw_Ntb -> thumbnail_Ntb -> thumbnail_NtbNormalized]
+  - Requires file `MD###_sorted_filenames.txt` in `~/CSHL_data_processed/MD###/` among others
+    - List of necessary pre-preprocess files here [NEED TO ADD]
+  - input:   ----`~/CSHL_data_processed/MD###/MD###_raw_Ntb/*_raw_Ntb.tif`
+  - output1: `~/CSHL_data_processed/MD###/MD###_thumbnail_Ntb/*_thumbnail_Ntb.tif`
+  - output2: `~/CSHL_data_processed/MD###/MD###_thumbnail_NtbNormalized/*_thumbnail_NtbNormalized.tif`
+* Transform prep1 masks back to original
+  - Not Yet Started
 
 
 
