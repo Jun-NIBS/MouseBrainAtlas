@@ -12,8 +12,9 @@ The code is available free of charge in accordance with the GNU General Public L
 
 ### Directories:
 
+* **old**: Orphaned code
 * **doc**: Documentation
-* **src**: code  
+* **src**: Code  
   src is further divided into
   * **PreProcessing**: Tools for preparing raw images for analysis.
   * **Registration**: Tools for registrating an existing stack.
