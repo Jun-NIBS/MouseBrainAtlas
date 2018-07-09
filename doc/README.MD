@@ -21,6 +21,8 @@
   - AWS instruction manual
 
 ## File Organization
+- **[Incomplete]** [Dependancies](dependancies.md)
+  - Naming conventions in S3 storage [INC]
 - **[Incomplete]** [S3 File Organization](writeup/S3_file_organization.md)
   - Naming conventions in S3 storage [INC]
 - **[Historical]** [Stack Directories](Brain_stack_directories.md)
