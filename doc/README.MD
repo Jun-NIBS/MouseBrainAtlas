@@ -1,30 +1,33 @@
-## Guides
-- [Alex User Guide](doc/RunningFiles.md)
-  - Running Guide made by AlexN to assist with running the code [INC]
-- **[Historical]** [Yuncong User Guide](doc/User%20Manuals/UserGuide.md)
-  - User Guide made by Yuncong to assist with running the code
+# Documentation Files
+ Following are all of the documentation files and user guides for the Atlas code. Having had multiple developers working on it, there are documentation files deemed "historical" that were made by earlier developers. Certain documents are also marked as incomplete and should be ignored by non-developers.
 
-- **[Historical/Incomplete]** [Dev Guide](doc/DeveloperGuide.md)
+## User Guides
+- **[Incomplete]** [Alex User Guide](RunningFiles.md)
+  - Running Guide made by AlexN to assist with running the code 
+- **[Historical]** [Yuncong User Guide](User%20Manuals/UserGuide.md)
+  - User Guide made by Yuncong to assist with running the code
+  
+- **[Historical]** [Dev Guide](DeveloperGuide.md)
   - Incomplete to-be guide of entire running process
-- **[Historical]** [Registration Steps](doc/Analysis.md)
+- **[Historical]** [Registration Steps](Analysis.md)
   - Guide for Registration with list of relevant scripts
-- **[Historical]** [Old README](doc/old_readme.md)
+- **[Historical]** [Old README](old_readme.md)
   - Yuncong's old README
 
 ## Server Information
-- [File Transfer](doc/TransferFiles.md)
+- **[Historical]** [File Transfer](TransferFiles.md)
   - Guide for transferring files to/from AWS S3 and Birdstore
-- [AWS Instructions](doc/writeup/AWS_instruction.md)
+- **[Historical]** [AWS Instructions](writeup/AWS_instruction.md)
   - AWS instruction manual
 
 ## File Organization
-- **[Incomplete]** [S3 File Organization](doc/writeup/S3_file_organization.md)
+- **[Incomplete]** [S3 File Organization](writeup/S3_file_organization.md)
   - Naming conventions in S3 storage [INC]
-- [Stack Directories](doc/Brain_stack_directories.md)
+- **[Historical]** [Stack Directories](Brain_stack_directories.md)
   - Description of every stack, all relevant information
 
 ## Machine Learning Documents
-- [Bayesian Parameters](doc/writeup/bayesian.md)
+- **[Historical]** [Bayesian Parameters](writeup/bayesian.md)
   - Parameters and associated uncertainty in Atlas building process
-- [Uncertainty](doc/writeup/zscore_hessian.md)
+- **[Historical]** [Uncertainty](writeup/zscore_hessian.md)
   - Z-score and Hessians used to quantify uncertainty
