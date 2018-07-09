@@ -1,6 +1,3 @@
-* Doc: documentation
-* src: code
-
 ## Guides
 - [Alex User Guide](doc/RunningFiles.md)
   - Running Guide made by AlexN to assist with running the code [INC]
