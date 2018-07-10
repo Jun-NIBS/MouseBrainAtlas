@@ -1,8 +1,19 @@
-.
-├── README.md
-├── directory_tree.txt
+This file contains the complete list of files in the repository.
+
+Each file should have a designation:
+K: Keep
+O: Move to old
+
+You can move a whole directory to old. "K"eep has to be specified for each file
+
+After K/O there can be a name of a directory the file should be moved to. Otherwise if it is K it is kept where it is, if it is O it is moved to the old directory at the same level as the file.
+
+
+
+├── README.md                           K
+├── directory_tree.txt                  O
 ├── doc
-│   ├── Analysis.md
+│   ├── Analysis.md                     K
 │   ├── Brain_stack_directories.md
 │   ├── DeveloperGuide.md
 │   ├── GuideForLaurenStacy.md
