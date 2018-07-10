@@ -322,14 +322,14 @@ After K/O there can be a name of a directory the file should be moved to. Otherw
     │   ├── apply_classifiers_v3.ipynb
     │   ├── apply_classifiers_v3.py
     │   ├── apply_classifiers_v4.py
-    │   ├── apply_classifiers_v5.py
+    │   ├── apply_classifiers_v5.py                                                             K
     │   ├── check_total_response.ipynb
-    │   ├── classifier_settings.csv
-    │   ├── compute_features.py
+    │   ├── classifier_settings.csv                                                             K
+    │   ├── compute_features.py                                                                 K
     │   ├── compute_features_for_entire_stacks.ipynb
-    │   ├── dataset_settings.csv
+    │   ├── dataset_settings.csv                                                                K
     │   ├── detector_settings.backup.csv
-    │   ├── detector_settings.csv
+    │   ├── detector_settings.csv                                                               K
     │   ├── experiment_classifier_response_to_exposure_correction.ipynb
     │   ├── experiment_classifier_response_to_exposure_correction_no_writeout.ipynb
     │   ├── experiment_classifier_response_to_exposure_correction_with_writeout.ipynb
@@ -341,7 +341,7 @@ After K/O there can be a name of a directory the file should be moved to. Otherw
     │   ├── extract_test_features_cnn_corrected.ipynb
     │   ├── finetune_cnn_v3.ipynb
     │   ├── finetune_dnn.ipynb
-    │   ├── from_image_to_score_volumes.py
+    │   ├── from_image_to_score_volumes.py                                                      K
     │   ├── from_image_to_scoremap.ipynb
     │   ├── from_images_to_score_volume.ipynb
     │   ├── gabor.ipynb
