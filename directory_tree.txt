@@ -417,7 +417,7 @@ After K/O there can be a name of a directory the file should be moved to. Otherw
     │   ├── neurotrace_blue_to_nissl.py
     │   ├── number_filelist_consecutively.ipynb
     │   ├── number_filelist_consecutively.py
-    │   ├── parameters
+    │   ├── parameters                                                  
     │   │   ├── Parameters_Affine.txt
     │   │   ├── Parameters_Affine_3d.txt
     │   │   ├── Parameters_Affine_3d_mi.txt
@@ -425,10 +425,10 @@ After K/O there can be a name of a directory the file should be moved to. Otherw
     │   │   ├── Parameters_BSpline_3d.txt
     │   │   ├── Parameters_BSpline_3d_mi.txt
     │   │   ├── Parameters_BSpline_3d_mi_wider_spacing.txt
-    │   │   ├── Parameters_Rigid.txt
+    │   │   ├── Parameters_Rigid.txt                            
     │   │   ├── Parameters_Rigid_3d.txt
     │   │   ├── Parameters_Rigid_3d_mi.txt
-    │   │   ├── Parameters_Rigid_MutualInfo.txt
+    │   │   ├── Parameters_Rigid_MutualInfo.txt                                                 K
     │   │   ├── Parameters_Rigid_MutualInfo_4000Iters.txt
     │   │   ├── Parameters_Rigid_MutualInfo_noNumberOfSpatialSamples.txt
     │   │   ├── Parameters_Rigid_MutualInfo_noNumberOfSpatialSamples_4000Iters.txt
@@ -440,11 +440,11 @@ After K/O there can be a name of a directory the file should be moved to. Otherw
     │   ├── plot_fluorescent_intensity_mappings.ipynb
     │   ├── plot_image_histograms.ipynb
     │   ├── preprocess_bingxing_data.ipynb
-    │   ├── preprocess_cshl_data_v2.ipynb
-    │   ├── preprocess_cshl_data_v2_neurotrace.ipynb
+    │   ├── preprocess_cshl_data_v2.ipynb                                                       K
+    │   ├── preprocess_cshl_data_v2_neurotrace.ipynb                                            K
     │   ├── preprocess_settings.csv
     │   ├── preprocess_ucsd_data.ipynb
-    │   ├── preprocess_ucsd_data_v2.ipynb
+    │   ├── preprocess_ucsd_data_v2.ipynb                                                       K
     │   ├── rename.py
     │   ├── rescale_image.py
     │   ├── sftp-config.json
@@ -455,7 +455,7 @@ After K/O there can be a name of a directory the file should be moved to. Otherw
     │   ├── unmix_many_tifs_autofile.m
     │   ├── unmix_tif_GB_separate_input_channels.m
     │   ├── warp_crop_IM_v2.py
-    │   └── warp_crop_IM_v3.py
+    │   └── warp_crop_IM_v3.py                                                                  K
     ├── registration
     │   ├── README.md
     │   ├── align_annotated_brains_v5.ipynb
@@ -502,7 +502,7 @@ After K/O there can be a name of a directory the file should be moved to. Otherw
     │   ├── multiprocess_experiment.ipynb
     │   ├── multiprocess_utilities.py
     │   ├── quarternion.py
-    │   ├── register_brains.py
+    │   ├── register_brains.py                                                                  K
     │   ├── register_lauren_data.ipynb
     │   ├── register_lauren_data_v2.ipynb
     │   ├── register_stacy_data.ipynb
@@ -522,7 +522,7 @@ After K/O there can be a name of a directory the file should be moved to. Otherw
     │   ├── transform_brains_v3_local.py
     │   ├── transform_brains_v3_reverse_global.py
     │   ├── transform_brains_v4.ipynb
-    │   ├── transform_brains_v4.py
+    │   ├── transform_brains_v4.py                                                              K
     │   ├── update_atlas.ipynb
     │   ├── visualize_registration.py
     │   ├── visualize_registration_v3.ipynb
@@ -530,7 +530,7 @@ After K/O there can be a name of a directory the file should be moved to. Otherw
     │   ├── visualize_registration_v4.ipynb
     │   ├── visualize_registration_v4.py
     │   ├── visualize_registration_v5.ipynb
-    │   ├── visualize_registration_v5.py
+    │   ├── visualize_registration_v5.py                                                        K
     │   └── warp_intensity_volumes.ipynb
     └── utilities
         ├── 100colors.txt
