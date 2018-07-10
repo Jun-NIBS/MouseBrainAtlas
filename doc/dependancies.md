@@ -18,3 +18,10 @@ Everything below is listed with the following format:
   * `pip install bloscpack`
 
 
+More dependencies:
+ * opencv-python==3.4.1.15
+ * scikit-image==0.13.1
+ * scikit-learn==0.19.1
+ * matplotlib==2.2.2
+ * pandas==0.23.0
+ * bloscpack
