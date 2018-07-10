@@ -59,8 +59,8 @@ if it is K it is kept where it is, if it is O it is moved to the old directory a
 │   │   ├── README.md
 │   │   ├── atlas_from_aligned_annotated_volumes_v4.ipynb
 │   │   ├── atlas_from_aligned_annotated_volumes_v5.ipynb
-│   │   ├── build_atlas_from_aligned_annotated_brains_v6.ipynb
-│   │   ├── build_atlas_from_aligned_annotated_brains_v7_standard_orientation_notstartedyet.ipynb
+│   │   ├── build_atlas_from_aligned_annotated_brains_v6.ipynb                                      K
+│   │   ├── build_atlas_from_aligned_annotated_brains_v7_standard_orientation_notstartedyet.ipynb   K?
 │   │   ├── euclid.py
 │   │   ├── icp_matching.py
 │   │   ├── outerContour_poisson_reconstruct.mlx
@@ -212,8 +212,8 @@ if it is K it is kept where it is, if it is O it is moved to the old directory a
 │   │   ├── compute_score_volume_gradients_v5.py
 │   │   ├── construct_contour_volume.ipynb
 │   │   ├── construct_contour_volume_v2.ipynb
-│   │   ├── construct_intensity_volume.py
-│   │   ├── construct_intensity_volume_v3.ipynb
+│   │   ├── construct_intensity_volume.py                                                       K
+│   │   ├── construct_intensity_volume_v3.ipynb                                                 K
 │   │   ├── construct_score_volume_v4.ipynb
 │   │   ├── construct_score_volume_v5.ipynb
 │   │   ├── construct_score_volume_v5.py
@@ -263,12 +263,12 @@ if it is K it is kept where it is, if it is O it is moved to the old directory a
     │   ├── gui_utilities.py
     │   ├── mask_editing_tool.py
     │   ├── mask_editing_tool_v2.py
-    │   ├── mask_editing_tool_v3.py
-    │   ├── mask_editing_tool_v4.py
+    │   ├── mask_editing_tool_v3.py                                                             K?
+    │   ├── mask_editing_tool_v4.py                                                             K?
     │   ├── mask_editing_utilities.py
     │   ├── newStructureNames.txt
     │   ├── preprocess_tool_v2.py
-    │   ├── preprocess_tool_v3.py
+    │   ├── preprocess_tool_v3.py                                                               K
     │   ├── rectification_tool.py
     │   ├── structure_names.txt
     │   ├── structure_tree.json                                                                 K
@@ -327,7 +327,7 @@ if it is K it is kept where it is, if it is O it is moved to the old directory a
     │   ├── check_total_response.ipynb
     │   ├── classifier_settings.csv                                                             K
     │   ├── compute_features.py                                                                 K
-    │   ├── compute_features_for_entire_stacks.ipynb
+    │   ├── compute_features_for_entire_stacks.ipynb                                            K
     │   ├── dataset_settings.csv                                                                K
     │   ├── detector_settings.backup.csv
     │   ├── detector_settings.csv                                                               K
@@ -348,7 +348,7 @@ if it is K it is kept where it is, if it is O it is moved to the old directory a
     │   ├── gabor.ipynb
     │   ├── generate_dataset.ipynb
     │   ├── identify_patch_class_based_on_labeling.ipynb
-    │   ├── identify_patch_class_based_on_labeling_v2.ipynb
+    │   ├── identify_patch_class_based_on_labeling_v2.ipynb                                     K
     │   ├── inception-bn-blue
     │   ├── inception-bn-blue.pdf
     │   ├── interpolate_scoremaps_v3.ipynb
@@ -363,7 +363,7 @@ if it is K it is kept where it is, if it is O it is moved to the old directory a
     │   ├── test_classifier_performance_v3.ipynb
     │   ├── top-down.ipynb
     │   ├── train_and_test_classifier_performance_v4.ipynb
-    │   ├── train_and_test_classifier_performance_v4_UCSD_brains.ipynb
+    │   ├── train_and_test_classifier_performance_v4_UCSD_brains.ipynb                          K
     │   ├── train_classifier_v3.5.ipynb
     │   ├── train_classifier_v3.ipynb
     │   ├── train_classifier_v4.ipynb
@@ -512,8 +512,8 @@ if it is K it is kept where it is, if it is O it is moved to the old directory a
     │   ├── registration_v5.ipynb
     │   ├── registration_v6.ipynb
     │   ├── registration_v7_atlasV6.ipynb
-    │   ├── registration_v7_atlasV6_local_allstructures.ipynb
-    │   ├── registration_v7_atlasV6_local_allstructures_generate_figures.ipynb
+    │   ├── registration_v7_atlasV6_local_allstructures.ipynb                                   K
+    │   ├── registration_v7_atlasV6_local_allstructures_generate_figures.ipynb                  K?
     │   ├── registration_v7_atlasV6_simpleGlobal.ipynb
     │   ├── registration_v7_atlasV6_textureBasedGlobal.ipynb
     │   ├── thin_plate_spline_registration_synthetic_example.ipynb
@@ -530,7 +530,7 @@ if it is K it is kept where it is, if it is O it is moved to the old directory a
     │   ├── visualize_registration_v3.py
     │   ├── visualize_registration_v4.ipynb
     │   ├── visualize_registration_v4.py
-    │   ├── visualize_registration_v5.ipynb
+    │   ├── visualize_registration_v5.ipynb                                                     K?
     │   ├── visualize_registration_v5.py                                                        K
     │   └── warp_intensity_volumes.ipynb
     └── utilities
@@ -545,12 +545,12 @@ if it is K it is kept where it is, if it is O it is moved to the old directory a
         ├── colormap.json
         ├── conversion.ipynb
         ├── conversion.py
-        ├── data_manager.py
+        ├── data_manager.py                                         K
         ├── distributed_utilities.py
         ├── high_contrast_colors.txt
-        ├── learning_utilities.py
+        ├── learning_utilities.py                                   K
         ├── lie.py
-        ├── metadata.py
+        ├── metadata.py                                             K
         ├── neighbors.py
         ├── preprocess_utilities.py
         ├── qt_utilities.py
@@ -559,7 +559,7 @@ if it is K it is kept where it is, if it is O it is moved to the old directory a
         ├── sequential_dispatcher.py
         ├── shape_matching.py
         ├── slic_texture.py
-        ├── utilities2015.py
+        ├── utilities2015.py                                        K
         ├── vis3d_utilities.py
         └── visualization_utilities.py
 
