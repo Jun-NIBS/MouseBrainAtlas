@@ -253,12 +253,12 @@ After K/O there can be a name of a directory the file should be moved to. Otherw
 └── src
     ├── anotation
     ├── gui
-    │   ├── DataFeeder.py
+    │   ├── DataFeeder.py                                                                       K
     │   ├── README(old).md
     │   ├── README.md
     │   ├── TODO.md
     │   ├── brain_labeling_gui_v27.py
-    │   ├── brain_labeling_gui_v28.py
+    │   ├── brain_labeling_gui_v28.py                                                           K
     │   ├── gui_utilities.py
     │   ├── mask_editing_tool.py
     │   ├── mask_editing_tool_v2.py
@@ -270,7 +270,7 @@ After K/O there can be a name of a directory the file should be moved to. Otherw
     │   ├── preprocess_tool_v3.py
     │   ├── rectification_tool.py
     │   ├── structure_names.txt
-    │   ├── structure_tree.json
+    │   ├── structure_tree.json                                                                 K
     │   ├── structure_tree.txt
     │   ├── structure_tree_txt_to_json.ipynb
     │   ├── ui
