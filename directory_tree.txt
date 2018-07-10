@@ -1,554 +1,554 @@
 .
-(0tqq (BREADME.md
-(0tqq (Bdirectory_tree.txt
-(0tqq (Bdoc
-(0x   tqq (BAnalysis.md
-(0x   tqq (BBrain_stack_directories.md
-(0x   tqq (BDeveloperGuide.md
-(0x   tqq (BGuideForLaurenStacy.md
-(0x   tqq (BREADME.MD
-(0x   tqq (BRunningFiles.md
-(0x   tqq (BTransferFiles.md
-(0x   tqq (BUser\ Manuals
-(0x   x   tqq (BUserGuide.md
-(0x   x   mqq (Buser_guide_pages
-(0x   x       tqq (BBuildAtlas.md
-(0x   x       tqq (BDataDescription.md
-(0x   x       tqq (BDetection.md
-(0x   x       tqq (BEnvironmentSetup.md
-(0x   x       tqq (BFileOrganization.md
-(0x   x       tqq (BGUIGuide.md
-(0x   x       tqq (BOverview.md
-(0x   x       tqq (BPreprocessing.md
-(0x   x       tqq (BRegistration.md
-(0x   x       tqq (BTiming.md
-(0x   x       tqq (BTrainClassifiers.md
-(0x   x       mqq (BVisualization.md
-(0x   tqq (Bdependancies.md
-(0x   tqq (BenvironmentVariables.md
-(0x   tqq (Bgui_specs.txt
-(0x   tqq (Bold_readme.md
-(0x   mqq (Bwriteup
-(0x       tqq (BAWS_instruction.md
-(0x       tqq (BRescanListWithPosition.txt
-(0x       tqq (BS3_file_organization.md
-(0x       tqq (Bannotation_notes.md
-(0x       tqq (Bbayesian.md
-(0x       tqq (Bbayesian.md.html
-(0x       tqq (Bexample_criteria.txt
-(0x       tqq (Boutliers.txt
-(0x       tqq (Btransfer_data_to_aws.md
-(0x       tqq (Buncertainty.md
-(0x       tqq (Buncertainty.md.html
-(0x       tqq (Bzscore_hessian.md
-(0x       mqq (Bzscore_hessian.md.html
-(0tqq (Bold
-(0x   tqq (B3d
-(0x   x   tqq (BREADME.md
-(0x   x   tqq (Batlas_from_aligned_annotated_volumes_v4.ipynb
-(0x   x   tqq (Batlas_from_aligned_annotated_volumes_v5.ipynb
-(0x   x   tqq (Bbuild_atlas_from_aligned_annotated_brains_v6.ipynb
-(0x   x   tqq (Bbuild_atlas_from_aligned_annotated_brains_v7_standard_orientation_notstartedyet.ipynb
-(0x   x   tqq (Beuclid.py
-(0x   x   tqq (Bicp_matching.py
-(0x   x   tqq (BouterContour_poisson_reconstruct.mlx
-(0x   x   tqq (Brender_shell.ipynb
-(0x   x   tqq (Brender_shell_from_tissue_masks.ipynb
-(0x   x   tqq (Bspherical_harmonics.ipynb
-(0x   x   tqq (Bvisualize_aligned_annotated_brains.ipynb
-(0x   x   tqq (Bvisualize_allen.ipynb
-(0x   x   tqq (Bvisualize_annotated_brains.ipynb
-(0x   x   tqq (Bvisualize_atlas_2018.ipynb
-(0x   x   tqq (Bvisualize_bingxing_data.ipynb
-(0x   x   tqq (Bvisualize_confidence_v3.ipynb
-(0x   x   tqq (Bvisualize_coregistration_atlas_space_v3.ipynb
-(0x   x   tqq (Bvisualize_greylevel_volumes.ipynb
-(0x   x   tqq (Bvisualize_hessian.ipynb
-(0x   x   tqq (Bvisualize_lauren_data.ipynb
-(0x   x   tqq (Bvisualize_scoreVolume_and_fuzzy_atlasVolume.ipynb
-(0x   x   tqq (Bvisualize_scoreVolume_and_fuzzy_atlasVolume_v2.ipynb
-(0x   x   mqq (Bvisualize_subject_space_v3.ipynb
-(0x   tqq (BCodeStructure.md
-(0x   tqq (Badaboost_m2
-(0x   x   mqq (BUntitled.ipynb
-(0x   tqq (Bannotation
-(0x   x   tqq (Bapply_cerebellumMask_from_annotationFiles.ipynb
-(0x   x   tqq (Bcheck_annotation_file_v3.ipynb
-(0x   x   tqq (Bcheck_annotation_file_v3_for_thalamus.ipynb
-(0x   x   tqq (Bconstruct_annotationVolume_from_annotationFiles_v4.ipynb
-(0x   x   tqq (Bconstruct_shell_volume.ipynb
-(0x   x   tqq (Bconvert_annotation_v3_to_using_original_uncropped_coordinates.ipynb
-(0x   x   tqq (Bdump_landmark_indices_to_files.py
-(0x   x   tqq (Bgenerate_annotation_from_alignment.ipynb
-(0x   x   tqq (Bgenerate_labelmap.ipynb
-(0x   x   tqq (Bgenerate_latest_annotation_list.ipynb
-(0x   x   tqq (Bgenerate_latest_annotation_list.py
-(0x   x   tqq (Binterpolate_contours.ipynb
-(0x   x   tqq (Binterpolate_contours_levelset.ipynb
-(0x   x   tqq (Bmap_labeling_to_original.ipynb
-(0x   x   tqq (Bmap_labelings_alignedCropped_to_original.ipynb
-(0x   x   tqq (Bmap_labelings_original_to_alignedCropped.ipynb
-(0x   x   tqq (Bmerge_labelings.ipynb
-(0x   x   tqq (Bparse_neurolucida_xml.py
-(0x   x   tqq (Bparse_neurolucida_xml_lauren.ipynb
-(0x   x   tqq (Bparse_neurolucida_xml_stacy.ipynb
-(0x   x   tqq (Bparse_xml_bingxing.ipynb
-(0x   x   tqq (Bremove_out_of_boundary_parts.ipynb
-(0x   x   tqq (Buntitled.txt
-(0x   x   tqq (Bupload_latest_annotations.py
-(0x   x   tqq (Bvisualize_annotations_v2.ipynb
-(0x   x   tqq (Bvisualize_annotations_v2.py
-(0x   x   tqq (Bvisualize_annotations_v2_distributed.py
-(0x   x   tqq (Bvisualize_annotations_v3.ipynb
-(0x   x   tqq (Bvisualize_annotations_v3.py
-(0x   x   tqq (Bvisualize_annotations_v3_distributed.ipynb
-(0x   x   tqq (Bvisualize_annotations_v3_distributed.py
-(0x   x   tqq (Bvisualize_annotations_v4.ipynb
-(0x   x   mqq (Bvisualize_annotations_v4.py
-(0x   tqq (Bannotation_pipeline.ipynb
-(0x   tqq (Bautomatic_annotation_evaluation.csv
-(0x   tqq (Baws
-(0x   x   tqq (BREADME.md
-(0x   x   tqq (Bcfncluster_config_template
-(0x   x   tqq (Bcfncluster_post_install.sh
-(0x   x   tqq (Bcfncluster_post_install_gpu.sh
-(0x   x   tqq (Bcfncluster_post_install_gpu_nocfncluster.sh
-(0x   x   tqq (Bcfncluster_post_install_preprocess.sh
-(0x   x   tqq (Bcfncluster_post_install_xiang.sh
-(0x   x   tqq (Bedited-cfncluster.cfn.json
-(0x   x   tqq (Binstall_cellprofiler.sh
-(0x   x   tqq (Binstall_dependencies.sh
-(0x   x   tqq (Blifecycle.json
-(0x   x   mqq (Bsetup_jupyter_notebook.sh
-(0x   tqq (Bcells
-(0x   x   tqq (BLoG.ipynb
-(0x   x   tqq (BLoG_public.ipynb
-(0x   x   tqq (BREADME.md
-(0x   x   tqq (BTODO.md
-(0x   x   tqq (Balign_pad_mirror_cells_v2.ipynb
-(0x   x   tqq (Bcell_detection_cellProfiler.ipynb
-(0x   x   tqq (Bcell_detection_exampleImage.ipynb
-(0x   x   tqq (Bcell_detection_public.ipynb
-(0x   x   tqq (Bcell_pipeline.ipynb
-(0x   x   tqq (Bcell_utilities.py
-(0x   x   tqq (Bcompare_with_third_parties.ipynb
-(0x   x   tqq (Bcompute_cell_neighborhood_relationship.ipynb
-(0x   x   tqq (Bcompute_cells_hu_moment.ipynb
-(0x   x   tqq (Bcompute_cells_hu_moment.py
-(0x   x   tqq (Bcompute_features.ipynb
-(0x   x   tqq (Bcompute_features_v2.ipynb
-(0x   x   tqq (Bd3js_visualization
-(0x   x   x   tqq (Bindex.html
-(0x   x   x   tqq (Bindex.html~HEAD
-(0x   x   x   tqq (Bscatter.css
-(0x   x   x   mqq (Bscatter.js
-(0x   x   tqq (Bderive_blob_information.ipynb
-(0x   x   tqq (Bderive_blob_information.py
-(0x   x   tqq (Bdetect_cells_alternatives.ipynb
-(0x   x   tqq (Bdetect_cells_cellprofiler.py
-(0x   x   tqq (Bdetect_cells_cellprofiler_v2.py
-(0x   x   tqq (Bdetect_cells_farsight.py
-(0x   x   tqq (Bdetect_cells_regional_otsu.ipynb
-(0x   x   tqq (Bdraw_cell_contours_on_images.ipynb
-(0x   x   tqq (Bevaluate_blob_detection.ipynb
-(0x   x   tqq (Bfractal_dimension.ipynb
-(0x   x   tqq (Bgenerate_d3js_data.ipynb
-(0x   x   tqq (Bgenerate_dataset_cell_based.ipynb
-(0x   x   tqq (Bleaves.ipynb
-(0x   x   tqq (Blevelset.ipynb
-(0x   x   tqq (Bpyclust_test.ipynb
-(0x   x   tqq (Breconstruct_images.ipynb
-(0x   x   tqq (Brun_third_party_tools.py
-(0x   x   tqq (Brun_third_party_tools_local.ipynb
-(0x   x   tqq (Brun_third_party_tools_wholestack.ipynb
-(0x   x   tqq (Brun_third_party_tools_wholestack_gordon.ipynb
-(0x   x   tqq (Brun_third_party_tools_wholestack_gordon_parallel.ipynb
-(0x   x   tqq (Bspectral_clustering.ipynb
-(0x   x   tqq (Bspectral_embedding_size_normalized_v2.ipynb
-(0x   x   tqq (Btest_cell_based_classifiers.ipynb
-(0x   x   tqq (Btrain_cell_based_classifiers.ipynb
-(0x   x   tqq (Btutorial.ipynb
-(0x   x   tqq (Bvisualize_detected_cells.ipynb
-(0x   x   mqq (Bvisualize_features.ipynb
-(0x   tqq (Bcreate_sql_database.ipynb
-(0x   tqq (Bdictionary
-(0x   x   tqq (BICA.ipynb
-(0x   x   tqq (BICA_experiments.ipynb
-(0x   x   tqq (BICA_experiments_demo.ipynb
-(0x   x   tqq (BICA_experiments_utility.ipynb
-(0x   x   tqq (Bdictionary_learning_sklearn_public.ipynb
-(0x   x   mqq (Bdictionary_method.ipynb
-(0x   tqq (Bfunctions_for_stacy.ipynb
-(0x   tqq (Bintensity
-(0x   x   tqq (Belastix_registration_3d.ipynb
-(0x   x   tqq (Bgray_vs_texture.ipynb
-(0x   x   tqq (Bmhd_utils_3d.py
-(0x   x   tqq (Btrain_intensity_classifier.ipynb
-(0x   x   mqq (Buse_allen_atlas.ipynb
-(0x   tqq (Bmhd_utils_3d.py
-(0x   tqq (Bmove_s3_files.ipynb
-(0x   tqq (Bnew_region
-(0x   x   tqq (Bcompare_texture_with_greyvalue.ipynb
-(0x   x   mqq (Bpropose_new_regions.ipynb
-(0x   tqq (Bpipeline_aws.ipynb
-(0x   tqq (Bpreprocess_pipeline_aws.ipynb
-(0x   tqq (Bpreprocess_pipeline_aws_thalamus.ipynb
-(0x   tqq (Breconstruct
-(0x   x   tqq (BREADME.md
-(0x   x   tqq (Bcompute_score_volume_gradient_v1.ipynb
-(0x   x   tqq (Bcompute_score_volume_gradient_v2.ipynb
-(0x   x   tqq (Bcompute_score_volume_gradients_v5.py
-(0x   x   tqq (Bconstruct_contour_volume.ipynb
-(0x   x   tqq (Bconstruct_contour_volume_v2.ipynb
-(0x   x   tqq (Bconstruct_intensity_volume.py
-(0x   x   tqq (Bconstruct_intensity_volume_v3.ipynb
-(0x   x   tqq (Bconstruct_score_volume_v4.ipynb
-(0x   x   tqq (Bconstruct_score_volume_v5.ipynb
-(0x   x   tqq (Bconstruct_score_volume_v5.py
-(0x   x   tqq (Bconstruct_score_volume_v6.ipynb
-(0x   x   tqq (Bconstruct_score_volume_v7_roi.ipynb
-(0x   x   tqq (Bconstruct_thumbnail_volume_v3_raw_resolution.ipynb
-(0x   x   tqq (Brectify.ipynb
-(0x   x   tqq (Bresection_thumbnail_volume.ipynb
-(0x   x   mqq (Btest_conversion_between_section_z.ipynb
-(0x   tqq (Bsnake
-(0x   x   tqq (Bcameraman.gif
-(0x   x   tqq (Bdeformable_template_prototype.ipynb
-(0x   x   tqq (Bdeformable_template_snake.ipynb
-(0x   x   tqq (Bdeformable_template_snap.ipynb
-(0x   x   tqq (Blocal_transform_fit_image.ipynb
-(0x   x   tqq (Blocal_transform_fit_image_snake_instack.ipynb
-(0x   x   tqq (Blocal_transform_fit_image_snake_parallel.ipynb
-(0x   x   tqq (Blocal_transform_fit_image_snake_projection.ipynb
-(0x   x   tqq (Bsnake_bresson.ipynb
-(0x   x   tqq (Bsnake_localization.py
-(0x   x   tqq (Bsnake_localization_distributed.py
-(0x   x   mqq (Bsnake_localization_distributed_allStacks.sh
-(0x   tqq (Bspm
-(0x   x   tqq (BSIFT_SPM_adaboost.ipynb
-(0x   x   tqq (BSIFT_SPM_features.ipynb
-(0x   x   tqq (BSIFT_SPM_features_training.ipynb
-(0x   x   tqq (BSIFT_SPM_v2.ipynb
-(0x   x   tqq (Bcompute_sift_labelmap.py
-(0x   x   tqq (Bcompute_sift_labelmap_distributed.py
-(0x   x   mqq (Bsift_spm_utilities.py
-(0x   tqq (Bvisualization
-(0x   x   tqq (Bjuxtapose_visualizations.ipynb
-(0x   x   mqq (Bvisualization.ipynb
-(0x   mqq (Bweb_services
-(0x       tqq (Bserver.py
-(0x       tqq (Bserver_v2.py
-(0x       mqq (Bweb_service.py
-(0mqq (Bsrc
-(0    tqq (Banotation
-(0    tqq (Bgui
-(0    x   tqq (BDataFeeder.py
-(0    x   tqq (BREADME(old).md
-(0    x   tqq (BREADME.md
-(0    x   tqq (BTODO.md
-(0    x   tqq (Bbrain_labeling_gui_v27.py
-(0    x   tqq (Bbrain_labeling_gui_v28.py
-(0    x   tqq (Bgui_utilities.py
-(0    x   tqq (Bmask_editing_tool.py
-(0    x   tqq (Bmask_editing_tool_v2.py
-(0    x   tqq (Bmask_editing_tool_v3.py
-(0    x   tqq (Bmask_editing_tool_v4.py
-(0    x   tqq (Bmask_editing_utilities.py
-(0    x   tqq (BnewStructureNames.txt
-(0    x   tqq (Bpreprocess_tool_v2.py
-(0    x   tqq (Bpreprocess_tool_v3.py
-(0    x   tqq (Brectification_tool.py
-(0    x   tqq (Bstructure_names.txt
-(0    x   tqq (Bstructure_tree.json
-(0    x   tqq (Bstructure_tree.txt
-(0    x   tqq (Bstructure_tree_txt_to_json.ipynb
-(0    x   tqq (Bui
-(0    x   x   tqq (BAlignmentGui.ui
-(0    x   x   tqq (BBrainLabelingGui_v15.ui
-(0    x   x   tqq (BGalleryDialog.ui
-(0    x   x   tqq (BMaskEditingGui4.ui
-(0    x   x   tqq (BMaskEditingGui5.ui
-(0    x   x   tqq (BMaskParametersGui.ui
-(0    x   x   tqq (BPreprocessTool.ui
-(0    x   x   tqq (BPreprocessTool_v2.ui
-(0    x   x   tqq (BRectificationTool.ui
-(0    x   x   tqq (B__init__.py
-(0    x   x   tqq (Baccept_new_landmark_dialog.py
-(0    x   x   tqq (Baccept_new_landmark_dialog.ui
-(0    x   x   tqq (Bui_AlignmentGui.py
-(0    x   x   tqq (Bui_BrainLabelingGui_v15.py
-(0    x   x   tqq (Bui_GalleryDialog.py
-(0    x   x   tqq (Bui_MaskEditingGui.py
-(0    x   x   tqq (Bui_MaskEditingGui4.py
-(0    x   x   tqq (Bui_MaskEditingGui5.py
-(0    x   x   tqq (Bui_MaskEditingGui5.ui.py
-(0    x   x   tqq (Bui_MaskParametersGui.py
-(0    x   x   tqq (Bui_PreprocessGui.py
-(0    x   x   tqq (Bui_PreprocessGui_v2.py
-(0    x   x   mqq (Bui_RectificationTool.py
-(0    x   tqq (Bui_BrainLabelingGui_v15.py
-(0    x   tqq (Bui_MaskEditingGui5.py
-(0    x   tqq (Bui_PreprocessGui.py
-(0    x   mqq (Bwidgets
-(0    x       tqq (BDrawableZoomableBrowsableGraphicsScene.py
-(0    x       tqq (BDrawableZoomableBrowsableGraphicsScene_ForLabeling.py
-(0    x       tqq (BDrawableZoomableBrowsableGraphicsScene_ForLabeling_v2.py
-(0    x       tqq (BDrawableZoomableBrowsableGraphicsScene_ForMasking.py
-(0    x       tqq (BDrawableZoomableBrowsableGraphicsScene_ForSnake.py
-(0    x       tqq (BMultiplePixmapsGraphicsScene.py
-(0    x       tqq (BSignalEmittingGraphicsPathItem.py
-(0    x       tqq (BSignalEmittingGraphicsPathItemWithVertexCircles.py
-(0    x       tqq (BSignalEmittingItems.py
-(0    x       tqq (BZoomableBrowsableGraphicsScene.py
-(0    x       tqq (BZoomableBrowsableGraphicsSceneWithReadonlyPolygon.py
-(0    x       tqq (B__init__.py
-(0    x       mqq (Bcustom_widgets.py
-(0    tqq (Blearning
-(0    x   tqq (BREADME.md
-(0    x   tqq (BTODO.md
-(0    x   tqq (BUntitled.ipynb
-(0    x   tqq (Banalyze_scores_finetuned_cnn_v3.ipynb
-(0    x   tqq (Bapply_classifiers_v3.ipynb
-(0    x   tqq (Bapply_classifiers_v3.py
-(0    x   tqq (Bapply_classifiers_v4.py
-(0    x   tqq (Bapply_classifiers_v5.py
-(0    x   tqq (Bcheck_total_response.ipynb
-(0    x   tqq (Bclassifier_settings.csv
-(0    x   tqq (Bcompute_features.py
-(0    x   tqq (Bcompute_features_for_entire_stacks.ipynb
-(0    x   tqq (Bdataset_settings.csv
-(0    x   tqq (Bdetector_settings.backup.csv
-(0    x   tqq (Bdetector_settings.csv
-(0    x   tqq (Bexperiment_classifier_response_to_exposure_correction.ipynb
-(0    x   tqq (Bexperiment_classifier_response_to_exposure_correction_no_writeout.ipynb
-(0    x   tqq (Bexperiment_classifier_response_to_exposure_correction_with_writeout.ipynb
-(0    x   tqq (Bexplore_normalization_effect_on_classifier.ipynb
-(0    x   tqq (Bexplore_normalization_effect_on_classifier_with_retrain.ipynb
-(0    x   tqq (Bexplore_normalization_effect_on_classifier_with_retrain_v2.ipynb
-(0    x   tqq (Bexplore_normalization_effect_on_classifier_with_retrain_v2_convenience.ipynb
-(0    x   tqq (Bexport_train_and_test_patches.ipynb
-(0    x   tqq (Bextract_test_features_cnn_corrected.ipynb
-(0    x   tqq (Bfinetune_cnn_v3.ipynb
-(0    x   tqq (Bfinetune_dnn.ipynb
-(0    x   tqq (Bfrom_image_to_score_volumes.py
-(0    x   tqq (Bfrom_image_to_scoremap.ipynb
-(0    x   tqq (Bfrom_images_to_score_volume.ipynb
-(0    x   tqq (Bgabor.ipynb
-(0    x   tqq (Bgenerate_dataset.ipynb
-(0    x   tqq (Bidentify_patch_class_based_on_labeling.ipynb
-(0    x   tqq (Bidentify_patch_class_based_on_labeling_v2.ipynb
-(0    x   tqq (Binception-bn-blue
-(0    x   tqq (Binception-bn-blue.pdf
-(0    x   tqq (Binterpolate_scoremaps_v3.ipynb
-(0    x   tqq (Binterpolate_scoremaps_v3.py
-(0    x   tqq (Bmake_cnn_models.ipynb
-(0    x   tqq (Bresample_scoremaps_v3.py
-(0    x   tqq (Bresample_scoremaps_v4.py
-(0    x   tqq (Bresample_scoremaps_v5.py
-(0    x   tqq (Bsync_features_to_gordon.ipynb
-(0    x   tqq (Bsynset.txt
-(0    x   tqq (Btensorflow_example.ipynb
-(0    x   tqq (Btest_classifier_performance_v3.ipynb
-(0    x   tqq (Btop-down.ipynb
-(0    x   tqq (Btrain_and_test_classifier_performance_v4.ipynb
-(0    x   tqq (Btrain_and_test_classifier_performance_v4_UCSD_brains.ipynb
-(0    x   tqq (Btrain_classifier_v3.5.ipynb
-(0    x   tqq (Btrain_classifier_v3.ipynb
-(0    x   tqq (Btrain_classifier_v4.ipynb
-(0    x   tqq (Bvgg16-blue
-(0    x   tqq (Bvgg16-blue.pdf
-(0    x   tqq (Bview_classification_metrics.ipynb
-(0    x   tqq (Bvisualize_scoremaps_v3.ipynb
-(0    x   tqq (Bvisualize_scoremaps_v3.py
-(0    x   tqq (Bvisualize_scoremaps_v4.py
-(0    x   mqq (Bvisualize_scoremaps_v5.py
-(0    tqq (Bpreprocess
-(0    x   tqq (BREADME.md
-(0    x   tqq (Balign_consecutive.py
-(0    x   tqq (Balign_consecutive_v2.py
-(0    x   tqq (Bbrightness_correction.ipynb
-(0    x   tqq (Bcheck_preprocess_info.ipynb
-(0    x   tqq (Bcompare_intensity_registration_vs_score_registration.ipynb
-(0    x   tqq (Bcompose_transform_thumbnail.py
-(0    x   tqq (Bcompose_transform_thumbnail_v2.py
-(0    x   tqq (Bcompress_and_rescale.py
-(0    x   tqq (Bcompress_as_jpeg.py
-(0    x   tqq (Bcontrast_stretch_fluorescent_image.py
-(0    x   tqq (Bcontrast_stretch_fluorescent_images.ipynb
-(0    x   tqq (Bconvert_grayscale_neurotrace.py
-(0    x   tqq (Bconvert_grayscale_neurotrace_v2.py
-(0    x   tqq (Bcreate_movie_for_stack.ipynb
-(0    x   tqq (Bczi_to_tiff.ipynb
-(0    x   tqq (Bczifile.py
-(0    x   tqq (Bczifile.pyx
-(0    x   tqq (Bdetect_labeled_neurons.ipynb
-(0    x   tqq (Bdetect_lossless_mask.ipynb
-(0    x   tqq (Bexpand_jp2.py
-(0    x   tqq (Bexplore_fluorescent_image_characteristics.ipynb
-(0    x   tqq (Bfix_data_problem.ipynb
-(0    x   tqq (Bgenerate_mask_v2.ipynb
-(0    x   tqq (Bgenerate_masks_v2_distributed.ipynb
-(0    x   tqq (Bgenerate_neurotrace_intensity_normalization_figures.ipynb
-(0    x   tqq (Bgenerate_other_versions_v2.py
-(0    x   tqq (Bgenerate_scoremap_viz_grid.ipynb
-(0    x   tqq (Bgenerate_thumbnail_mask_contour_viz.py
-(0    x   tqq (Bgenerate_thumbnail_mask_contour_viz_distributed.py
-(0    x   tqq (Bgenerate_thumbnail_masks_distributed.py
-(0    x   tqq (Bgenerate_thumbnail_masks_v4.py
-(0    x   tqq (Bgenerate_thumbnail_masks_v5.py
-(0    x   tqq (Binspect_areas_around_landmarks.ipynb
-(0    x   tqq (Bintensity_correction.py
-(0    x   tqq (Blearn_to_identify_wrong_masks.ipynb
-(0    x   tqq (Bmatch_intensity_profile.py
-(0    x   tqq (Bmatch_intensity_profile_v2.py
-(0    x   tqq (Bmatch_ucsd_to_cshl_histograms.ipynb
-(0    x   tqq (Bmorphsnakes.py
-(0    x   tqq (Bneurotrace_blue_to_nissl.py
-(0    x   tqq (Bnumber_filelist_consecutively.ipynb
-(0    x   tqq (Bnumber_filelist_consecutively.py
-(0    x   tqq (Bparameters
-(0    x   x   tqq (BParameters_Affine.txt
-(0    x   x   tqq (BParameters_Affine_3d.txt
-(0    x   x   tqq (BParameters_Affine_3d_mi.txt
-(0    x   x   tqq (BParameters_BSpline.txt
-(0    x   x   tqq (BParameters_BSpline_3d.txt
-(0    x   x   tqq (BParameters_BSpline_3d_mi.txt
-(0    x   x   tqq (BParameters_BSpline_3d_mi_wider_spacing.txt
-(0    x   x   tqq (BParameters_Rigid.txt
-(0    x   x   tqq (BParameters_Rigid_3d.txt
-(0    x   x   tqq (BParameters_Rigid_3d_mi.txt
-(0    x   x   tqq (BParameters_Rigid_MutualInfo.txt
-(0    x   x   tqq (BParameters_Rigid_MutualInfo_4000Iters.txt
-(0    x   x   tqq (BParameters_Rigid_MutualInfo_noNumberOfSpatialSamples.txt
-(0    x   x   tqq (BParameters_Rigid_MutualInfo_noNumberOfSpatialSamples_4000Iters.txt
-(0    x   x   tqq (BParameters_Rigid_RequiredRatioOfValidSamples.txt
-(0    x   x   tqq (BParameters_Rigid_erodeMask.txt
-(0    x   x   tqq (BParameters_Rigid_noNumberOfSpatialSamples.txt
-(0    x   x   tqq (BParameters_Translation.txt
-(0    x   x   mqq (BParameters_Translation_3d.txt
-(0    x   tqq (Bplot_fluorescent_intensity_mappings.ipynb
-(0    x   tqq (Bplot_image_histograms.ipynb
-(0    x   tqq (Bpreprocess_bingxing_data.ipynb
-(0    x   tqq (Bpreprocess_cshl_data_v2.ipynb
-(0    x   tqq (Bpreprocess_cshl_data_v2_neurotrace.ipynb
-(0    x   tqq (Bpreprocess_settings.csv
-(0    x   tqq (Bpreprocess_ucsd_data.ipynb
-(0    x   tqq (Bpreprocess_ucsd_data_v2.ipynb
-(0    x   tqq (Brename.py
-(0    x   tqq (Brescale_image.py
-(0    x   tqq (Bsftp-config.json
-(0    x   tqq (Bstereotectic_coordinates.ipynb
-(0    x   tqq (Bstereotectic_coordinates_lossless.ipynb
-(0    x   tqq (Bstretch_contrast_image.py
-(0    x   tqq (Btransfer_s3.ipynb
-(0    x   tqq (Bunmix_many_tifs_autofile.m
-(0    x   tqq (Bunmix_tif_GB_separate_input_channels.m
-(0    x   tqq (Bwarp_crop_IM_v2.py
-(0    x   mqq (Bwarp_crop_IM_v3.py
-(0    tqq (Bregistration
-(0    x   tqq (BREADME.md
-(0    x   tqq (Balign_annotated_brains_v5.ipynb
-(0    x   tqq (Balign_annotated_brains_v6.ipynb
-(0    x   tqq (Balign_subject_brain_to_annotated_volume_v2.ipynb
-(0    x   tqq (Balign_subject_brain_to_atlas_v2.py
-(0    x   tqq (Balign_subject_brain_to_atlas_v4.py
-(0    x   tqq (Balign_subject_brain_to_subject_brain_v2.ipynb
-(0    x   tqq (Banalyze_global_alignment_over_brains.ipynb
-(0    x   tqq (Banalyze_human_correction.ipynb
-(0    x   tqq (Banalyze_score_evolution.ipynb
-(0    x   tqq (Banalyze_score_significance_synthetic_example.ipynb
-(0    x   tqq (Banalyze_structurewise_alignment_over_brains_v3.ipynb
-(0    x   tqq (Bcompute_hessian.ipynb
-(0    x   tqq (Bcompute_individual_alignment_hessian.ipynb
-(0    x   tqq (Bcubic_bspline_registration_synthetic_example.ipynb
-(0    x   tqq (Bdeformable_registration_cubic_bspline.ipynb
-(0    x   tqq (Berase_cerebellum.ipynb
-(0    x   tqq (Bevaluate_registration_jaccard.ipynb
-(0    x   tqq (Bevaluate_registration_metrics_v2_compute_deviation_vs_ChAT.ipynb
-(0    x   tqq (Bevaluate_registration_metrics_v2_compute_deviation_vs_expert.ipynb
-(0    x   tqq (Bexample_fixed_brain_spec.json
-(0    x   tqq (Bexample_moving_brain_spec.json
-(0    x   tqq (Bfit_atlas_structure_to_subject_v2.py
-(0    x   tqq (Bfit_contour_to_scoreVolume_inSection.ipynb
-(0    x   tqq (Bfit_contour_to_scoremap.py
-(0    x   tqq (Bfit_contour_to_scoremap_graphcut.ipynb
-(0    x   tqq (Bgaussian_smooth_volume.ipynb
-(0    x   tqq (Bglobal_registration_v3.ipynb
-(0    x   tqq (Bglobal_registration_v3.py
-(0    x   tqq (Bglobal_registration_v4.ipynb
-(0    x   tqq (Bglobal_registration_v4.py
-(0    x   tqq (Bhessian_v2_global.ipynb
-(0    x   tqq (Bhessian_v2_local.ipynb
-(0    x   tqq (Blie_group_experiment.ipynb
-(0    x   tqq (Blocal_registration_v3.ipynb
-(0    x   tqq (Blocal_registration_v3.py
-(0    x   tqq (Blocal_registration_v4.ipynb
-(0    x   tqq (Blocal_registration_v4.py
-(0    x   tqq (Bmeasure_confidence_v3.ipynb
-(0    x   tqq (Bmeasure_confidence_v3_global.py
-(0    x   tqq (Bmeasure_confidence_v3_local.py
-(0    x   tqq (Bmeasure_confidence_v4.ipynb
-(0    x   tqq (Bmultiprocess_experiment.ipynb
-(0    x   tqq (Bmultiprocess_utilities.py
-(0    x   tqq (Bquarternion.py
-(0    x   tqq (Bregister_brains.py
-(0    x   tqq (Bregister_lauren_data.ipynb
-(0    x   tqq (Bregister_lauren_data_v2.ipynb
-(0    x   tqq (Bregister_stacy_data.ipynb
-(0    x   tqq (Bregistration_settings.backup.csv
-(0    x   tqq (Bregistration_settings.csv
-(0    x   tqq (Bregistration_v5.ipynb
-(0    x   tqq (Bregistration_v6.ipynb
-(0    x   tqq (Bregistration_v7_atlasV6.ipynb
-(0    x   tqq (Bregistration_v7_atlasV6_local_allstructures.ipynb
-(0    x   tqq (Bregistration_v7_atlasV6_local_allstructures_generate_figures.ipynb
-(0    x   tqq (Bregistration_v7_atlasV6_simpleGlobal.ipynb
-(0    x   tqq (Bregistration_v7_atlasV6_textureBasedGlobal.ipynb
-(0    x   tqq (Bthin_plate_spline_registration_synthetic_example.ipynb
-(0    x   tqq (Btransform_brains_v3.ipynb
-(0    x   tqq (Btransform_brains_v3.py
-(0    x   tqq (Btransform_brains_v3_global.py
-(0    x   tqq (Btransform_brains_v3_local.py
-(0    x   tqq (Btransform_brains_v3_reverse_global.py
-(0    x   tqq (Btransform_brains_v4.ipynb
-(0    x   tqq (Btransform_brains_v4.py
-(0    x   tqq (Bupdate_atlas.ipynb
-(0    x   tqq (Bvisualize_registration.py
-(0    x   tqq (Bvisualize_registration_v3.ipynb
-(0    x   tqq (Bvisualize_registration_v3.py
-(0    x   tqq (Bvisualize_registration_v4.ipynb
-(0    x   tqq (Bvisualize_registration_v4.py
-(0    x   tqq (Bvisualize_registration_v5.ipynb
-(0    x   tqq (Bvisualize_registration_v5.py
-(0    x   mqq (Bwarp_intensity_volumes.ipynb
-(0    mqq (Butilities
-(0        tqq (B100colors.txt
-(0        tqq (B__init__.py
-(0        tqq (Baligner.py
-(0        tqq (Baligner_v2.py
-(0        tqq (Baligner_v3.py
-(0        tqq (Bannotation_utilities.py
-(0        tqq (Bbipartite_matching.py
-(0        tqq (Bclustering.py
-(0        tqq (Bcolormap.json
-(0        tqq (Bconversion.ipynb
-(0        tqq (Bconversion.py
-(0        tqq (Bdata_manager.py
-(0        tqq (Bdistributed_utilities.py
-(0        tqq (Bhigh_contrast_colors.txt
-(0        tqq (Blearning_utilities.py
-(0        tqq (Blie.py
-(0        tqq (Bmetadata.py
-(0        tqq (Bneighbors.py
-(0        tqq (Bpreprocess_utilities.py
-(0        tqq (Bqt_utilities.py
-(0        tqq (Brandomcolor.py
-(0        tqq (Bregistration_utilities.py
-(0        tqq (Bsequential_dispatcher.py
-(0        tqq (Bshape_matching.py
-(0        tqq (Bslic_texture.py
-(0        tqq (Butilities2015.py
-(0        tqq (Bvis3d_utilities.py
-(0        mqq (Bvisualization_utilities.py
+├── README.md
+├── directory_tree.txt
+├── doc
+│   ├── Analysis.md
+│   ├── Brain_stack_directories.md
+│   ├── DeveloperGuide.md
+│   ├── GuideForLaurenStacy.md
+│   ├── README.MD
+│   ├── RunningFiles.md
+│   ├── TransferFiles.md
+│   ├── User\ Manuals
+│   │   ├── UserGuide.md
+│   │   └── user_guide_pages
+│   │       ├── BuildAtlas.md
+│   │       ├── DataDescription.md
+│   │       ├── Detection.md
+│   │       ├── EnvironmentSetup.md
+│   │       ├── FileOrganization.md
+│   │       ├── GUIGuide.md
+│   │       ├── Overview.md
+│   │       ├── Preprocessing.md
+│   │       ├── Registration.md
+│   │       ├── Timing.md
+│   │       ├── TrainClassifiers.md
+│   │       └── Visualization.md
+│   ├── dependancies.md
+│   ├── environmentVariables.md
+│   ├── gui_specs.txt
+│   ├── old_readme.md
+│   └── writeup
+│       ├── AWS_instruction.md
+│       ├── RescanListWithPosition.txt
+│       ├── S3_file_organization.md
+│       ├── annotation_notes.md
+│       ├── bayesian.md
+│       ├── bayesian.md.html
+│       ├── example_criteria.txt
+│       ├── outliers.txt
+│       ├── transfer_data_to_aws.md
+│       ├── uncertainty.md
+│       ├── uncertainty.md.html
+│       ├── zscore_hessian.md
+│       └── zscore_hessian.md.html
+├── old
+│   ├── 3d
+│   │   ├── README.md
+│   │   ├── atlas_from_aligned_annotated_volumes_v4.ipynb
+│   │   ├── atlas_from_aligned_annotated_volumes_v5.ipynb
+│   │   ├── build_atlas_from_aligned_annotated_brains_v6.ipynb
+│   │   ├── build_atlas_from_aligned_annotated_brains_v7_standard_orientation_notstartedyet.ipynb
+│   │   ├── euclid.py
+│   │   ├── icp_matching.py
+│   │   ├── outerContour_poisson_reconstruct.mlx
+│   │   ├── render_shell.ipynb
+│   │   ├── render_shell_from_tissue_masks.ipynb
+│   │   ├── spherical_harmonics.ipynb
+│   │   ├── visualize_aligned_annotated_brains.ipynb
+│   │   ├── visualize_allen.ipynb
+│   │   ├── visualize_annotated_brains.ipynb
+│   │   ├── visualize_atlas_2018.ipynb
+│   │   ├── visualize_bingxing_data.ipynb
+│   │   ├── visualize_confidence_v3.ipynb
+│   │   ├── visualize_coregistration_atlas_space_v3.ipynb
+│   │   ├── visualize_greylevel_volumes.ipynb
+│   │   ├── visualize_hessian.ipynb
+│   │   ├── visualize_lauren_data.ipynb
+│   │   ├── visualize_scoreVolume_and_fuzzy_atlasVolume.ipynb
+│   │   ├── visualize_scoreVolume_and_fuzzy_atlasVolume_v2.ipynb
+│   │   └── visualize_subject_space_v3.ipynb
+│   ├── CodeStructure.md
+│   ├── adaboost_m2
+│   │   └── Untitled.ipynb
+│   ├── annotation
+│   │   ├── apply_cerebellumMask_from_annotationFiles.ipynb
+│   │   ├── check_annotation_file_v3.ipynb
+│   │   ├── check_annotation_file_v3_for_thalamus.ipynb
+│   │   ├── construct_annotationVolume_from_annotationFiles_v4.ipynb
+│   │   ├── construct_shell_volume.ipynb
+│   │   ├── convert_annotation_v3_to_using_original_uncropped_coordinates.ipynb
+│   │   ├── dump_landmark_indices_to_files.py
+│   │   ├── generate_annotation_from_alignment.ipynb
+│   │   ├── generate_labelmap.ipynb
+│   │   ├── generate_latest_annotation_list.ipynb
+│   │   ├── generate_latest_annotation_list.py
+│   │   ├── interpolate_contours.ipynb
+│   │   ├── interpolate_contours_levelset.ipynb
+│   │   ├── map_labeling_to_original.ipynb
+│   │   ├── map_labelings_alignedCropped_to_original.ipynb
+│   │   ├── map_labelings_original_to_alignedCropped.ipynb
+│   │   ├── merge_labelings.ipynb
+│   │   ├── parse_neurolucida_xml.py
+│   │   ├── parse_neurolucida_xml_lauren.ipynb
+│   │   ├── parse_neurolucida_xml_stacy.ipynb
+│   │   ├── parse_xml_bingxing.ipynb
+│   │   ├── remove_out_of_boundary_parts.ipynb
+│   │   ├── untitled.txt
+│   │   ├── upload_latest_annotations.py
+│   │   ├── visualize_annotations_v2.ipynb
+│   │   ├── visualize_annotations_v2.py
+│   │   ├── visualize_annotations_v2_distributed.py
+│   │   ├── visualize_annotations_v3.ipynb
+│   │   ├── visualize_annotations_v3.py
+│   │   ├── visualize_annotations_v3_distributed.ipynb
+│   │   ├── visualize_annotations_v3_distributed.py
+│   │   ├── visualize_annotations_v4.ipynb
+│   │   └── visualize_annotations_v4.py
+│   ├── annotation_pipeline.ipynb
+│   ├── automatic_annotation_evaluation.csv
+│   ├── aws
+│   │   ├── README.md
+│   │   ├── cfncluster_config_template
+│   │   ├── cfncluster_post_install.sh
+│   │   ├── cfncluster_post_install_gpu.sh
+│   │   ├── cfncluster_post_install_gpu_nocfncluster.sh
+│   │   ├── cfncluster_post_install_preprocess.sh
+│   │   ├── cfncluster_post_install_xiang.sh
+│   │   ├── edited-cfncluster.cfn.json
+│   │   ├── install_cellprofiler.sh
+│   │   ├── install_dependencies.sh
+│   │   ├── lifecycle.json
+│   │   └── setup_jupyter_notebook.sh
+│   ├── cells
+│   │   ├── LoG.ipynb
+│   │   ├── LoG_public.ipynb
+│   │   ├── README.md
+│   │   ├── TODO.md
+│   │   ├── align_pad_mirror_cells_v2.ipynb
+│   │   ├── cell_detection_cellProfiler.ipynb
+│   │   ├── cell_detection_exampleImage.ipynb
+│   │   ├── cell_detection_public.ipynb
+│   │   ├── cell_pipeline.ipynb
+│   │   ├── cell_utilities.py
+│   │   ├── compare_with_third_parties.ipynb
+│   │   ├── compute_cell_neighborhood_relationship.ipynb
+│   │   ├── compute_cells_hu_moment.ipynb
+│   │   ├── compute_cells_hu_moment.py
+│   │   ├── compute_features.ipynb
+│   │   ├── compute_features_v2.ipynb
+│   │   ├── d3js_visualization
+│   │   │   ├── index.html
+│   │   │   ├── index.html~HEAD
+│   │   │   ├── scatter.css
+│   │   │   └── scatter.js
+│   │   ├── derive_blob_information.ipynb
+│   │   ├── derive_blob_information.py
+│   │   ├── detect_cells_alternatives.ipynb
+│   │   ├── detect_cells_cellprofiler.py
+│   │   ├── detect_cells_cellprofiler_v2.py
+│   │   ├── detect_cells_farsight.py
+│   │   ├── detect_cells_regional_otsu.ipynb
+│   │   ├── draw_cell_contours_on_images.ipynb
+│   │   ├── evaluate_blob_detection.ipynb
+│   │   ├── fractal_dimension.ipynb
+│   │   ├── generate_d3js_data.ipynb
+│   │   ├── generate_dataset_cell_based.ipynb
+│   │   ├── leaves.ipynb
+│   │   ├── levelset.ipynb
+│   │   ├── pyclust_test.ipynb
+│   │   ├── reconstruct_images.ipynb
+│   │   ├── run_third_party_tools.py
+│   │   ├── run_third_party_tools_local.ipynb
+│   │   ├── run_third_party_tools_wholestack.ipynb
+│   │   ├── run_third_party_tools_wholestack_gordon.ipynb
+│   │   ├── run_third_party_tools_wholestack_gordon_parallel.ipynb
+│   │   ├── spectral_clustering.ipynb
+│   │   ├── spectral_embedding_size_normalized_v2.ipynb
+│   │   ├── test_cell_based_classifiers.ipynb
+│   │   ├── train_cell_based_classifiers.ipynb
+│   │   ├── tutorial.ipynb
+│   │   ├── visualize_detected_cells.ipynb
+│   │   └── visualize_features.ipynb
+│   ├── create_sql_database.ipynb
+│   ├── dictionary
+│   │   ├── ICA.ipynb
+│   │   ├── ICA_experiments.ipynb
+│   │   ├── ICA_experiments_demo.ipynb
+│   │   ├── ICA_experiments_utility.ipynb
+│   │   ├── dictionary_learning_sklearn_public.ipynb
+│   │   └── dictionary_method.ipynb
+│   ├── functions_for_stacy.ipynb
+│   ├── intensity
+│   │   ├── elastix_registration_3d.ipynb
+│   │   ├── gray_vs_texture.ipynb
+│   │   ├── mhd_utils_3d.py
+│   │   ├── train_intensity_classifier.ipynb
+│   │   └── use_allen_atlas.ipynb
+│   ├── mhd_utils_3d.py
+│   ├── move_s3_files.ipynb
+│   ├── new_region
+│   │   ├── compare_texture_with_greyvalue.ipynb
+│   │   └── propose_new_regions.ipynb
+│   ├── pipeline_aws.ipynb
+│   ├── preprocess_pipeline_aws.ipynb
+│   ├── preprocess_pipeline_aws_thalamus.ipynb
+│   ├── reconstruct
+│   │   ├── README.md
+│   │   ├── compute_score_volume_gradient_v1.ipynb
+│   │   ├── compute_score_volume_gradient_v2.ipynb
+│   │   ├── compute_score_volume_gradients_v5.py
+│   │   ├── construct_contour_volume.ipynb
+│   │   ├── construct_contour_volume_v2.ipynb
+│   │   ├── construct_intensity_volume.py
+│   │   ├── construct_intensity_volume_v3.ipynb
+│   │   ├── construct_score_volume_v4.ipynb
+│   │   ├── construct_score_volume_v5.ipynb
+│   │   ├── construct_score_volume_v5.py
+│   │   ├── construct_score_volume_v6.ipynb
+│   │   ├── construct_score_volume_v7_roi.ipynb
+│   │   ├── construct_thumbnail_volume_v3_raw_resolution.ipynb
+│   │   ├── rectify.ipynb
+│   │   ├── resection_thumbnail_volume.ipynb
+│   │   └── test_conversion_between_section_z.ipynb
+│   ├── snake
+│   │   ├── cameraman.gif
+│   │   ├── deformable_template_prototype.ipynb
+│   │   ├── deformable_template_snake.ipynb
+│   │   ├── deformable_template_snap.ipynb
+│   │   ├── local_transform_fit_image.ipynb
+│   │   ├── local_transform_fit_image_snake_instack.ipynb
+│   │   ├── local_transform_fit_image_snake_parallel.ipynb
+│   │   ├── local_transform_fit_image_snake_projection.ipynb
+│   │   ├── snake_bresson.ipynb
+│   │   ├── snake_localization.py
+│   │   ├── snake_localization_distributed.py
+│   │   └── snake_localization_distributed_allStacks.sh
+│   ├── spm
+│   │   ├── SIFT_SPM_adaboost.ipynb
+│   │   ├── SIFT_SPM_features.ipynb
+│   │   ├── SIFT_SPM_features_training.ipynb
+│   │   ├── SIFT_SPM_v2.ipynb
+│   │   ├── compute_sift_labelmap.py
+│   │   ├── compute_sift_labelmap_distributed.py
+│   │   └── sift_spm_utilities.py
+│   ├── visualization
+│   │   ├── juxtapose_visualizations.ipynb
+│   │   └── visualization.ipynb
+│   └── web_services
+│       ├── server.py
+│       ├── server_v2.py
+│       └── web_service.py
+└── src
+    ├── anotation
+    ├── gui
+    │   ├── DataFeeder.py
+    │   ├── README(old).md
+    │   ├── README.md
+    │   ├── TODO.md
+    │   ├── brain_labeling_gui_v27.py
+    │   ├── brain_labeling_gui_v28.py
+    │   ├── gui_utilities.py
+    │   ├── mask_editing_tool.py
+    │   ├── mask_editing_tool_v2.py
+    │   ├── mask_editing_tool_v3.py
+    │   ├── mask_editing_tool_v4.py
+    │   ├── mask_editing_utilities.py
+    │   ├── newStructureNames.txt
+    │   ├── preprocess_tool_v2.py
+    │   ├── preprocess_tool_v3.py
+    │   ├── rectification_tool.py
+    │   ├── structure_names.txt
+    │   ├── structure_tree.json
+    │   ├── structure_tree.txt
+    │   ├── structure_tree_txt_to_json.ipynb
+    │   ├── ui
+    │   │   ├── AlignmentGui.ui
+    │   │   ├── BrainLabelingGui_v15.ui
+    │   │   ├── GalleryDialog.ui
+    │   │   ├── MaskEditingGui4.ui
+    │   │   ├── MaskEditingGui5.ui
+    │   │   ├── MaskParametersGui.ui
+    │   │   ├── PreprocessTool.ui
+    │   │   ├── PreprocessTool_v2.ui
+    │   │   ├── RectificationTool.ui
+    │   │   ├── __init__.py
+    │   │   ├── accept_new_landmark_dialog.py
+    │   │   ├── accept_new_landmark_dialog.ui
+    │   │   ├── ui_AlignmentGui.py
+    │   │   ├── ui_BrainLabelingGui_v15.py
+    │   │   ├── ui_GalleryDialog.py
+    │   │   ├── ui_MaskEditingGui.py
+    │   │   ├── ui_MaskEditingGui4.py
+    │   │   ├── ui_MaskEditingGui5.py
+    │   │   ├── ui_MaskEditingGui5.ui.py
+    │   │   ├── ui_MaskParametersGui.py
+    │   │   ├── ui_PreprocessGui.py
+    │   │   ├── ui_PreprocessGui_v2.py
+    │   │   └── ui_RectificationTool.py
+    │   ├── ui_BrainLabelingGui_v15.py
+    │   ├── ui_MaskEditingGui5.py
+    │   ├── ui_PreprocessGui.py
+    │   └── widgets
+    │       ├── DrawableZoomableBrowsableGraphicsScene.py
+    │       ├── DrawableZoomableBrowsableGraphicsScene_ForLabeling.py
+    │       ├── DrawableZoomableBrowsableGraphicsScene_ForLabeling_v2.py
+    │       ├── DrawableZoomableBrowsableGraphicsScene_ForMasking.py
+    │       ├── DrawableZoomableBrowsableGraphicsScene_ForSnake.py
+    │       ├── MultiplePixmapsGraphicsScene.py
+    │       ├── SignalEmittingGraphicsPathItem.py
+    │       ├── SignalEmittingGraphicsPathItemWithVertexCircles.py
+    │       ├── SignalEmittingItems.py
+    │       ├── ZoomableBrowsableGraphicsScene.py
+    │       ├── ZoomableBrowsableGraphicsSceneWithReadonlyPolygon.py
+    │       ├── __init__.py
+    │       └── custom_widgets.py
+    ├── learning
+    │   ├── README.md
+    │   ├── TODO.md
+    │   ├── Untitled.ipynb
+    │   ├── analyze_scores_finetuned_cnn_v3.ipynb
+    │   ├── apply_classifiers_v3.ipynb
+    │   ├── apply_classifiers_v3.py
+    │   ├── apply_classifiers_v4.py
+    │   ├── apply_classifiers_v5.py
+    │   ├── check_total_response.ipynb
+    │   ├── classifier_settings.csv
+    │   ├── compute_features.py
+    │   ├── compute_features_for_entire_stacks.ipynb
+    │   ├── dataset_settings.csv
+    │   ├── detector_settings.backup.csv
+    │   ├── detector_settings.csv
+    │   ├── experiment_classifier_response_to_exposure_correction.ipynb
+    │   ├── experiment_classifier_response_to_exposure_correction_no_writeout.ipynb
+    │   ├── experiment_classifier_response_to_exposure_correction_with_writeout.ipynb
+    │   ├── explore_normalization_effect_on_classifier.ipynb
+    │   ├── explore_normalization_effect_on_classifier_with_retrain.ipynb
+    │   ├── explore_normalization_effect_on_classifier_with_retrain_v2.ipynb
+    │   ├── explore_normalization_effect_on_classifier_with_retrain_v2_convenience.ipynb
+    │   ├── export_train_and_test_patches.ipynb
+    │   ├── extract_test_features_cnn_corrected.ipynb
+    │   ├── finetune_cnn_v3.ipynb
+    │   ├── finetune_dnn.ipynb
+    │   ├── from_image_to_score_volumes.py
+    │   ├── from_image_to_scoremap.ipynb
+    │   ├── from_images_to_score_volume.ipynb
+    │   ├── gabor.ipynb
+    │   ├── generate_dataset.ipynb
+    │   ├── identify_patch_class_based_on_labeling.ipynb
+    │   ├── identify_patch_class_based_on_labeling_v2.ipynb
+    │   ├── inception-bn-blue
+    │   ├── inception-bn-blue.pdf
+    │   ├── interpolate_scoremaps_v3.ipynb
+    │   ├── interpolate_scoremaps_v3.py
+    │   ├── make_cnn_models.ipynb
+    │   ├── resample_scoremaps_v3.py
+    │   ├── resample_scoremaps_v4.py
+    │   ├── resample_scoremaps_v5.py
+    │   ├── sync_features_to_gordon.ipynb
+    │   ├── synset.txt
+    │   ├── tensorflow_example.ipynb
+    │   ├── test_classifier_performance_v3.ipynb
+    │   ├── top-down.ipynb
+    │   ├── train_and_test_classifier_performance_v4.ipynb
+    │   ├── train_and_test_classifier_performance_v4_UCSD_brains.ipynb
+    │   ├── train_classifier_v3.5.ipynb
+    │   ├── train_classifier_v3.ipynb
+    │   ├── train_classifier_v4.ipynb
+    │   ├── vgg16-blue
+    │   ├── vgg16-blue.pdf
+    │   ├── view_classification_metrics.ipynb
+    │   ├── visualize_scoremaps_v3.ipynb
+    │   ├── visualize_scoremaps_v3.py
+    │   ├── visualize_scoremaps_v4.py
+    │   └── visualize_scoremaps_v5.py
+    ├── preprocess
+    │   ├── README.md
+    │   ├── align_consecutive.py
+    │   ├── align_consecutive_v2.py
+    │   ├── brightness_correction.ipynb
+    │   ├── check_preprocess_info.ipynb
+    │   ├── compare_intensity_registration_vs_score_registration.ipynb
+    │   ├── compose_transform_thumbnail.py
+    │   ├── compose_transform_thumbnail_v2.py
+    │   ├── compress_and_rescale.py
+    │   ├── compress_as_jpeg.py
+    │   ├── contrast_stretch_fluorescent_image.py
+    │   ├── contrast_stretch_fluorescent_images.ipynb
+    │   ├── convert_grayscale_neurotrace.py
+    │   ├── convert_grayscale_neurotrace_v2.py
+    │   ├── create_movie_for_stack.ipynb
+    │   ├── czi_to_tiff.ipynb
+    │   ├── czifile.py
+    │   ├── czifile.pyx
+    │   ├── detect_labeled_neurons.ipynb
+    │   ├── detect_lossless_mask.ipynb
+    │   ├── expand_jp2.py
+    │   ├── explore_fluorescent_image_characteristics.ipynb
+    │   ├── fix_data_problem.ipynb
+    │   ├── generate_mask_v2.ipynb
+    │   ├── generate_masks_v2_distributed.ipynb
+    │   ├── generate_neurotrace_intensity_normalization_figures.ipynb
+    │   ├── generate_other_versions_v2.py
+    │   ├── generate_scoremap_viz_grid.ipynb
+    │   ├── generate_thumbnail_mask_contour_viz.py
+    │   ├── generate_thumbnail_mask_contour_viz_distributed.py
+    │   ├── generate_thumbnail_masks_distributed.py
+    │   ├── generate_thumbnail_masks_v4.py
+    │   ├── generate_thumbnail_masks_v5.py
+    │   ├── inspect_areas_around_landmarks.ipynb
+    │   ├── intensity_correction.py
+    │   ├── learn_to_identify_wrong_masks.ipynb
+    │   ├── match_intensity_profile.py
+    │   ├── match_intensity_profile_v2.py
+    │   ├── match_ucsd_to_cshl_histograms.ipynb
+    │   ├── morphsnakes.py
+    │   ├── neurotrace_blue_to_nissl.py
+    │   ├── number_filelist_consecutively.ipynb
+    │   ├── number_filelist_consecutively.py
+    │   ├── parameters
+    │   │   ├── Parameters_Affine.txt
+    │   │   ├── Parameters_Affine_3d.txt
+    │   │   ├── Parameters_Affine_3d_mi.txt
+    │   │   ├── Parameters_BSpline.txt
+    │   │   ├── Parameters_BSpline_3d.txt
+    │   │   ├── Parameters_BSpline_3d_mi.txt
+    │   │   ├── Parameters_BSpline_3d_mi_wider_spacing.txt
+    │   │   ├── Parameters_Rigid.txt
+    │   │   ├── Parameters_Rigid_3d.txt
+    │   │   ├── Parameters_Rigid_3d_mi.txt
+    │   │   ├── Parameters_Rigid_MutualInfo.txt
+    │   │   ├── Parameters_Rigid_MutualInfo_4000Iters.txt
+    │   │   ├── Parameters_Rigid_MutualInfo_noNumberOfSpatialSamples.txt
+    │   │   ├── Parameters_Rigid_MutualInfo_noNumberOfSpatialSamples_4000Iters.txt
+    │   │   ├── Parameters_Rigid_RequiredRatioOfValidSamples.txt
+    │   │   ├── Parameters_Rigid_erodeMask.txt
+    │   │   ├── Parameters_Rigid_noNumberOfSpatialSamples.txt
+    │   │   ├── Parameters_Translation.txt
+    │   │   └── Parameters_Translation_3d.txt
+    │   ├── plot_fluorescent_intensity_mappings.ipynb
+    │   ├── plot_image_histograms.ipynb
+    │   ├── preprocess_bingxing_data.ipynb
+    │   ├── preprocess_cshl_data_v2.ipynb
+    │   ├── preprocess_cshl_data_v2_neurotrace.ipynb
+    │   ├── preprocess_settings.csv
+    │   ├── preprocess_ucsd_data.ipynb
+    │   ├── preprocess_ucsd_data_v2.ipynb
+    │   ├── rename.py
+    │   ├── rescale_image.py
+    │   ├── sftp-config.json
+    │   ├── stereotectic_coordinates.ipynb
+    │   ├── stereotectic_coordinates_lossless.ipynb
+    │   ├── stretch_contrast_image.py
+    │   ├── transfer_s3.ipynb
+    │   ├── unmix_many_tifs_autofile.m
+    │   ├── unmix_tif_GB_separate_input_channels.m
+    │   ├── warp_crop_IM_v2.py
+    │   └── warp_crop_IM_v3.py
+    ├── registration
+    │   ├── README.md
+    │   ├── align_annotated_brains_v5.ipynb
+    │   ├── align_annotated_brains_v6.ipynb
+    │   ├── align_subject_brain_to_annotated_volume_v2.ipynb
+    │   ├── align_subject_brain_to_atlas_v2.py
+    │   ├── align_subject_brain_to_atlas_v4.py
+    │   ├── align_subject_brain_to_subject_brain_v2.ipynb
+    │   ├── analyze_global_alignment_over_brains.ipynb
+    │   ├── analyze_human_correction.ipynb
+    │   ├── analyze_score_evolution.ipynb
+    │   ├── analyze_score_significance_synthetic_example.ipynb
+    │   ├── analyze_structurewise_alignment_over_brains_v3.ipynb
+    │   ├── compute_hessian.ipynb
+    │   ├── compute_individual_alignment_hessian.ipynb
+    │   ├── cubic_bspline_registration_synthetic_example.ipynb
+    │   ├── deformable_registration_cubic_bspline.ipynb
+    │   ├── erase_cerebellum.ipynb
+    │   ├── evaluate_registration_jaccard.ipynb
+    │   ├── evaluate_registration_metrics_v2_compute_deviation_vs_ChAT.ipynb
+    │   ├── evaluate_registration_metrics_v2_compute_deviation_vs_expert.ipynb
+    │   ├── example_fixed_brain_spec.json
+    │   ├── example_moving_brain_spec.json
+    │   ├── fit_atlas_structure_to_subject_v2.py
+    │   ├── fit_contour_to_scoreVolume_inSection.ipynb
+    │   ├── fit_contour_to_scoremap.py
+    │   ├── fit_contour_to_scoremap_graphcut.ipynb
+    │   ├── gaussian_smooth_volume.ipynb
+    │   ├── global_registration_v3.ipynb
+    │   ├── global_registration_v3.py
+    │   ├── global_registration_v4.ipynb
+    │   ├── global_registration_v4.py
+    │   ├── hessian_v2_global.ipynb
+    │   ├── hessian_v2_local.ipynb
+    │   ├── lie_group_experiment.ipynb
+    │   ├── local_registration_v3.ipynb
+    │   ├── local_registration_v3.py
+    │   ├── local_registration_v4.ipynb
+    │   ├── local_registration_v4.py
+    │   ├── measure_confidence_v3.ipynb
+    │   ├── measure_confidence_v3_global.py
+    │   ├── measure_confidence_v3_local.py
+    │   ├── measure_confidence_v4.ipynb
+    │   ├── multiprocess_experiment.ipynb
+    │   ├── multiprocess_utilities.py
+    │   ├── quarternion.py
+    │   ├── register_brains.py
+    │   ├── register_lauren_data.ipynb
+    │   ├── register_lauren_data_v2.ipynb
+    │   ├── register_stacy_data.ipynb
+    │   ├── registration_settings.backup.csv
+    │   ├── registration_settings.csv
+    │   ├── registration_v5.ipynb
+    │   ├── registration_v6.ipynb
+    │   ├── registration_v7_atlasV6.ipynb
+    │   ├── registration_v7_atlasV6_local_allstructures.ipynb
+    │   ├── registration_v7_atlasV6_local_allstructures_generate_figures.ipynb
+    │   ├── registration_v7_atlasV6_simpleGlobal.ipynb
+    │   ├── registration_v7_atlasV6_textureBasedGlobal.ipynb
+    │   ├── thin_plate_spline_registration_synthetic_example.ipynb
+    │   ├── transform_brains_v3.ipynb
+    │   ├── transform_brains_v3.py
+    │   ├── transform_brains_v3_global.py
+    │   ├── transform_brains_v3_local.py
+    │   ├── transform_brains_v3_reverse_global.py
+    │   ├── transform_brains_v4.ipynb
+    │   ├── transform_brains_v4.py
+    │   ├── update_atlas.ipynb
+    │   ├── visualize_registration.py
+    │   ├── visualize_registration_v3.ipynb
+    │   ├── visualize_registration_v3.py
+    │   ├── visualize_registration_v4.ipynb
+    │   ├── visualize_registration_v4.py
+    │   ├── visualize_registration_v5.ipynb
+    │   ├── visualize_registration_v5.py
+    │   └── warp_intensity_volumes.ipynb
+    └── utilities
+        ├── 100colors.txt
+        ├── __init__.py
+        ├── aligner.py
+        ├── aligner_v2.py
+        ├── aligner_v3.py
+        ├── annotation_utilities.py
+        ├── bipartite_matching.py
+        ├── clustering.py
+        ├── colormap.json
+        ├── conversion.ipynb
+        ├── conversion.py
+        ├── data_manager.py
+        ├── distributed_utilities.py
+        ├── high_contrast_colors.txt
+        ├── learning_utilities.py
+        ├── lie.py
+        ├── metadata.py
+        ├── neighbors.py
+        ├── preprocess_utilities.py
+        ├── qt_utilities.py
+        ├── randomcolor.py
+        ├── registration_utilities.py
+        ├── sequential_dispatcher.py
+        ├── shape_matching.py
+        ├── slic_texture.py
+        ├── utilities2015.py
+        ├── vis3d_utilities.py
+        └── visualization_utilities.py
 
 29 directories, 522 files
