@@ -460,7 +460,7 @@ if it is K it is kept where it is, if it is O it is moved to the old directory a
     ├── registration
     │   ├── README.md
     │   ├── align_annotated_brains_v5.ipynb
-    │   ├── align_annotated_brains_v6.ipynb
+    │   ├── align_annotated_brains_v6.ipynb                                                     K
     │   ├── align_subject_brain_to_annotated_volume_v2.ipynb
     │   ├── align_subject_brain_to_atlas_v2.py
     │   ├── align_subject_brain_to_atlas_v4.py
