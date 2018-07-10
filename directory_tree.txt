@@ -1,8 +1,20 @@
-.
-├── README.md
-├── directory_tree.txt
+This file contains the complete list of files in the repository.
+
+Each file should have a designation:
+K: Keep
+O: Move to old
+
+You can move a whole directory to old. "K"eep has to be specified for each file
+
+After K/O there can be a name of a directory the file should be moved to. Otherwise 
+if it is K it is kept where it is, if it is O it is moved to the old directory at the same level as the file.
+
+
+
+├── README.md                           K
+├── directory_tree.txt                  O
 ├── doc
-│   ├── Analysis.md
+│   ├── Analysis.md                     K
 │   ├── Brain_stack_directories.md
 │   ├── DeveloperGuide.md
 │   ├── GuideForLaurenStacy.md
@@ -47,8 +59,8 @@
 │   │   ├── README.md
 │   │   ├── atlas_from_aligned_annotated_volumes_v4.ipynb
 │   │   ├── atlas_from_aligned_annotated_volumes_v5.ipynb
-│   │   ├── build_atlas_from_aligned_annotated_brains_v6.ipynb
-│   │   ├── build_atlas_from_aligned_annotated_brains_v7_standard_orientation_notstartedyet.ipynb
+│   │   ├── build_atlas_from_aligned_annotated_brains_v6.ipynb                                      K
+│   │   ├── build_atlas_from_aligned_annotated_brains_v7_standard_orientation_notstartedyet.ipynb   K?
 │   │   ├── euclid.py
 │   │   ├── icp_matching.py
 │   │   ├── outerContour_poisson_reconstruct.mlx
@@ -200,8 +212,8 @@
 │   │   ├── compute_score_volume_gradients_v5.py
 │   │   ├── construct_contour_volume.ipynb
 │   │   ├── construct_contour_volume_v2.ipynb
-│   │   ├── construct_intensity_volume.py
-│   │   ├── construct_intensity_volume_v3.ipynb
+│   │   ├── construct_intensity_volume.py                                                       K
+│   │   ├── construct_intensity_volume_v3.ipynb                                                 K
 │   │   ├── construct_score_volume_v4.ipynb
 │   │   ├── construct_score_volume_v5.ipynb
 │   │   ├── construct_score_volume_v5.py
@@ -242,24 +254,24 @@
 └── src
     ├── anotation
     ├── gui
-    │   ├── DataFeeder.py
+    │   ├── DataFeeder.py                                                                       K
     │   ├── README(old).md
     │   ├── README.md
     │   ├── TODO.md
     │   ├── brain_labeling_gui_v27.py
-    │   ├── brain_labeling_gui_v28.py
+    │   ├── brain_labeling_gui_v28.py                                                           K
     │   ├── gui_utilities.py
     │   ├── mask_editing_tool.py
     │   ├── mask_editing_tool_v2.py
-    │   ├── mask_editing_tool_v3.py
-    │   ├── mask_editing_tool_v4.py
+    │   ├── mask_editing_tool_v3.py                                                             K?
+    │   ├── mask_editing_tool_v4.py                                                             K?
     │   ├── mask_editing_utilities.py
     │   ├── newStructureNames.txt
     │   ├── preprocess_tool_v2.py
-    │   ├── preprocess_tool_v3.py
+    │   ├── preprocess_tool_v3.py                                                               K
     │   ├── rectification_tool.py
     │   ├── structure_names.txt
-    │   ├── structure_tree.json
+    │   ├── structure_tree.json                                                                 K
     │   ├── structure_tree.txt
     │   ├── structure_tree_txt_to_json.ipynb
     │   ├── ui
@@ -311,14 +323,14 @@
     │   ├── apply_classifiers_v3.ipynb
     │   ├── apply_classifiers_v3.py
     │   ├── apply_classifiers_v4.py
-    │   ├── apply_classifiers_v5.py
+    │   ├── apply_classifiers_v5.py                                                             K
     │   ├── check_total_response.ipynb
-    │   ├── classifier_settings.csv
-    │   ├── compute_features.py
-    │   ├── compute_features_for_entire_stacks.ipynb
-    │   ├── dataset_settings.csv
+    │   ├── classifier_settings.csv                                                             K
+    │   ├── compute_features.py                                                                 K
+    │   ├── compute_features_for_entire_stacks.ipynb                                            K
+    │   ├── dataset_settings.csv                                                                K
     │   ├── detector_settings.backup.csv
-    │   ├── detector_settings.csv
+    │   ├── detector_settings.csv                                                               K
     │   ├── experiment_classifier_response_to_exposure_correction.ipynb
     │   ├── experiment_classifier_response_to_exposure_correction_no_writeout.ipynb
     │   ├── experiment_classifier_response_to_exposure_correction_with_writeout.ipynb
@@ -330,13 +342,13 @@
     │   ├── extract_test_features_cnn_corrected.ipynb
     │   ├── finetune_cnn_v3.ipynb
     │   ├── finetune_dnn.ipynb
-    │   ├── from_image_to_score_volumes.py
+    │   ├── from_image_to_score_volumes.py                                                      K
     │   ├── from_image_to_scoremap.ipynb
     │   ├── from_images_to_score_volume.ipynb
     │   ├── gabor.ipynb
     │   ├── generate_dataset.ipynb
     │   ├── identify_patch_class_based_on_labeling.ipynb
-    │   ├── identify_patch_class_based_on_labeling_v2.ipynb
+    │   ├── identify_patch_class_based_on_labeling_v2.ipynb                                     K
     │   ├── inception-bn-blue
     │   ├── inception-bn-blue.pdf
     │   ├── interpolate_scoremaps_v3.ipynb
@@ -351,7 +363,7 @@
     │   ├── test_classifier_performance_v3.ipynb
     │   ├── top-down.ipynb
     │   ├── train_and_test_classifier_performance_v4.ipynb
-    │   ├── train_and_test_classifier_performance_v4_UCSD_brains.ipynb
+    │   ├── train_and_test_classifier_performance_v4_UCSD_brains.ipynb                          K
     │   ├── train_classifier_v3.5.ipynb
     │   ├── train_classifier_v3.ipynb
     │   ├── train_classifier_v4.ipynb
@@ -406,7 +418,7 @@
     │   ├── neurotrace_blue_to_nissl.py
     │   ├── number_filelist_consecutively.ipynb
     │   ├── number_filelist_consecutively.py
-    │   ├── parameters
+    │   ├── parameters                                                  
     │   │   ├── Parameters_Affine.txt
     │   │   ├── Parameters_Affine_3d.txt
     │   │   ├── Parameters_Affine_3d_mi.txt
@@ -414,10 +426,10 @@
     │   │   ├── Parameters_BSpline_3d.txt
     │   │   ├── Parameters_BSpline_3d_mi.txt
     │   │   ├── Parameters_BSpline_3d_mi_wider_spacing.txt
-    │   │   ├── Parameters_Rigid.txt
+    │   │   ├── Parameters_Rigid.txt                            
     │   │   ├── Parameters_Rigid_3d.txt
     │   │   ├── Parameters_Rigid_3d_mi.txt
-    │   │   ├── Parameters_Rigid_MutualInfo.txt
+    │   │   ├── Parameters_Rigid_MutualInfo.txt                                                 K
     │   │   ├── Parameters_Rigid_MutualInfo_4000Iters.txt
     │   │   ├── Parameters_Rigid_MutualInfo_noNumberOfSpatialSamples.txt
     │   │   ├── Parameters_Rigid_MutualInfo_noNumberOfSpatialSamples_4000Iters.txt
@@ -429,11 +441,11 @@
     │   ├── plot_fluorescent_intensity_mappings.ipynb
     │   ├── plot_image_histograms.ipynb
     │   ├── preprocess_bingxing_data.ipynb
-    │   ├── preprocess_cshl_data_v2.ipynb
-    │   ├── preprocess_cshl_data_v2_neurotrace.ipynb
+    │   ├── preprocess_cshl_data_v2.ipynb                                                       K
+    │   ├── preprocess_cshl_data_v2_neurotrace.ipynb                                            K
     │   ├── preprocess_settings.csv
     │   ├── preprocess_ucsd_data.ipynb
-    │   ├── preprocess_ucsd_data_v2.ipynb
+    │   ├── preprocess_ucsd_data_v2.ipynb                                                       K
     │   ├── rename.py
     │   ├── rescale_image.py
     │   ├── sftp-config.json
@@ -444,11 +456,11 @@
     │   ├── unmix_many_tifs_autofile.m
     │   ├── unmix_tif_GB_separate_input_channels.m
     │   ├── warp_crop_IM_v2.py
-    │   └── warp_crop_IM_v3.py
+    │   └── warp_crop_IM_v3.py                                                                  K
     ├── registration
     │   ├── README.md
     │   ├── align_annotated_brains_v5.ipynb
-    │   ├── align_annotated_brains_v6.ipynb
+    │   ├── align_annotated_brains_v6.ipynb                                                     K
     │   ├── align_subject_brain_to_annotated_volume_v2.ipynb
     │   ├── align_subject_brain_to_atlas_v2.py
     │   ├── align_subject_brain_to_atlas_v4.py
@@ -491,7 +503,7 @@
     │   ├── multiprocess_experiment.ipynb
     │   ├── multiprocess_utilities.py
     │   ├── quarternion.py
-    │   ├── register_brains.py
+    │   ├── register_brains.py                                                                  K
     │   ├── register_lauren_data.ipynb
     │   ├── register_lauren_data_v2.ipynb
     │   ├── register_stacy_data.ipynb
@@ -500,8 +512,8 @@
     │   ├── registration_v5.ipynb
     │   ├── registration_v6.ipynb
     │   ├── registration_v7_atlasV6.ipynb
-    │   ├── registration_v7_atlasV6_local_allstructures.ipynb
-    │   ├── registration_v7_atlasV6_local_allstructures_generate_figures.ipynb
+    │   ├── registration_v7_atlasV6_local_allstructures.ipynb                                   K
+    │   ├── registration_v7_atlasV6_local_allstructures_generate_figures.ipynb                  K?
     │   ├── registration_v7_atlasV6_simpleGlobal.ipynb
     │   ├── registration_v7_atlasV6_textureBasedGlobal.ipynb
     │   ├── thin_plate_spline_registration_synthetic_example.ipynb
@@ -511,15 +523,15 @@
     │   ├── transform_brains_v3_local.py
     │   ├── transform_brains_v3_reverse_global.py
     │   ├── transform_brains_v4.ipynb
-    │   ├── transform_brains_v4.py
+    │   ├── transform_brains_v4.py                                                              K
     │   ├── update_atlas.ipynb
     │   ├── visualize_registration.py
     │   ├── visualize_registration_v3.ipynb
     │   ├── visualize_registration_v3.py
     │   ├── visualize_registration_v4.ipynb
     │   ├── visualize_registration_v4.py
-    │   ├── visualize_registration_v5.ipynb
-    │   ├── visualize_registration_v5.py
+    │   ├── visualize_registration_v5.ipynb                                                     K?
+    │   ├── visualize_registration_v5.py                                                        K
     │   └── warp_intensity_volumes.ipynb
     └── utilities
         ├── 100colors.txt
@@ -533,12 +545,12 @@
         ├── colormap.json
         ├── conversion.ipynb
         ├── conversion.py
-        ├── data_manager.py
+        ├── data_manager.py                                         K
         ├── distributed_utilities.py
         ├── high_contrast_colors.txt
-        ├── learning_utilities.py
+        ├── learning_utilities.py                                   K
         ├── lie.py
-        ├── metadata.py
+        ├── metadata.py                                             K
         ├── neighbors.py
         ├── preprocess_utilities.py
         ├── qt_utilities.py
@@ -547,7 +559,7 @@
         ├── sequential_dispatcher.py
         ├── shape_matching.py
         ├── slic_texture.py
-        ├── utilities2015.py
+        ├── utilities2015.py                                        K
         ├── vis3d_utilities.py
         └── visualization_utilities.py
 
