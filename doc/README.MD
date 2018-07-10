@@ -22,9 +22,9 @@
 
 ## File Organization
 - **[Incomplete]** [Dependancies](dependancies.md)
-  - Naming conventions in S3 storage [INC]
+  - List of all packages that need to be installed 
 - **[Incomplete]** [S3 File Organization](writeup/S3_file_organization.md)
-  - Naming conventions in S3 storage [INC]
+  - Naming conventions in S3 storage
 - **[Historical]** [Stack Directories](Brain_stack_directories.md)
   - Description of every stack, all relevant information
 
