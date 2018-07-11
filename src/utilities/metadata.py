@@ -169,20 +169,18 @@ elif hostname == 'yuncong-Precision-WorkStation-T7500' and username == 'alexn':
     if 'DATA_ROOTDIR' in os.environ:
         DATA_ROOTDIR = os.environ['DATA_ROOTDIR']
     else:
-        DATA_ROOTDIR = '/media/alexn/BstemAtlasDataBackup'
-        #DATA_ROOTDIR = '/media/alexn/data'
+        DATA_ROOTDIR = '/home/alexn/data'
 
-    if 'THUMBNAIL_DATA_ROOTDIR' in os.environ: # NOT True for AlexN , else is performed
+    if 'THUMBNAIL_DATA_ROOTDIR' in os.environ:
         THUMBNAIL_DATA_ROOTDIR = os.environ['THUMBNAIL_DATA_ROOTDIR']
-    else: 
-        THUMBNAIL_DATA_ROOTDIR = '/media/alexn/BstemAtlasDataBackup' # This executes
-        #THUMBNAIL_DATA_ROOTDIR = '/home/alexn/data'
+    else:
+        THUMBNAIL_DATA_ROOTDIR = '/home/alexn/data'
 
     RAW_DATA_DIR = os.path.join(DATA_ROOTDIR, 'CSHL_data')
 
     ON_AWS = False
-    S3_DATA_BUCKET = 'mousebrainatlas-data-alexn'
-    S3_RAWDATA_BUCKET = 'mousebrainatlas-rawdata-alexn'
+    # S3_DATA_BUCKET = 'mousebrainatlas-data'
+    # S3_RAWDATA_BUCKET = 'mousebrainatlas-rawdata'
 
     REPO_DIR = os.environ['REPO_DIR']
 
@@ -322,9 +320,9 @@ def convert_resolution_string_to_voxel_size(resolution, stack=None):
     elif resolution == 'lossless' or resolution == 'down1' or resolution == 'raw':
         assert stack is not None
         return planar_resolution[stack]
-    elif resolution == 'down8':
+    elif resolution.startswith('down'):
         assert stack is not None
-        return planar_resolution[stack] * 8.
+        return planar_resolution[stack] * int(resolution[4:])
     elif resolution == 'um':
         return 1.
     elif resolution.endswith('um'):
@@ -339,7 +337,6 @@ def parse_label(label, singular_as_s=False):
     """
     Args:
         singular_as_s (bool): If true, singular structures have side = 'S', otherwise side = None.
-
     Returns:
         (structure name, side, surround margin, surround structure name)
     """
@@ -536,7 +533,8 @@ all_dk_ntb_stacks = ['CHATM2', 'CHATM3']
 all_alt_nissl_ntb_stacks = ['MD653', 'MD652', 'MD642']
 all_alt_nissl_tracing_stacks = ['MD657', 'MD658', 'MD661', 'MD662']
 # all_stacks = all_nissl_stacks + all_ntb_stacks
-all_stacks = all_nissl_stacks + all_ntb_stacks + all_alt_nissl_ntb_stacks + all_alt_nissl_tracing_stacks + all_dk_ntb_stacks
+all_stacks = all_nissl_stacks + all_ntb_stacks + all_alt_nissl_ntb_stacks + all_alt_nissl_tracing_stacks + all_dk_ntb_stacks \
+                + ['DEMO999'] 
 all_annotated_nissl_stacks = ['MD585', 'MD589', 'MD594']
 all_annotated_ntb_stacks = ['MD635']
 all_annotated_stacks = all_annotated_nissl_stacks + all_annotated_ntb_stacks
@@ -565,6 +563,7 @@ planar_resolution = {'MD585': XY_PIXEL_DISTANCE_LOSSLESS,
                      # 'DmaleAxioscan': XY_PIXEL_DISTANCE_LOSSLESS_AXIOSCAN,
                      'CHATM2': XY_PIXEL_DISTANCE_LOSSLESS_AXIOSCAN,
                      'CHATM3': XY_PIXEL_DISTANCE_LOSSLESS_AXIOSCAN,
+                     'DEMO999': XY_PIXEL_DISTANCE_LOSSLESS,
                     }
 
 ########################################
