@@ -1375,14 +1375,14 @@ def show_progress_bar(min, max):
     display(bar)
     return bar
 
-from enum import Enum
+# from enum import Enum
 
-class PolygonType(Enum):
-    CLOSED = 'closed'
-    OPEN = 'open'
-    TEXTURE = 'textured'
-    TEXTURE_WITH_CONTOUR = 'texture with contour'
-    DIRECTION = 'directionality'
+# class PolygonType(Enum):
+#     CLOSED = 'closed'
+#     OPEN = 'open'
+#     TEXTURE = 'textured'
+#     TEXTURE_WITH_CONTOUR = 'texture with contour'
+#     DIRECTION = 'directionality'
 
 def create_parent_dir_if_not_exists(fp):
     create_if_not_exists(os.path.dirname(fp))
