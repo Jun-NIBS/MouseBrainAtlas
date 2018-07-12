@@ -54,7 +54,7 @@ To visualize the multi-probability level structures of the aligned atlas overlai
 - `$ ./visualize_registration_demo_3_structures.py`
 
 An [example output image](example_atlas_overlay.jpg) is included in this repo.
-The background image is the intensity-normalized Neurotrace.
+The background image is the intensity-normalized Neurotrace Blue-stained section.
 White contours are the atlas after simple global registration.
 Colored contours are the atlas after local registration. Different colors correspond to different probability levels. The  levels from outside in are 0.99, 0.75, 0.5, 0.25, 0.01.
 
