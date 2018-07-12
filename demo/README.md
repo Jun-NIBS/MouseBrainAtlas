@@ -18,7 +18,7 @@ cd ../demo
 ./download_demo_data.py
 ```
 
-The input data are downloaded under `demo/demo_data`.
+The input data are downloaded under `demo/demo_data/`.
 
 ## Register 12N individually
 - `$ ./register_brains_demo_12N.py`
@@ -26,7 +26,7 @@ The input data are downloaded under `demo/demo_data`.
 ## Register 3N_R and 4N_R as a group
 - `$ ./register_brains_demo_3N_R_4N_R.py`
 
-The outputs are also generated in _demo_data_ folder under the following paths. You can download the expected output from our S3 bucket using URLs formed by prepending https://s3-us-west-1.amazonaws.com/mousebrainatlas-data/ to the paths.
+The outputs are also generated in `demo_data/` folder. The outputs include the transform parameters and transformed atlas structures.
 
 ------------------------
 
