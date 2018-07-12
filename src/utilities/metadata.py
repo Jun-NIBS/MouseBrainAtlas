@@ -296,8 +296,67 @@ elif hostname.startswith('ip'):
     CSHL_SPM_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_SPM')
 
 else:
-    print 'Setting environment for Brainstem workstation'
+    print 'Setting environment for Precision WorkStation for Alex Newberry'
+    HOST_ID = 'workstation'
 
+    if 'ROOT_DIR' in os.environ:
+        ROOT_DIR = os.environ['ROOT_DIR']
+    else:
+	raise Exception("Must set environment variable ROOT_DIR")
+
+    if 'DATA_ROOTDIR' in os.environ:
+        DATA_ROOTDIR = os.environ['DATA_ROOTDIR']
+    else:
+        raise Exception("Must set environment variable DATA_ROOTDIR")
+
+
+    if 'THUMBNAIL_DATA_ROOTDIR' in os.environ:
+        THUMBNAIL_DATA_ROOTDIR = os.environ['THUMBNAIL_DATA_ROOTDIR']
+    else:
+        raise Exception("Must set environment variable THUMBNAIL_DATA_ROOTDIR")
+
+
+    RAW_DATA_DIR = os.path.join(DATA_ROOTDIR, 'CSHL_data')
+
+    ON_AWS = False
+    S3_DATA_BUCKET = None
+    S3_RAWDATA_BUCKET = None
+
+    REPO_DIR = os.environ['REPO_DIR']
+
+    DATA_DIR = os.path.join(DATA_ROOTDIR, 'CSHL_data_processed')
+
+    THUMBNAIL_DATA_DIR = os.path.join(THUMBNAIL_DATA_ROOTDIR, 'CSHL_data_processed')
+    VOLUME_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_volumes')
+    MESH_ROOTDIR =  os.path.join(ROOT_DIR, 'CSHL_meshes')
+
+    # annotation_rootdir =  os.path.join(ROOT_DIR, 'CSHL_data_labelings_losslessAlignCropped')
+#     annotation_midbrainIncluded_v2_rootdir = '/home/yuncong/CSHL_labelings_v3/'
+    PATCH_FEATURES_ROOTDIR = os.path.join(DATA_ROOTDIR, 'CSHL_patch_features')
+    PATCH_LOCATIONS_ROOTDIR = os.path.join(DATA_ROOTDIR, 'CSHL_patch_locations')
+
+    SCOREMAP_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_scoremaps')
+    SCOREMAP_VIZ_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_scoremap_viz')
+    SPARSE_SCORES_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_patch_scores')
+
+    ANNOTATION_ROOTDIR =  os.path.join(ROOT_DIR, 'CSHL_labelings_v3')
+    ANNOTATION_THALAMUS_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_labelings_thalamus')
+    CLF_ROOTDIR =  os.path.join(DATA_ROOTDIR, 'CSHL_classifiers')
+
+    REGISTRATION_PARAMETERS_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_registration_parameters')
+    REGISTRATION_VIZ_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_registration_visualization')
+
+    KDU_EXPAND_BIN = '/home/yuncong/KDU7A2_Demo_Apps_for_Centos7-x86-64_170827/kdu_expand'
+
+    CLASSIFIER_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'classifier_settings.csv')
+    DATASET_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'dataset_settings.csv')
+    REGISTRATION_SETTINGS_CSV = os.path.join(REPO_DIR, 'registration', 'registration_settings.csv')
+    PREPROCESS_SETTINGS_CSV = os.path.join(REPO_DIR, 'preprocess', 'preprocess_settings.csv')
+    DETECTOR_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'detector_settings.csv')
+
+    MXNET_MODEL_ROOTDIR = os.path.join(ROOT_DIR, 'mxnet_models')
+
+    ELASTIX_BIN = 'elastix'
 
 #################### Resolution conversions ############
 

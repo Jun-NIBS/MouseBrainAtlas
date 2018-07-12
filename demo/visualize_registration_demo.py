@@ -275,7 +275,7 @@ for sec in sorted(auto_contours_all_sec_all_structures_all_levels.keys()):
                               version, stack + '_' + version + '_' + ('%03d' % sec) + '.jpg')    
             create_parent_dir_if_not_exists(fp)
             imsave(fp, viz[::16, ::16])
-            upload_to_s3(fp)
+ #           upload_to_s3(fp)
             
         except:
             pass
