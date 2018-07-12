@@ -11,7 +11,7 @@ It shows how one can:
 cd setup
 source set_env_variables.sh
 cd ../demo
-./download_demo_data.py`
+./download_demo_data.py
 ```
 
 The input data are downloaded under `demo/demo_data`.
