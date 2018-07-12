@@ -1,7 +1,7 @@
 This demo assumes a subject brain (DEMO999) is roughly globally aligned with the atlas (atlasV7).
 It shows how one can:
-- register 7N_L (facial motor nucleus) individually.
-- register 3N_R and 4N_R as a group.
+- register 12N (hypoglossal nucleus) individually.
+- register 3N_R (occulomotor, right) and 4N_R (trochlear, right) as a group.
 - visualize the aligned atlas overlaid on original images
 
 ---------------------------
