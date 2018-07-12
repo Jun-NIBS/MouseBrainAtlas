@@ -51,7 +51,7 @@ The outputs are also generated in _demo_data_ folder under the following paths. 
 ## Visualize registration results
 
 To visualize the multi-probability level structures of the aligned atlas overlaid on original images:
-- `$ ./visualize_registration_demo.py demo_visualization_per_structure_alignment_spec.json -g demo_visualization_global_alignment_spec.json`
+- `$ ./visualize_registration_demo_3_structures.py`
 
 The outputs are the following:
 
