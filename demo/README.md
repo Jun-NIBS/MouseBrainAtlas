@@ -53,9 +53,8 @@ The outputs are also generated in _demo_data_ folder under the following paths. 
 To visualize the multi-probability level structures of the aligned atlas overlaid on original images:
 - `$ ./visualize_registration_demo_3_structures.py`
 
-The outputs are the following:
+An [example output image](example_atlas_overlay.jpg) is included in this repo.
+White contours are the atlas after simple global registration.
+Colored contours are the atlas after local registration. Different colors correspond to different probability levels. The  levels from outside in are 0.99, 0.75, 0.5, 0.25, 0.01.
 
-**Atlas-overlaid images**
-- under `CSHL_registration_visualization/DEMO999_atlas_aligned_multilevel_down16_all_structures/NtbNormalizedAdaptiveInvertedGammaJpeg/`
-
-
+The complete set of overlay images are under `CSHL_registration_visualization/DEMO999_atlas_aligned_multilevel_down16_all_structures/NtbNormalizedAdaptiveInvertedGammaJpeg/`
