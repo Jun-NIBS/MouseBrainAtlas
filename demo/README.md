@@ -6,10 +6,15 @@ It shows how one can:
 
 ---------------------------
 
-## Download input data
+## Setup environment variables and download input data
+```
+cd setup
+source set_env_variables.sh
+cd ../demo
+./download_demo_data.py`
+```
 
-- Run `cd setup; source set_env_variables.sh`.
-- Then run `cd ../demo; ./download_demo_data.py` to download input data into a folder called `demo_data`.
+The input data are downloaded under `demo/demo_data`.
 
 ## Register 12N individually
 - `$ ./register_brains_demo.py demo_fixed_brain_spec_12N.json demo_moving_brain_spec_12N.json`
