@@ -97,7 +97,10 @@ def load_data(fp, polydata_instead_of_face_vertex_list=True, download_s3=True):
     from distributed_utilities import download_from_s3
 
     if download_s3:
-        download_from_s3(fp)
+        try:
+            download_from_s3(fp)
+        except:
+            sys.stderr.write("Downloading from S3 failed.\n")
 
     if fp.endswith('.bp'):
         data = bp.unpack_ndarray_file(fp)
