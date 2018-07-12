@@ -21,25 +21,24 @@ Feature extraction (transforming raw image to feature maps) is accelerated using
 * 15 sec using 8 GPUs
 
 ### Installation Instructions
+clone this repository
+```
+git clone https://github.com/ActiveBrainAtlas/MouseBrainAtlas.git
+```
+**Typical cloning time:**
+This repository is 3.3GB in size. Cloning takes about 3 minutes using an internet connection of 20MB/sec.
+
 After cloning this repository execute the following commands:
 ```
 cd setup
 pip install -r requirements.txt
 ```
+**Typical install time** on a typical desktop computer: 5 Minutes.
 
-Typical install time on a typical desktop computer: 5 Minutes.
+### Demo
 
-### Demos
+Please consult the README in the Demo Directory
 
-We provide a demo of the core functionality:
-
-Registration of a section to the map using a classification score map.
-
-#### Instructions for running Demo
-
-Given in the README in the directory Demo
-
-#### Expected Output
 
 Input and expected output will be downloaded from an open S3 bucket
 
