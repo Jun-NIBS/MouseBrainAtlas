@@ -19,10 +19,10 @@ cd ../demo
 The input data are downloaded under `demo/demo_data`.
 
 ## Register 12N individually
-- `$ ./register_brains_demo.py demo_fixed_brain_spec_12N.json demo_moving_brain_spec_12N.json`
+- `$ ./register_brains_demo_12N.py`
 
 ## Register 3N_R and 4N_R as a group
-- `$ ./register_brains_demo.py demo_fixed_brain_spec_3N_R_4N_R.json demo_moving_brain_spec_3N_R_4N_R.json`
+- `$ ./register_brains_demo_3N_R_4N_R.py`
 
 The program should finish in 2 minutes.
 
