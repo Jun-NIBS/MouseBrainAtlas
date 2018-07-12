@@ -2163,6 +2163,7 @@ kelly_colors = dict(vivid_yellow=(255, 179, 0),
 
 high_contrast_colors = boynton_colors.values() + kelly_colors.values()
 
+sys.path.append(os.path.join(os.environ['REPO_DIR'], 'utilities'))
 import randomcolor
 
 def random_colors(count):

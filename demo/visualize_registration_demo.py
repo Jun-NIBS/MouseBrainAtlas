@@ -17,6 +17,11 @@ from annotation_utilities import *
 from metadata import *
 from data_manager import *
 
+
+metadata_cache1 = generate_metadata_cache()
+print metadata_cache1['sections_to_filenames'].keys()
+print DataManager.load_anchor_filename('DEMO999')
+
 def get_structure_contours_from_structure_volumes_v3(volumes, stack, sections, 
                                                      resolution, level, sample_every=1,
                                                     use_unsided_name_as_key=False):
@@ -143,8 +148,10 @@ section_margin = int(section_margin_um / SECTION_THICKNESS)
 
 stack = 'DEMO999'
 # stack = brain_f_spec['name']
-valid_secmin = np.min(metadata_cache['valid_sections'][stack])
-valid_secmax = np.max(metadata_cache['valid_sections'][stack])
+# valid_secmin = np.min(metadata_cache['valid_sections'][stack])
+# valid_secmax = np.max(metadata_cache['valid_sections'][stack])
+valid_secmin = 1
+valid_secmax = 999
 
 auto_contours_all_sec_all_structures_all_levels = defaultdict(lambda: defaultdict(dict))
 simple_global_contours_all_sec_all_structures_all_levels = defaultdict(lambda: defaultdict(dict))

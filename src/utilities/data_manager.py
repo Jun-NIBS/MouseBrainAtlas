@@ -21,8 +21,10 @@ image_cache = {}
 def get_random_masked_regions(region_shape, stack, num_regions=1, sec=None, fn=None):
     """
     Return a random region that is on mask.
+
     Args:
         region_shape ((width, height)-tuple):
+
     Returns:
         list of (region_x, region_y, region_w, region_h)
     """
@@ -166,6 +168,7 @@ class CoordinatesConverter(object):
         """
         Generate three new coordinate frames, based on a given bounding box.
         Names of the new frames are <base_frame_name>_sagittal, <base_frame_name>_coronal and <base_frame_name>_horizontal.
+
         Args:
             base_frame_name (str):
         """
@@ -216,6 +219,7 @@ class CoordinatesConverter(object):
         """
         Convert among the three frames specified by the second method in this presentation
         https://docs.google.com/presentation/d/1o5aQbXY5wYC0BNNiEZm7qmjvngbD_dVoMyCw_tAQrkQ/edit#slide=id.g2d31ede24d_0_0
+
         Args:
             in_plane (str): one of sagittal, coronal and horizontal
             out_plane (str): one of sagittal, coronal and horizontal
@@ -365,6 +369,7 @@ class CoordinatesConverter(object):
         """
         Convert the coordinates expressed in "wholebrain" frame in microns to
         coordinates expressed in the given frame and resolution.
+
         Args:
             p_wrt_wholebrain_um (list of 3-tuples): list of points
             wrt (str): name of output frame
@@ -398,6 +403,7 @@ class CoordinatesConverter(object):
         """
         Convert the coordinates expressed in given frame and resolution to
         coordinates expressed in "wholebrain" frame in microns.
+
         Args:
             p (list of 3-tuples): list of points
             wrt (str): name of input frame
@@ -433,22 +439,29 @@ class CoordinatesConverter(object):
                                      stack=None):
         """
         Converts between coordinates that are expressed in different frames and different resolutions.
+
         Use this in combination with DataManager.get_domain_origin().
+
         `wrt` can be either 3-D frames or 2-D frames.
         Detailed definitions of various frames can be found at https://goo.gl/o2Yydw.
+
         There are two ways to specify 3-D frames.
+
         1. The "absolute" way:
         - wholebrain: formed by stacking all sections of prep1 (aligned + padded) images
         - wholebrainXYcropped: formed by stacking all sections of prep2 images
         - brainstemXYfull: formed by stacking sections of prep1 images that contain brainstem
         - brainstem: formed by stacking brainstem sections of prep2 images
         - brainstemXYFullNoMargin: formed by stacking brainstem sections of prep4 images
+
         2. The "relative" way:
         - x_sagittal: frame of lo-res sagittal scene = sagittal frame of the intensity volume, with origin at the most left/rostral/dorsal position.
         - x_coronal: frame of lo-res coronal scene = coronal frame of the intensity volume, with origin at the most left/rostral/dorsal position.
         - x_horizontal: frame of lo-res horizontal scene = horizontal frame of the intensity volume, with origin at the most left/rostral/dorsal position.
+
         Build-in 2-D frames include:
         - {0: 'original', 1: 'alignedPadded', 2: 'alignedCroppedBrainstem', 3: 'alignedCroppedThalamus', 4: 'alignedNoMargin', 5: 'alignedWithMargin', 6: 'originalCropped'}
+
         Resolution specifies the physical units of the coordinate axes.
         Build-in `resolution` for 3-D coordinates can be any of these strings:
         - raw
@@ -551,11 +564,13 @@ from skimage.transform import resize
 def images_to_volume_v2(images, spacing_um, in_resol_um, out_resol_um, crop_to_minimal=True):
     """
     Stack images in parallel at specified z positions to form volume.
+
     Args:
         images (dict of 2D images): key is section index. First section has index 1.
         spacing_um (float): spacing between adjacent sections or thickness of each section, in micron.
         in_resol_um (float): image planar resolution in micron.
         out_resol_um (float): isotropic output voxel size, in micron.
+
     Returns:
         (volume, volume origin relative to the image origin of section 1)
     """
@@ -854,6 +869,7 @@ class DataManager(object):
                                download_s3=True):
         """
         Return the annotation file path.
+
         Args:
             timestamp (str): can be "latest".
             return_timestamp (bool)
@@ -1057,7 +1073,7 @@ class DataManager(object):
     @staticmethod
     def load_anchor_filename(stack):
         fp = DataManager.get_anchor_filename_filename(stack)
-        download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
+        # download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
         anchor_fn = DataManager.load_data(fp, filetype='anchor')
         return anchor_fn
 
@@ -1074,6 +1090,7 @@ class DataManager(object):
     def get_section_limits_filename_v2(stack, anchor_fn=None, prep_id=2):
         """
         Return path to file that specified the cropping box of the given crop specifier.
+
         Args:
             prep_id (int or str): 2D frame specifier
         """
@@ -1091,6 +1108,7 @@ class DataManager(object):
     def get_cropbox_filename_v2(stack, anchor_fn=None, prep_id=2):
         """
         Return path to file that specified the cropping box of the given crop specifier.
+
         Args:
             prep_id (int or str): 2D frame specifier
         """
@@ -1108,6 +1126,7 @@ class DataManager(object):
     def get_cropbox_filename(stack, anchor_fn=None, prep_id=2):
         """
         Get the filename to brainstem crop box.
+
         """
 
         if anchor_fn is None:
@@ -1135,9 +1154,12 @@ class DataManager(object):
     def get_domain_origin(stack, domain, resolution, loaded_cropbox_resolution='down32'):
         """
         Loads the 3D origin of a domain for a given stack.
+
         If specimen, the origin is wrt to wholebrain.
         If atlas, the origin is wrt to atlas space.
+
         Use this in combination with convert_frame_and_resolution().
+
         Args:
             domain (str): domain name
             resolution (str): output resolution
@@ -1219,6 +1241,7 @@ class DataManager(object):
                        return_dict=False, only_2d=True):
         """
         Loads the cropping box for the given crop.
+
         Args:
             convert_section_to_z (bool): If true, return (xmin,xmax,ymin,ymax,zmin,zmax) where z=0 is section #1; if false, return (xmin,xmax,ymin,ymax,secmin,secmax)
             prep_id (int)
@@ -1232,7 +1255,7 @@ class DataManager(object):
         else:
             raise Exception("prep_id %s must be either str or int" % prep_id)
 
-        download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
+        # download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
 
         if fp.endswith('.txt'):
             xmin, xmax, ymin, ymax, secmin, secmax = load_data(fp).astype(np.int)
@@ -1307,13 +1330,14 @@ class DataManager(object):
     def load_cropbox(stack, anchor_fn=None, convert_section_to_z=False, prep_id=2, return_origin_instead_of_bbox=False):
         """
         Loads the crop box for brainstem.
+
         Args:
             convert_section_to_z (bool): If true, return (xmin,xmax,ymin,ymax,zmin,zmax) where z=0 is section #1; if false, return (xmin,xmax,ymin,ymax,secmin,secmax)
             prep_id (int)
         """
 
         fp = DataManager.get_cropbox_filename(stack=stack, anchor_fn=anchor_fn, prep_id=prep_id)
-        download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
+        # download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
 
         if convert_section_to_z:
             xmin, xmax, ymin, ymax, secmin, secmax = np.loadtxt(fp).astype(np.int)
@@ -1358,6 +1382,7 @@ class DataManager(object):
     def load_sorted_filenames(stack=None, fp=None, redownload=False):
         """
         Get the mapping between section index and image filename.
+
         Returns:
             Two dicts: filename_to_section, section_to_filename
         """
@@ -1365,7 +1390,7 @@ class DataManager(object):
         if fp is None:
             fp = DataManager.get_sorted_filenames_filename(stack)
 
-        download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR, redownload=redownload)
+        # download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR, redownload=redownload)
         filename_to_section, section_to_filename = DataManager.load_data(fp, filetype='file_section_map')
         if 'Placeholder' in filename_to_section:
             filename_to_section.pop('Placeholder')
@@ -1503,7 +1528,7 @@ class DataManager(object):
             resolution = 'down%d' % downsample_factor
 
         fp = DataManager.get_transforms_filename(stack, anchor_fn=anchor_fn)
-        download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
+        # download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
         Ts_down32 = DataManager.load_data(fp, filetype='pickle')
 
         if use_inverse:
@@ -1704,7 +1729,7 @@ class DataManager(object):
         """
         params_fp = DataManager.get_alignment_parameters_filepath(**locals())
         # download_from_s3(params_fp, redownload=True)
-        download_from_s3(params_fp, redownload=False)
+        # download_from_s3(params_fp, redownload=False)
         return DataManager.load_data(params_fp, 'transform_params')
 
     # @staticmethod
@@ -1753,7 +1778,9 @@ class DataManager(object):
         - `scoreHistory`: score trajectory
         - `scoreEvolution`: a plot of score trajectory, exported as PNG
         - `trajectory`: parameter trajectory
+
         Must provide `alignment_spec`
+
         Args:
             transform_parameters:
             score_traj ((Ti,) array): score trajectory
@@ -1846,7 +1873,7 @@ class DataManager(object):
     classifier_setting_m=None, classifier_setting_f=None,
     type_f='score', type_m='score', downscale=32, param_suffix=None):
         fp = DataManager.get_best_trial_index_filepath(**locals())
-        download_from_s3(fp)
+        # download_from_s3(fp)
         with open(fp, 'r') as f:
             best_trial_index = int(f.readline())
         return best_trial_index
@@ -1897,7 +1924,7 @@ class DataManager(object):
                             type_m='score', type_f='score',
                             trial_idx=None):
         fp = DataManager.get_confidence_filepath(**locals())
-        download_from_s3(fp)
+        # download_from_s3(fp)
         return load_pickle(fp)
 
     @staticmethod
@@ -1954,7 +1981,7 @@ class DataManager(object):
         clf_allClasses = {}
         for structure in structures:
             clf_fp = DataManager.get_classifier_filepath(structure=structure, classifier_id=classifier_id)
-            download_from_s3(clf_fp)
+            # download_from_s3(clf_fp)
             if os.path.exists(clf_fp):
                 clf_allClasses[structure] = joblib.load(clf_fp)
             else:
@@ -1983,7 +2010,7 @@ class DataManager(object):
             fn = metadata_cache['sections_to_filenames'][stack][sec]
 
         sparse_scores_fp = DataManager.get_sparse_scores_filepath(**locals())
-        download_from_s3(sparse_scores_fp)
+        # download_from_s3(sparse_scores_fp)
         return DataManager.load_data(sparse_scores_fp, filetype='bp')
 
     @staticmethod
@@ -2020,7 +2047,7 @@ class DataManager(object):
         v2 adds argument `prep_id`.
         """
         fn = DataManager.get_intensity_volume_filepath_v2(stack=stack, downscale=downscale, prep_id=prep_id)
-        download_from_s3(fn)
+        # download_from_s3(fn)
         return DataManager.load_data(fn, filetype='bp')
 
     @staticmethod
@@ -2031,7 +2058,7 @@ class DataManager(object):
         """
 
         fn = DataManager.get_intensity_volume_filepath_v2(stack=stack, prep_id=prep_id, downscale=downscale)
-        download_from_s3(fn)
+        # download_from_s3(fn)
         vol = DataManager.load_data(fn, filetype='bp')
 
         bbox_fp = DataManager.get_intensity_volume_bbox_filepath_v2(stack=stack, prep_id=prep_id, downscale=downscale)
@@ -2105,7 +2132,7 @@ class DataManager(object):
     @staticmethod
     def load_annotation_volume(stack, downscale):
         fp = DataManager.get_annotation_volume_filepath(**locals())
-        download_from_s3(fp)
+        # download_from_s3(fp)
         return DataManager.load_data(fp, filetype='bp')
 
     @staticmethod
@@ -2129,7 +2156,7 @@ class DataManager(object):
     @staticmethod
     def load_annotation_volume_label_to_name(stack):
         fn = DataManager.get_annotation_volume_label_to_name_filepath(stack)
-        download_from_s3(fn)
+        # download_from_s3(fn)
         label_to_name, name_to_label = DataManager.load_data(fn, filetype='label_name_map')
         return label_to_name, name_to_label
 
@@ -2356,6 +2383,7 @@ class DataManager(object):
     def get_instance_mesh_filepath(atlas_name, structure, index, resolution=None, **kwargs):
         """
         Filepath of the instance mesh to derive mean shapes in atlas.
+
         Args:
             index (int): the index of the instance. The template instance is at index 0.
         """
@@ -2420,6 +2448,7 @@ class DataManager(object):
     def save_transformed_volume(volume, bbox, alignment_spec, resolution=None, structure=None):
         """
         Save volume array as bp file and bounding box as txt file.
+
         Args:
             resolution (str):
             bbox ((3,)-array): wrt fixedWholebrain
@@ -2453,8 +2482,10 @@ class DataManager(object):
             alignment_spec (dict): specify stack_m, stack_f, warp_setting.
             resolution (str): resolution of the output volume.
             legacy (bool): if legacy, resolution can only be down32.
+
         Returns:
             (2-tuple): (volume, bounding box wrt "wholebrain" domain of the fixed stack)
+
         """
         kwargs = locals()
 
@@ -2530,7 +2561,7 @@ class DataManager(object):
                                 downscale=32,
                                 trial_idx=None):
         fp = DataManager.get_transformed_volume_filepath(**locals())
-        download_from_s3(fp)
+        # download_from_s3(fp)
         return DataManager.load_data(fp, filetype='bp')
 
 
@@ -2550,15 +2581,18 @@ class DataManager(object):
 ):
         """
         Load transformed volumes for all structures and normalize them into a common shape.
+
         Args:
             alignment_spec (dict):
             trial_idx: could be int (for global transform) or dict {sided structure name: best trial index} (for local transform).
             common_shape (bool): If true, volumes are normalized to the same shape.
+
         Returns:
             If `common_shape` is True:
                 if return_label_mappings is True, returns (volumes, common_bbox, structure_to_label, label_to_structure), volumes is dict.
                 else, returns (volumes, common_bbox).
                 By default, `common_bbox` is wrt fixed stack's wholebrain domain.
+
             If `common_shape` is False:
                 if return_label_mappings is True, returns (dict of volume_bbox_tuples, structure_to_label, label_to_structure).
                 else, returns volume_bbox_tuples.
@@ -3039,11 +3073,11 @@ class DataManager(object):
         for structure in structures:
             try:
                 vol_fp = DataManager.get_prob_shape_volume_filepath(structure=structure, **kwargs)
-                download_from_s3(vol_fp)
+                # download_from_s3(vol_fp)
                 vol = bp.unpack_ndarray_file(vol_fp)
 
                 origin_fp = DataManager.get_prob_shape_origin_filepath(structure=structure, **kwargs)
-                download_from_s3(origin_fp)
+                # download_from_s3(origin_fp)
                 origin = np.loadtxt(origin_fp)
 
                 prob_shapes[structure] = (vol, origin)
@@ -3582,10 +3616,12 @@ class DataManager(object):
                                                      return_origin_instead_of_bbox=True):
         """
         Load original (un-transformed) volumes for all structures and optionally pad them into a common shape.
+
         Args:
             common_shape (bool): If true, volumes are padded to the same shape.
             in_bbox_wrt (str): the bbox origin for the bbox files currently stored.
             loaded_cropbox_resolution (str): resolution in which the loaded cropbox is defined on.
+
         Returns:
             If `common_shape` is True:
                 if return_label_mappings is True, returns (volumes, common_bbox, structure_to_label, label_to_structure), volumes is dict.
@@ -3752,12 +3788,13 @@ class DataManager(object):
                                 crop_to_minimal=False):
         """
         Args:
+
         Returns:
             (3d-array, (6,)-tuple): (volume, bounding box wrt wholebrain)
         """
 
         vol_fp = DataManager.get_original_volume_filepath_v2(stack_spec=stack_spec, structure=structure, resolution=resolution)
-        download_from_s3(vol_fp, is_dir=False)
+        # download_from_s3(vol_fp, is_dir=False)
         volume = DataManager.load_data(vol_fp, filetype='bp')
 
         # bbox_fp = DataManager.get_original_volume_bbox_filepath_v2(stack_spec=stack_spec, structure=structure,
@@ -3816,15 +3853,17 @@ class DataManager(object):
         """
         This returns the 3D bounding box of the volume.
         (?) Bounding box coordinates are with respect to coordinates origin of the contours. (?)
+
         Args:
             volume_type (str): score or annotationAsScore.
             relative_to_uncropped (bool): if True, the returned bounding box is with respect to "wholebrain"; if False, wrt "wholebrainXYcropped". Default is False.
+
         Returns:
             (6-tuple): bounding box of the volume (xmin, xmax, ymin, ymax, zmin, zmax).
         """
 
         bbox_fp = DataManager.get_original_volume_bbox_filepath(**locals())
-        download_from_s3(bbox_fp)
+        # download_from_s3(bbox_fp)
         volume_bbox_wrt_wholebrainXYcropped = DataManager.load_data(bbox_fp, filetype='bbox')
         # for volume type "score" or "thumbnail", bbox of the loaded volume wrt "wholebrainXYcropped".
         # for volume type "annotationAsScore", bbox on file is wrt wholebrain.
@@ -4001,7 +4040,7 @@ class DataManager(object):
             out_resolution (str): e.g. 10.0um or down32
         """
         viz_fp = DataManager.get_scoremap_viz_filepath_v2(**locals())
-        download_from_s3(viz_fp)
+        # download_from_s3(viz_fp)
         viz = imread(viz_fp)
         return viz
 
@@ -4045,7 +4084,7 @@ class DataManager(object):
         """
 
         scoremap_bp_filepath = DataManager.get_downscaled_scoremap_filepath(**locals())
-        download_from_s3(scoremap_bp_filepath)
+        # download_from_s3(scoremap_bp_filepath)
 
         if not os.path.exists(scoremap_bp_filepath):
             raise Exception('No scoremap for image %s (section %d) for label %s\n' % \
@@ -4284,15 +4323,17 @@ class DataManager(object):
         """
         Args:
             win (int): the spacing/size scheme
+
         Returns:
             (features, patch center locations wrt prep=2 images)
+
         Note: `mean_img` is assumed to be the default provided by mxnet.
         """
 
         features_fp = DataManager.get_dnn_features_filepath_v2(stack=stack, sec=sec, fn=fn, prep_id=prep_id, win_id=win_id,
                               normalization_scheme=normalization_scheme,
                                              model_name=model_name, what='features')
-        download_from_s3(features_fp, local_root=DATA_ROOTDIR)
+        # download_from_s3(features_fp, local_root=DATA_ROOTDIR)
         if not os.path.exists(features_fp):
             raise Exception("Features for %s, %s/%s does not exist." % (stack, sec, fn))
 
@@ -4301,7 +4342,7 @@ class DataManager(object):
         locations_fp = DataManager.get_dnn_features_filepath_v2(stack=stack, sec=sec, fn=fn, prep_id=prep_id, win_id=win_id,
                               normalization_scheme=normalization_scheme,
                                              model_name=model_name, what='locations')
-        download_from_s3(locations_fp)
+        # download_from_s3(locations_fp)
         locations = np.loadtxt(locations_fp).astype(np.int)
 
         return features, locations
@@ -4456,6 +4497,7 @@ class DataManager(object):
         Args:
             version (str): version string
             data_dir: This by default is DATA_DIR, but one can change this ad-hoc when calling the function
+
         Returns:
             Absolute path of the image directory.
         """
@@ -4526,10 +4568,10 @@ class DataManager(object):
 
         if not os.path.exists(img_fp):
             sys.stderr.write('File not on local disk. Download from S3.\n')
-            if resol == 'lossless' or resol == 'raw' or resol == 'down8':
-                download_from_s3(img_fp, local_root=DATA_ROOTDIR)
-            else:
-                download_from_s3(img_fp, local_root=THUMBNAIL_DATA_ROOTDIR)
+            # if resol == 'lossless' or resol == 'raw' or resol == 'down8':
+            #     download_from_s3(img_fp, local_root=DATA_ROOTDIR)
+            # else:
+            #     download_from_s3(img_fp, local_root=THUMBNAIL_DATA_ROOTDIR)
 
         global use_image_cache
         if use_image_cache:
@@ -4653,16 +4695,17 @@ class DataManager(object):
     @staticmethod
     def load_image(stack, version, resol='lossless', section=None, fn=None, anchor_fn=None, modality=None, data_dir=DATA_DIR, ext=None):
         img_fp = DataManager.get_image_filepath(**locals())
-        download_from_s3(img_fp)
+        # download_from_s3(img_fp)
         return imread(img_fp)
 
     @staticmethod
     def get_image_filepath_v2(stack, prep_id, version=None, resol='raw',
                            data_dir=DATA_DIR, raw_data_dir=RAW_DATA_DIR, thumbnail_data_dir=THUMBNAIL_DATA_DIR,
-                           section=None, fn=None, ext=None):
+                           section=None, fn=None, ext=None, sorted_filenames_fp=None):
         """
         Args:
             version (str): the version string.
+
         Returns:
             Absolute path of the image file.
         """
@@ -4675,7 +4718,13 @@ class DataManager(object):
                 resol = 'lossless'
 
         if section is not None:
-            fn = metadata_cache['sections_to_filenames'][stack][section]
+            
+            if sorted_filenames_fp is not None:
+                _, sections_to_filenames = DataManager.load_sorted_filenames(fp=sorted_filenames_fp)                
+                fn = sections_to_filenames[section]
+            else:
+                fn = metadata_cache['sections_to_filenames'][stack][section]
+                
             if is_invalid(fn=fn):
                 raise Exception('Section is invalid: %s.' % fn)
         else:
@@ -4712,6 +4761,7 @@ class DataManager(object):
             resol: can be either lossless or thumbnail
             version: TODO - Write a list of options
             modality: can be either nissl or fluorescent. If not specified, it is inferred.
+
         Returns:
             Absolute path of the image file.
         """
@@ -4838,8 +4888,11 @@ class DataManager(object):
     def convert_section_to_z(sec, downsample=None, resolution=None, stack=None, mid=False, z_begin=None, first_sec=None):
         """
         Voxel size is determined by `resolution`.
+
         z = sec * section_thickness_in_unit_of_cubic_voxel_size - z_begin
+
         Physical size of a cubic voxel depends on the downsample factor.
+
         Args:
             downsample/resolution: this determines the voxel size.
             z_begin (float): z-coordinate of an origin. The z-coordinate of a given section is relative to this value.
@@ -4849,6 +4902,7 @@ class DataManager(object):
                 If `stack` is given, the default is the first section of the brainstem.
                 If `stack` is not given, default = 1.
             mid (bool): If false, return the z-coordinates of the two sides of the section. If true, only return a single scalar = the average.
+
         Returns:
             z1, z2 (2-tuple of float): the z-levels of the beginning and end of the queried section, counted from `z_begin`.
         """
@@ -4885,6 +4939,7 @@ class DataManager(object):
     def convert_z_to_section(z, downsample=None, resolution=None, z_first_sec=None, sec_z0=None, stack=None):
         """
         Convert z coordinate to section index.
+
         Args:
             resolution (str): planar resolution
             z_first_sec (int): z level of section index 1. Provide either this or `sec_z0`.
@@ -5037,7 +5092,7 @@ class DataManager(object):
 
         try:
             fp = DataManager.get_thumbnail_mask_filename_v3(stack=stack, section=section, fn=fn, prep_id=prep_id)
-            download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
+            # download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
             mask = imread(fp).astype(np.bool)
             return mask
         except:
@@ -5051,7 +5106,7 @@ class DataManager(object):
                 try:
                     sys.stderr.write('Try finding prep5 masks.\n')
                     fp = DataManager.get_thumbnail_mask_filename_v3(stack=stack, section=section, fn=fn, prep_id=5)
-                    download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
+                    # download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
                     mask_prep5 = imread(fp).astype(np.bool)
 
                     xmin,xmax,ymin,ymax = DataManager.load_cropbox_v2_relative(stack=stack, prep_id=prep_id, wrt_prep_id=5, out_resolution='down32')
@@ -5062,7 +5117,7 @@ class DataManager(object):
                     sys.stderr.write('Cannot load mask %s, section=%s, fn=%s, prep=%s\n' % (stack, section, fn, prep_id))
                     sys.stderr.write('Try finding prep1 masks.\n')
                     fp = DataManager.get_thumbnail_mask_filename_v3(stack=stack, section=section, fn=fn, prep_id=1)
-                    download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
+                    # download_from_s3(fp, local_root=THUMBNAIL_DATA_ROOTDIR)
                     mask_prep1 = imread(fp).astype(np.bool)
 
                     xmin,xmax,ymin,ymax = DataManager.load_cropbox_v2(stack=stack, prep_id=prep_id, return_dict=False, only_2d=True)
@@ -5166,11 +5221,12 @@ class DataManager(object):
     def load_dataset_patches(dataset_id, structure=None):
         """
         FIXME: file extension is hdf but the format is actually bp.
+
         Returns:
             (n,224,224)-array: patches
         """
         fp = DataManager.get_dataset_patches_filepath(dataset_id=dataset_id, structure=structure)
-        download_from_s3(fp, local_root=os.path.dirname(CLF_ROOTDIR))
+        # download_from_s3(fp, local_root=os.path.dirname(CLF_ROOTDIR))
         return bp.unpack_ndarray_file(fp)
 
     @staticmethod
@@ -5184,7 +5240,7 @@ class DataManager(object):
     @staticmethod
     def load_dataset_features(dataset_id, structure=None):
         fp = DataManager.get_dataset_features_filepath(dataset_id=dataset_id, structure=structure)
-        download_from_s3(fp, local_root=os.path.dirname(CLF_ROOTDIR))
+        # download_from_s3(fp, local_root=os.path.dirname(CLF_ROOTDIR))
         return bp.unpack_ndarray_file(fp)
 
     @staticmethod
@@ -5198,7 +5254,7 @@ class DataManager(object):
     @staticmethod
     def load_dataset_addresses(dataset_id, structure=None):
         fp = DataManager.get_dataset_addresses_filepath(dataset_id=dataset_id, structure=structure)
-        download_from_s3(fp, local_root=os.path.dirname(CLF_ROOTDIR))
+        # download_from_s3(fp, local_root=os.path.dirname(CLF_ROOTDIR))
         return load_pickle(fp)
 
     @staticmethod
@@ -5220,7 +5276,7 @@ class DataManager(object):
     @staticmethod
     def load_labeled_neurons_filepath(stack, sec=None, fn=None):
         fp = DataManager.get_labeled_neurons_filepath(**locals())
-        download_from_s3(fp)
+        # download_from_s3(fp)
         return load_pickle(fp)
 
     @staticmethod
@@ -5228,8 +5284,10 @@ class DataManager(object):
         """
         Load multiple datasets, returns both features and addresses.
         Assume the features are stored as patch_features_<name>.bp; addresses are stored as patch_addresses_<name>.bp.
+
         Args:
             labels_to_sample (list of str): e.g. VCA_surround_500_VCP. If this is not given, use all labels in the associated dataset directory.
+
         Returns:
             (merged_features, merged_addresses)
         """
@@ -5313,7 +5371,8 @@ def download_all_metadata():
         except:
             pass
 
-download_all_metadata()
+# Temporarily commented out
+# download_all_metadata()
 
 # This module stores any meta information that is dynamic.
 metadata_cache = {}
@@ -5376,6 +5435,8 @@ def generate_metadata_cache():
             metadata_cache['image_shape'][stack] = DataManager.get_image_dimension(stack)
         except:
             pass
+        
+    return metadata_cache
 
 
 generate_metadata_cache()
