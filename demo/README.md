@@ -1,3 +1,5 @@
+## Demo of MouseBrainAtlas registration
+
 The following has been tested on Linux Ubuntu 16.04 and might not work on other operating systems.
 
 This demo assumes a subject brain (DEMO999) is roughly globally aligned with the atlas (atlasV7).
@@ -41,3 +43,13 @@ White contours are the atlas after simple global registration.
 Colored contours are the atlas after local registration. Different colors correspond to different probability levels. The  levels from outside in are 0.99, 0.75, 0.5, 0.25, 0.01.
 
 The complete set of overlay images are under `CSHL_registration_visualization/DEMO999_atlas_aligned_multilevel_down16_all_structures/NtbNormalizedAdaptiveInvertedGammaJpeg/`
+
+
+Input and expected output will be downloaded from an open S3 bucket
+
+#### Expected demo run time 
+
+on a typical desktop computer
+
+* Global registration: 1 sec
+* Local registration: 1 hour
