@@ -1,3 +1,5 @@
+The following has been tested on Linux Ubuntu 16.04 and will not work on other operating systems.
+
 This demo assumes a subject brain (DEMO999) is roughly globally aligned with the atlas (atlasV7).
 It shows how one can:
 - register 12N (hypoglossal nucleus) individually.
