@@ -6,9 +6,11 @@ It shows how one can:
 
 ---------------------------
 
-## Setup environment variables and download input data
+## Install packages, setup environment variables and download input data
 ```
+sudo apt-get install wget
 cd setup
+sudo pip install -r requirements.txt
 source set_env_variables.sh
 cd ../demo
 ./download_demo_data.py
