@@ -8,7 +8,7 @@ It shows how one can:
 
 ## Install packages, setup environment variables and download input data
 ```
-sudo apt-get install wget
+sudo apt-get install wget python-pip
 cd setup
 sudo pip install -r requirements.txt
 source set_env_variables.sh
