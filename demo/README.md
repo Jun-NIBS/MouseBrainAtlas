@@ -30,9 +30,11 @@ The program should finish in 2 minutes.
 
 The outputs are also generated in _demo_data_ folder under the following paths. You can download the expected output from our S3 bucket using URLs formed by prepending https://s3-us-west-1.amazonaws.com/mousebrainatlas-data/ to the paths.
 
-### Parameter files
+## Output: Parameter files
 
-**Yoav: How is the naive user supposed to understand what is in the files below?
+**Yoav: How is the naive user supposed to understand what is in the files below?**  
+I think this section should either be remved or, if you want to keep it, you should create another markdown file that explains how to read the file
+
 **Best set of transform parameters**
 - `CSHL_registration_parameters/atlasV7/atlasV7_10.0um_scoreVolume_3N_R_4N_R_warp7_DEMO999_detector799_10.0um_scoreVolume_3N_R_4N_R/atlasV7_10.0um_scoreVolume_3N_R_4N_R_warp7_DEMO999_detector799_10.0um_scoreVolume_3N_R_4N_R_parameters.json`
 
