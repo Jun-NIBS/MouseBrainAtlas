@@ -83,7 +83,7 @@ aligner.set_label_weights(label_weights=aligner_parameters['label_weights_m'])
 ################################
 
 if use_simple_global:
-    T_atlas_wrt_canonicalAtlasSpace_subject_wrt_wholebrain_atlasResol = bp.unpack_ndarray_file('/home/yuncong/CSHL_simple_global_registration/' + brain_f_spec['name'] + '_T_atlas_wrt_canonicalAtlasSpace_subject_wrt_wholebrain_atlasResol.bp')
+    T_atlas_wrt_canonicalAtlasSpace_subject_wrt_wholebrain_atlasResol = bp.unpack_ndarray_file(os.path.join(ROOT_DIR, 'CSHL_simple_global_registration', brain_f_spec['name'] + '_T_atlas_wrt_canonicalAtlasSpace_subject_wrt_wholebrain_atlasResol.bp'))
     aligner.set_initial_transform(T_atlas_wrt_canonicalAtlasSpace_subject_wrt_wholebrain_atlasResol)
     aligner.set_centroid(centroid_m='structure_centroid', centroid_f='centroid_m')
 else:
