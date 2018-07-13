@@ -54,3 +54,10 @@ The complete set of overlay images are under `CSHL_registration_visualization/DE
 
 
 Input and expected output will be downloaded from an open S3 bucket
+
+
+### Contact Info
+
+If there are any techincal difficulties with running the demo code please contact one of the developers:
+* Alex Newberry: adnewber@ucsd.edu
+* Yuncong Chen: yuncong@ucsd.edu 
