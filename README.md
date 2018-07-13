@@ -48,9 +48,3 @@ on a typical desktop computer
 
 * Global registration: 1 sec
 * Local registration: 1 hour
-
-### Contact Info
-
-If there are any techincal difficulties with the code please contact one of the developers:
-* Alex Newberry: adnewber@ucsd.edu
-* Yuncong Chen: yuncong@ucsd.edu 
