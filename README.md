@@ -46,5 +46,4 @@ Input and expected output will be downloaded from an open S3 bucket
 
 on a typical desktop computer
 
-* Global registration: 1 sec
-* Local registration: 1 hour
+* Roughly half an hour start to finish
