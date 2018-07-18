@@ -36,7 +36,7 @@ Run **preprocess_cshl_data_v2_neurotrace.ipynb**, it will complete every step of
   - Next step is to Compose the pairwise transformations, requires anchor slide
     - Then for each section (=slide), multiply all the pairwise transforms between this section and the anchor section. This gives each section a X-to-anchor transform. The X-to-anchor transforms for all sections are stored in a pkl file.
       - Yuncong: "This is the basics, though partially innacurate"
-    - 
+    - REAL STEPS
 * Generate Thumbnail mask
   - Requires GUI, using this program, you draw rough outlines, which are then shrinked by an algorithm called "active contour" to tightly fit the tissue content. [SKIP FOR NOW]
 
