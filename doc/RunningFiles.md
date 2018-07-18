@@ -16,15 +16,15 @@ Run **preprocess_cshl_data_v2_neurotrace.ipynb**, it will complete every step of
   - set 'stack' equal to brain name, make sure raw files are on S3:///mousebrainatlas-rawdata/...
 * Download raw scanner files from S3 and Specify raw file locations
   - Specify where to download all raw files, for me was `~/MD###/`
-* Convert raw JPEG2000 to TIFF format [JP2 -> TIF]
+* Convert raw JPEG2000 to TIFF format **[JP2 -> TIF]**
   - CSHL uses NanoZoomer, gives CSHL format which apparently can onlly be converted to jp2
   - input:  `~/MD###/*.jp2`  (Location of ALL raw files, defined earlier)
   - output: `~/CSHL_data_processed/MD###/MD###_raw/*_raw.tif`
   - NOTE: may have discrepency with defined input/output directories
-* Extract Neurotrace channel [raw -> raw_Ntb]
+* Extract Neurotrace channel **[raw -> raw_Ntb]**
   - input:  `~/CSHL_data_processed/MD###/MD###_raw/*_raw.tif`
   - output: `~/CSHL_data_processed/MD###/MD###_raw_Ntb/*_raw_Ntb.tif`
-* Generate thumbnails and linearly contrast stretch [raw_Ntb -> thumbnail_Ntb -> thumbnail_NtbNormalized]
+* Generate thumbnails and linearly contrast stretch **[raw_Ntb -> thumbnail_Ntb -> thumbnail_NtbNormalized]**
   - Requires file `MD###_sorted_filenames.txt` in `~/CSHL_data_processed/MD###/` among others
     - List of necessary pre-preprocess files here [NEED TO ADD]
   - input:   ----`~/CSHL_data_processed/MD###/MD###_raw_Ntb/*_raw_Ntb.tif`
@@ -32,7 +32,7 @@ Run **preprocess_cshl_data_v2_neurotrace.ipynb**, it will complete every step of
   - output2: `~/CSHL_data_processed/MD###/MD###_thumbnail_NtbNormalized/*_thumbnail_NtbNormalized.tif`
 * Compute Transforms using thumbnail_NtbNormalized
   - Use Elastix to align, computing transforms between adjacent sections
-    - Gives pairwise transforms
+    - Gives *pairwise* transforms
   - Next step is to Compose the pairwise transformations, requires anchor slide
     - Then for each section (=slide), multiply all the pairwise transforms between this section and the anchor section. This gives each section a X-to-anchor transform. The X-to-anchor transforms for all sections are stored in a pkl file.
       - Yuncong: "This is the basics, though partially innacurate"
