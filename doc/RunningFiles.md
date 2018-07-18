@@ -30,9 +30,15 @@ Run **preprocess_cshl_data_v2_neurotrace.ipynb**, it will complete every step of
   - input:   ----`~/CSHL_data_processed/MD###/MD###_raw_Ntb/*_raw_Ntb.tif`
   - output1: `~/CSHL_data_processed/MD###/MD###_thumbnail_Ntb/*_thumbnail_Ntb.tif`
   - output2: `~/CSHL_data_processed/MD###/MD###_thumbnail_NtbNormalized/*_thumbnail_NtbNormalized.tif`
-* Transform prep1 masks back to original
-  - Not Yet Started
-
+* Compute Transforms using thumbnail_NtbNormalized
+  - Use Elastix to align, computing transforms between adjacent sections
+    - Gives pairwise transforms
+  - Next step is to Compose the pairwise transformations, requires anchor slide
+    - Then for each section (=slide), multiply all the pairwise transforms between this section and the anchor section. This gives each section a X-to-anchor transform. The X-to-anchor transforms for all sections are stored in a pkl file.
+      - Yuncong: "This is the basics, though partially innacurate"
+    - 
+* Generate Thumbnail mask
+  - Requires GUI, using this program, you draw rough outlines, which are then shrinked by an algorithm called "active contour" to tightly fit the tissue content. [SKIP FOR NOW]
 
 
 ### Thionin (UCSD)
