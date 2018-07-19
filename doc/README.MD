@@ -6,6 +6,10 @@
   - Running Guide made by AlexN to assist with running the code:
      1. Preprocessing
      2. Registration
+     3. Visualization
+---
+     4. Atlas Building
+     5. ...
 
 ### Historical
 - **[Historical]** [Yuncong User Guide](User%20Manuals/UserGuide.md)
@@ -18,15 +22,16 @@
   - Yuncong's old README
 
 ## Server Information
+Anything having to do with BirdStore and S3.
 - **[Historical]** [File Transfer](TransferFiles.md)
   - Guide for transferring files to/from AWS S3 and Birdstore
 - **[Historical]** [AWS Instructions](writeup/AWS_instruction.md)
   - AWS instruction manual
 
 ## File Organization
-- **[Incomplete]** [Dependancies](dependancies.md)
+-  [Software Dependancies](dependancies.md)
   - List of all packages that need to be installed 
-- **[Incomplete]** [S3 File Organization](writeup/S3_file_organization.md)
+-  [Data File Organization](writeup/S3_file_organization.md)
   - Naming conventions in S3 storage
 - **[Historical]** [Stack Directories](Brain_stack_directories.md)
   - Description of every stack, all relevant information
