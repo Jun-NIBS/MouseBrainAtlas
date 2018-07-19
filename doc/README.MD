@@ -1,12 +1,15 @@
 # Documentation Files
  Following are all of the documentation files and user guides for the Atlas code. Having had multiple developers working on it, there are documentation files deemed "historical" that were made by earlier developers. Certain documents are also marked as incomplete and should be ignored by non-developers.
 
-## User Guides
-- **[Incomplete]** [Alex User Guide](RunningFiles.md)
-  - Running Guide made by AlexN to assist with running the code 
+## User Guide
+[In Development] [Alex User Guide](RunningFiles.md)
+  - Running Guide made by AlexN to assist with running the code:
+     1. Preprocessing
+     2. Registration
+
+### Historical
 - **[Historical]** [Yuncong User Guide](User%20Manuals/UserGuide.md)
   - User Guide made by Yuncong to assist with running the code
-  
 - **[Historical]** [Dev Guide](DeveloperGuide.md)
   - Incomplete to-be guide of entire running process
 - **[Historical]** [Registration Steps](Analysis.md)
