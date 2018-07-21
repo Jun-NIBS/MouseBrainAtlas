@@ -1,7 +1,7 @@
 ### File Organization on S3
 
 ##### Bucket 1: mousebrainatlas-data
-- CSHL_data
+- CSHL_data  ** Yoav: I don't see this subdirectory of mousebrainatlas-data**
   - MD###                 '###' is a 3 digit brain designation
     - *_lossless.jp2 
     - *.lossy.jp2    
