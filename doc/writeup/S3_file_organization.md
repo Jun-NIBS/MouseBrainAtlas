@@ -11,9 +11,45 @@
 * 2018-07-10 20:10:09 mousebraindata-open
 * 2017-05-10 17:30:28 yoav-seed-backup
 
+##### Bucket mousebrainatlas-data
 
+`aws ls s3://mousebrainatlas-data/`
+ 
+* CSHL_SPM/
+* CSHL_annotation_viz/
+* CSHL_cells_v2/
+* CSHL_classifiers/
+* CSHL_data_processed/
+* CSHL_labelings_thalamus/
+* CSHL_labelings_v3/
+* CSHL_meshes/
+* CSHL_patch_features/
+* CSHL_patch_locations/
+* CSHL_patch_scores/
+* CSHL_registration_parameters/
+* CSHL_registration_visualization/
+* CSHL_registration_visualization_atlasV5/
+* CSHL_registration_viz_juxtaposed/
+* CSHL_scoremap_viz/
+* CSHL_scoremap_viz_grid/
+* CSHL_scoremaps/
+* CSHL_simple_global_registration/
+* CSHL_volumes/
+* Dropbox/
+* HRNTS2017/
+* LGN3Datlas/
+* blob_matching_atlas/
+* image_examples/
+* image_examples_raw/
+* lauren_data/
+* mxnet_models/
+* raw_image_histograms/
+* raw_image_histograms_fullImage/
+* raw_image_histograms_log/
+* raw_image_histograms_log_fullImage/
+* stacy_data/
+* training_examples/
 
-##### Bucket 1: mousebrainatlas-data
 - CSHL_data  **Yoav:**  I don't see this subdirectory of mousebrainatlas-data. [Here is the output of a current ls (7/21)](ListingOf_mousebrainatlas-data)
   - MD###                 '###' is a 3 digit brain designation
     - *_lossless.jp2 
@@ -25,25 +61,4 @@
 
 ##### Bucket 2: mousebrainatlas-rawdata
 A lot of stuff here, will take a while.
-
-
-### Leftover from Yuncong
-
-Resolution string
-resol:
-- lossless
-- thumbnail
-- down8
-
-Intensity-related string
-int:
-- linearNormalized500
-- linearNormalized2000
-- linearNormalized500_jpeg
-- gray
-- gray_jpeg
-- mask
-- [empty string]
-- jpeg
-- tif
 
