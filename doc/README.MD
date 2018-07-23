@@ -7,7 +7,6 @@
      1. Preprocessing
      2. Registration
      3. Visualization
----
      4. Atlas Building
      5. ...
 
