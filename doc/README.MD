@@ -9,9 +9,7 @@
      3. Visualization
      4. Atlas Building
      5. ...
-     
-**[Historical]** [Yuncong User Guide](User%20Manuals/UserGuide.md)
-  - User Guide made by Yuncong to assist with running the code. Currently the most complete guide of the code, use this if in doubt.
+
 
 ## Server Information
 Anything having to do with BirdStore and S3.
@@ -39,3 +37,5 @@ Anything having to do with BirdStore and S3.
   - Guide for Registration with list of relevant scripts
 - **[Historical]** [Old README](old_readme.md)
   - Yuncong's old README
+- **[Historical]** [Yuncong User Guide](User%20Manuals/UserGuide.md)
+  - User Guide made by Yuncong to assist with running the code. Currently the most complete guide of the code, use this if in doubt.
