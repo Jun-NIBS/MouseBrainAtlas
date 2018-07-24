@@ -22,10 +22,8 @@
 
 ## Server Information
 Anything having to do with BirdStore and S3.
-- **[Historical]** [File Transfer](TransferFiles.md)
-  - Guide for transferring files to/from AWS S3 and Birdstore
 - **[Historical]** [AWS Instructions](writeup/AWS_instruction.md)
-  - AWS instruction manual
+  - Guide for transferring files to/from AWS S3 and Birdstore as well as running code on AWS
 
 ## File Organization
 -  [Software Dependancies](dependancies.md)
