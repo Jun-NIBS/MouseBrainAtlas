@@ -1,8 +1,8 @@
 # Alex N's notes for running through the code
 
 ## File Formats
-* The files from CSHL are sent to us as jp2000. 
-* Files from UCSD **unknown for now**
+* The files from CSHL are created as NDPI,sent to us as jp2000, later converted to tiff. 
+* The files from UCSD are created as CZI, must be converted to tiff via online converter detailed in preprocessing.md.
 * Files are stored on S3 and birdstore as uncompressed jp2000. 
 
 ## Preprocessing
