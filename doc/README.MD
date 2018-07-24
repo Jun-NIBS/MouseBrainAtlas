@@ -26,11 +26,11 @@ Anything having to do with BirdStore and S3.
   - Guide for transferring files to/from AWS S3 and Birdstore as well as running code on AWS with CfnCluster
 
 ## File Organization
--  [Software Dependancies](dependancies.md)
+- [Software Dependancies](dependancies.md)
   - List of all packages that need to be installed 
--  [Data File Organization](writeup/S3_file_organization.md)
+- [Data File Organization](writeup/S3_file_organization.md)
   - Naming conventions in S3 storage
-- **[Historical]** [Stack Directories](Brain_stack_directories.md)
+- [Stack Directories](Brain_stack_directories.md)
   - Description of every stack, all relevant information
 
 ## Machine Learning Documents
