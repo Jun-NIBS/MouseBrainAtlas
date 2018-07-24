@@ -23,7 +23,7 @@
 ## Server Information
 Anything having to do with BirdStore and S3.
 - **[Historical]** [AWS Instructions](writeup/AWS_instruction.md)
-  - Guide for transferring files to/from AWS S3 and Birdstore as well as running code on AWS
+  - Guide for transferring files to/from AWS S3 and Birdstore as well as running code on AWS with CfnCluster
 
 ## File Organization
 -  [Software Dependancies](dependancies.md)
