@@ -2,17 +2,18 @@
  Following are all of the documentation files and user guides for the Atlas code. Having had multiple developers working on it, there are documentation files deemed "historical" that were made by earlier developers. Certain documents are also marked as incomplete and should be ignored by non-developers.
 
 ## User Guide
-[In Development] [Alex User Guide](RunningFiles.md)
+**[In Development]** [Alex User Guide](RunningFiles.md)
   - Running Guide made by AlexN to assist with running the code:
      1. Preprocessing
      2. Registration
      3. Visualization
      4. Atlas Building
      5. ...
+     
+**[Historical]** [Yuncong User Guide](User%20Manuals/UserGuide.md)
+  - User Guide made by Yuncong to assist with running the code. Currently the most complete guide of the code, use this if in doubt.
 
 ### Historical
-- **[Historical]** [Yuncong User Guide](User%20Manuals/UserGuide.md)
-  - User Guide made by Yuncong to assist with running the code
 - **[Historical]** [Dev Guide](DeveloperGuide.md)
   - Incomplete to-be guide of entire running process
 - **[Historical]** [Registration Steps](Analysis.md)
@@ -22,7 +23,7 @@
 
 ## Server Information
 Anything having to do with BirdStore and S3.
-- **[Historical]** [AWS Instructions](writeup/AWS_instruction.md)
+- [AWS Instructions](writeup/AWS_instruction.md)
   - Guide for transferring files to/from AWS S3 and Birdstore as well as running code on AWS with CfnCluster
 
 ## File Organization
