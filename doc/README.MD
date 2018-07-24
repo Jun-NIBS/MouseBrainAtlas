@@ -13,14 +13,6 @@
 **[Historical]** [Yuncong User Guide](User%20Manuals/UserGuide.md)
   - User Guide made by Yuncong to assist with running the code. Currently the most complete guide of the code, use this if in doubt.
 
-### Historical
-- **[Historical]** [Dev Guide](DeveloperGuide.md)
-  - Incomplete to-be guide of entire running process
-- **[Historical]** [Registration Steps](Analysis.md)
-  - Guide for Registration with list of relevant scripts
-- **[Historical]** [Old README](old_readme.md)
-  - Yuncong's old README
-
 ## Server Information
 Anything having to do with BirdStore and S3.
 - [AWS Instructions](writeup/AWS_instruction.md)
@@ -35,7 +27,15 @@ Anything having to do with BirdStore and S3.
   - Description of every stack, all relevant information
 
 ## Machine Learning Documents
-- **[Historical]** [Bayesian Parameters](writeup/bayesian.md)
+- [Bayesian Parameters](writeup/bayesian.md)
   - Parameters and associated uncertainty in Atlas building process
-- **[Historical]** [Uncertainty](writeup/zscore_hessian.md)
+- [Uncertainty](writeup/zscore_hessian.md)
   - Z-score and Hessians used to quantify uncertainty
+
+### Historical
+- **[Historical]** [Dev Guide](DeveloperGuide.md)
+  - Incomplete to-be guide of entire running process
+- **[Historical]** [Registration Steps](Analysis.md)
+  - Guide for Registration with list of relevant scripts
+- **[Historical]** [Old README](old_readme.md)
+  - Yuncong's old README
