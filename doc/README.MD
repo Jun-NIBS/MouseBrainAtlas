@@ -17,6 +17,7 @@ Anything having to do with the BirdStore and S3 servers this project uses. S3 is
   - Guide for transferring files to/from AWS S3 and Birdstore as well as running code on AWS with CfnCluster
 
 ## File Organization
+These files contain information on what software is needed to run the code, how all of the processed data is organized both locally and on relevant servers, and a catalog of every brain that has gone through the code.
 - [Software Dependancies](dependancies.md)
   - List of all packages that need to be installed 
 - [Data File Organization](writeup/S3_file_organization.md)
@@ -25,6 +26,7 @@ Anything having to do with the BirdStore and S3 servers this project uses. S3 is
   - Description of every stack, all relevant information
 
 ## Machine Learning Documents
+These files concern the specifics of classifying certain brain regions.
 - [Bayesian Parameters](writeup/bayesian.md)
   - Parameters and associated uncertainty in Atlas building process
 - [Uncertainty](writeup/zscore_hessian.md)
