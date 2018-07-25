@@ -1,5 +1,5 @@
 # Documentation Files
- Following are all of the documentation files and user guides for the Atlas code. Having had multiple developers working on it, there are documentation files deemed "historical" that were made by earlier developers. Certain documents are also marked as incomplete and should be ignored by non-developers.
+ Following are all of the documentation files and user guides for the Atlas code. Having had multiple developers working on it, there are documentation files deemed "historical" that were made by earlier developers. Certain documents are also marked as incomplete and should be ignored by non-developers. Several "historical" files are unmarked as they are not outdated.
 
 ## User Guide
 **[In Development]** [Alex User Guide](RunningFiles.md)
@@ -31,11 +31,4 @@ Anything having to do with BirdStore and S3.
   - Z-score and Hessians used to quantify uncertainty
 
 ### Historical
-- **[Historical]** [Dev Guide](DeveloperGuide.md)
-  - Incomplete to-be guide of entire running process
-- **[Historical]** [Registration Steps](Analysis.md)
-  - Guide for Registration with list of relevant scripts
-- **[Historical]** [Old README](old_readme.md)
-  - Yuncong's old README
-- **[Historical]** [Yuncong User Guide](User%20Manuals/UserGuide.md)
-  - User Guide made by Yuncong to assist with running the code. Currently the most complete guide of the code, use this if in doubt.
+- [List of historical documentation files](HistoricalFileList.md)
