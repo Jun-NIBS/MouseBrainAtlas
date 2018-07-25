@@ -12,7 +12,7 @@
 
 
 ## Server Information
-Anything having to do with BirdStore and S3.
+Anything having to do with the BirdStore and S3 servers this project uses. S3 is the primary location of all data and interfacing with it may be necessary. BirdStore, as of right now, is synced with S3 but is not used directly for file retrieval.
 - [AWS Instructions](writeup/AWS_instruction.md)
   - Guide for transferring files to/from AWS S3 and Birdstore as well as running code on AWS with CfnCluster
 
