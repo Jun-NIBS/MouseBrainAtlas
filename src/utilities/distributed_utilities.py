@@ -306,7 +306,7 @@ def run_distributed5(command, argument_type='single', kwargs_list=None, jobs_per
                 # That lets bash treat them as single strings.
                 # Reference: http://stackoverflow.com/questions/15783701/which-characters-need-to-be-escaped-in-bash-how-do-we-know-it
                 line = "%(generic_launcher_path)s %(command_template)s %(kwargs_list_str)s" % \
-                {'generic_launcher_path': os.path.join(os.environ['REPO_DIR'], 'utilities', 'sequential_dispatcher.py'),
+                {'generic_launcher_path': os.path.join(os.environ['REPO_DIR'], 'src', 'utilities', 'sequential_dispatcher.py'),
                 'command_template': shell_escape(command),
                 'kwargs_list_str': shell_escape(json.dumps(kwargs_list_as_list[fj:lj+1]))
                 }
@@ -325,10 +325,10 @@ def run_distributed5(command, argument_type='single', kwargs_list=None, jobs_per
             stdout_template = '/home/ubuntu/stdout_%d.log'
             stderr_template = '/home/ubuntu/stderr_%d.log'
         else:
-            stdout_template = '/home/alexn/stdout_%d.log'
-            stderr_template = '/home/alexn/stderr_%d.log'
-            #stdout_template = '/home/yuncong/stdout_%d.log'
-            #stderr_template = '/home/yuncong/stderr_%d.log'
+            #stdout_template = '/home/alexn/stdout_%d.log'
+            #stderr_template = '/home/alexn/stderr_%d.log'
+            stdout_template = os.path.join( os.environ['ROOT_DIR'], 'stdout_%d.log' )
+            stderr_template = os.path.join( os.environ['ROOT_DIR'], 'stderr_%d.log' )
         
         if local_only:
             stdout_f = open(stdout_template % node_i, "w")
