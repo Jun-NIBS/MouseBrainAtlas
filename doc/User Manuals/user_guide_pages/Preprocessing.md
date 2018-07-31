@@ -3,7 +3,7 @@
 The steps for different data types vary slightly. The following section summarizes these steps for each data type.
 Details on how to perform each step are in the rest of this page.
 
-In the following explanation, each step is characterized by a pair of image set names, denoting the input and the output respectively. A standard naming convention is used to name all images involved in the preprocessing process. [This page](ImageNamingConvention.md) describes the naming convention. In addition, each step uses a script, whose name is given after the input/output pair.
+In the following explanation, each step is characterized by a pair of image set names, denoting the input and the output respectively. A standard naming convention is used to name all images involved in the preprocessing process. [This page](ImageNamingConvention.md) describes the naming convention. In addition, each step uses a script, whose name is given after the input -> output pair.
 
 ## Convert data from scanner format to TIF
 
@@ -11,17 +11,28 @@ In the following explanation, each step is characterized by a pair of image set 
 * czi -> raw (for czi data)
 
 ## For thionin (brightfield) data
-* raw -> thumbnail: `rescale`
-* Compute tranforms using thumbnail: `align` + `compose`
-* thumbnail -> prep1_thumbnail: `crop`
-* Supply prep1_thumbnail_mask
-* prep1_thumbnail_mask -> thumbnail_mask: `warp`
-* raw -> prep1_raw: `warp`
-* Compute prep5 (alignedWithMargin) cropping box based on prep1_thumbnail_mask
-* prep1_raw -> prep5_raw: `crop`
+* raw -> thumbnail: `resize`
+`resize.py <in_fp_map> <out_fp_map> 0.03125`
+* Loop:
+	* Compute pairwise tranforms using thumbnail: `align`
+	* Compose pairwise transforms to get each image's transform to anchor: `compose`
+	`align_compose.py [stack] [resol] [version] [image_names] [filelist] [anchor] [elastix_output_dir] [custom_output_dir]`
+	* thumbnail -> prep1_thumbnail: `warp`
+	* Inspect aligned images, correct pairwise transforms and check each image's order in stack (HUMAN)
+* If `thumbnail_mask` is given:
+	* thumbnail_mask -> prep1_thumbnail_mask: `warp`
+* Else:
+	* Supply prep1_thumbnail_mask (HUMAN)
+	* prep1_thumbnail_mask -> thumbnail_mask: `warp`
+* Compute prep5 (alignedWithMargin) crop box based on prep1_thumbnail_mask
+* Either
+	* raw -> prep1_raw: `warp`
+	* prep1_raw -> prep5_raw: `crop`
+* Or
+	* raw -> prep5_raw: `warp` + `crop`
 * prep1_thumbnail -> prep5_thumbnail: `crop`
 * prep1_thumbnail_mask -> prep5_thumbnail_mask: `crop`
-* Specify prep2 (alignedBrainstemCrop) cropping box
+* Specify prep2 (alignedBrainstemCrop) cropping box (HUMAN)
 * prep5_raw -> prep2_raw: `crop`
 * prep5_thumbnail -> prep2_thumbnail: `crop`
 * prep5_thumbnail_mask -> prep2_thumbnail_mask: `crop`
@@ -93,6 +104,7 @@ For Axioscan fluorescent images, channels are labeled with meaningful names.
 
 For Nissl images, convert RGB to grayscale.
 
+
 ## Rectify images
 
 The images must have anterior at the left, posterior at the right, dorsal at the top and ventral at the bottom.
@@ -134,15 +146,30 @@ Make sure the following items are generated under `DATA_DIR/<stack>`:
 - `<stack>_raw_Ntb`. This contains images named `<imageName>_raw_Ntb.tif`. These can be either symbolic links or actual files.
 - `<stack>_raw_CHAT`. This contains images named `<imageName>_raw_CHAT.tif`. These can be either symbolic links or actual files.
 
+
+## Rescale
+
+`rescale.py <in_fp_map> <out_fp_map> <scaling>`
+
+
 ## Intensity normalize fluorescent images
 
-`$ normalize_intensity.py <stack> [input_version] [output_version]`
+`$ normalize_intensity.py <stack> <input_version> <output_version> [--adaptive]`
 
-`<input_version>` default to "Ntb".
-`<output_version>` default to "NtbNormalized"
+For example,
+`normalize_intensity.py Ntb NtbNormalizedAdaptiveInvertedGamma --adaptive`
 
-Make sure the following items are generated under `DATA_DIR/<stack>`:
-- `<stack>_thumbnail_NtbNormalized`
+The detailed steps for intensity normalization are:
+- Load image
+- Rescale mask
+- Compute mean/std for sample regions
+- Interpolate mean map
+- Scale up mean map
+- Interpolate std map
+- Scale up std map
+- Normalize (subtract each pixel's intensity by mean and then divide by std)
+- Save float version
+- Rescale to uint8
 
 ## Compute intra-stack transforms
 
@@ -177,7 +204,7 @@ If any correction is made, make sure the following items are generated under `DA
 Then re-run
 `$ align.py <stack>`
 
-## Specify cropping
+## Crop
 
 Cropping of the images is desired to focus computation only on the region of interest.
 
@@ -190,6 +217,8 @@ Make sure the following items are generated under `DATA_DIR/<stack>`:
 	- `caudal_limit`
 	- `dorsal_limit`
 	- `ventral_limit`
+	- `wrt`
+	- `resolution`
 The coordinates are relative to images of prep_id=1 (alignPadded) in down32 resolution.
 - `<stack>_alignedTo_<anchorImageName>_prep<prepId>_sectionLimits.json`: This file contains a dict with the following keys:
 	- `left_section_limit`
