@@ -11,6 +11,8 @@ Requires files from pre-preprocessing step including [name]_anchor.txt, [name]_s
 
 Neutrace data typically is stained with another indicator, data has multiple channels that are a part of the preprocessing stage.
 
+What lies below is notes meant for reference by Alex Newberry, it will be altered to be for users soon. The scripts that they will need to run are still being written.
+
 Run **preprocess_cshl_data_v2_neurotrace.ipynb**, it will complete every step of the preprocessing stage for neurotrace brains as outlined below:
 #### preprocess_cshl_data_v2_neurotrace.ipynb
 * Prepare data
