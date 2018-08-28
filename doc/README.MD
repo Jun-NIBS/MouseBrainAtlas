@@ -25,12 +25,5 @@ These files contain information on what software is needed to run the code, how 
 - [Stack Directories](Brain_stack_directories.md)
   - Description of every stack, all relevant information
 
-## Machine Learning Documents
-These files concern the specifics of classifying certain brain regions.
-- [Bayesian Parameters](writeup/bayesian.md)
-  - Parameters and associated uncertainty in Atlas building process
-- [Uncertainty](writeup/zscore_hessian.md)
-  - Z-score and Hessians used to quantify uncertainty
-
 ### Historical
 - [List of historical documentation files](HistoricalFileList.md)
