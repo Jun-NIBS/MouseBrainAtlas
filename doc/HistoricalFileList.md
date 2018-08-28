@@ -4,8 +4,8 @@ These files were written by the ex-developer of the Atlas code. Several files ha
 
 - **[Historical]** [Dev Guide](DeveloperGuide.md)
   - Incomplete to-be guide of entire running process
-- **[Historical]** [Registration Steps](Analysis.md)
-  - Guide for Registration with list of relevant scripts
+- **[Historical]** [Quantitative result storage](Analysis.md)
+  - Describes where the quantitative analysis results are stored
 - **[Historical]** [Old README](old_readme.md)
   - Yuncong's old README
 - **[Historical]** [Yuncong User Guide](User%20Manuals/UserGuide.md)
