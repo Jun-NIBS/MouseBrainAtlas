@@ -1,4 +1,4 @@
-The Active Mouse Brain Atlas project provides a toolkit that automatically registers histological brain series to a standardized brain atlas based on detecting a large set of structures by high-resolution textures.
+The Active Mouse Brain Atlas project provides a toolkit that automatically registers histological series to a standardized brain atlas based on detecting a large set of structures by high-resolution textures.
 
 Other functions include tools for annotating brain images, learning the texture corresponding the different structures, and estimating brain-to-brain variability in the location of the structures.
 
