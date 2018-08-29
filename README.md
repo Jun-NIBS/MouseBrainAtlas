@@ -20,7 +20,7 @@ Cloning the repository takes about 3 minutes using a 20MB/s connection. Installi
 
 # Demo
 
-We provide demo scripts that demonstrate the process of registering an example brain with the atlas, and visualizing the result. See the [demo] directory for details. The demo takes roughly half an hour from start to finish.
+We provide demo scripts that demonstrate the process of registering an example brain with the atlas, and visualizing the result. See the [demo](demo) directory for details. The demo takes roughly half an hour from start to finish.
 
 # Reference
 
