@@ -8,7 +8,7 @@ The Active Mouse Brain Atlas project provides a toolkit for automatic registrati
 
 # Installation
 
-This system has been tested on Linux Ubuntu 16.04. The feature extraction step can be significantly accelerated using GPU (80 seconds per image using a single Nvidia Titan X, 15 seconds using 8 GPUs, compared to 30 minutes using CPU).
+This system has been tested on Ubuntu 16.04. The feature extraction step can be significantly accelerated using GPU (80 seconds per image using a single Nvidia Titan X, 15 seconds using 8 GPUs, compared to 30 minutes using CPU).
 
 ```
 git clone https://github.com/ActiveBrainAtlas/MouseBrainAtlas.git
