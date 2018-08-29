@@ -1,20 +1,16 @@
-### Table of contents
-
-- [System requirements](#system-requirements)
-- [Installation Instructions](#installation-instructions)
-- [Demo](#demo)
-
----
-
-This repository contains the code and documentation for the active mouse brain atlas project. 
-
-The core functionality of the code is to register, or align, a stack of brain slices to a standardized brain atlas.
+The Active Mouse Brain Atlas project is a toolkit that automatically registers histological brain series to a standardized brain atlas based on detecting a large set of structures by high-resolution textures.
 
 Other functions include tools for annotating brain images, learning the texture corresponding the different structures, and estimating brain-to-brain variability in the location of the structures.
 
 The code is in Python either stand-alone or in Jupyter Notebooks. This code is currently in development.
 
 The code is available free of charge in accordance with the GNU General Public License (GPL)
+
+- [System requirements](#system-requirements)
+- [Installation Instructions](#installation-instructions)
+- [Demo](#demo)
+
+----
 
 # System Requirements
 
