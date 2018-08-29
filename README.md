@@ -1,10 +1,4 @@
-The Active Mouse Brain Atlas project provides a toolkit that automatically registers histological series to a standardized brain atlas, based on detecting a large set of structures by high-resolution textures.
-
-Other functions include tools for annotating brain images, learning the texture corresponding the different structures, and estimating brain-to-brain variability in the location of the structures.
-
-The code is in Python either stand-alone or in Jupyter Notebooks. This code is currently in development.
-
-The code is available free of charge in accordance with the GNU General Public License (GPL)
+The Active Mouse Brain Atlas project provides a toolkit that automatically registers histological series to a standardized brain atlas, based on detecting structures by high-resolution textures.
 
 - [System requirements](#system-requirements)
 - [Installation Instructions](#installation-instructions)
