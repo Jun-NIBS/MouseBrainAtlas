@@ -1,3 +1,8 @@
+- [System requirements](#system-requirements)
+- [Installation Instructions](#installation-instructions)
+- [Demo](#demo)
+
+
 This repository contains the code and documentation for the active mouse brain atlas project. 
 
 The core functionality of the code is to register, or align, a stack of brain slices to a standardized brain atlas.
