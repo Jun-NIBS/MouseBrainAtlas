@@ -24,5 +24,5 @@ We provide demo scripts that demonstrate the process of registering an example b
 
 # Reference
 
-The Active Atlas: Combining 3D Anatomical Models with Texture Detectors, Yuncong Chen et al., MICCAI 2017 [[pdf]](https://arxiv.org/pdf/1702.08606.pdf)
+The Active Atlas: Combining 3D Anatomical Models with Texture Detectors, _Yuncong Chen et al._, MICCAI 2017 [[pdf]](https://arxiv.org/pdf/1702.08606.pdf)
 
