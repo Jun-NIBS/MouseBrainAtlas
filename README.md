@@ -1,5 +1,3 @@
-## The Active Mouse Brain Atlas
-
 This repository contains the code and documentation for the active mouse brain atlas project. 
 
 The core functionality of the code is to register, or align, a stack of brain slices to a standardized brain atlas.
@@ -10,7 +8,7 @@ The code is in Python either stand-alone or in Jupyter Notebooks. This code is c
 
 The code is available free of charge in accordance with the GNU General Public License (GPL)
 
-### System Requirements
+# System Requirements
 
 This system has been tested on Linux Ubuntu 16.04
 
@@ -20,7 +18,7 @@ Feature extraction (transforming raw image to feature maps) is accelerated using
 * 80 sec using a single GPU
 * 15 sec using 8 GPUs
 
-### Installation Instructions
+# Installation Instructions
 clone this repository
 ```
 git clone https://github.com/ActiveBrainAtlas/MouseBrainAtlas.git
@@ -35,7 +33,7 @@ pip install -r requirements.txt
 ```
 **Typical install time** on a typical desktop computer: 5 Minutes.
 
-### Demo
+# Demo
 
 Please consult the README in the Demo Directory
 
