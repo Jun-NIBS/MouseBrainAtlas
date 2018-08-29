@@ -2,6 +2,7 @@ The Active Mouse Brain Atlas project provides a toolkit for automatic registrati
 
 - [Installation](#installation)
 - [Demo](#demo)
+- [Reference](#reference)
 
 ----
 
@@ -20,3 +21,8 @@ Cloning the repository takes about 3 minutes using a 20MB/s connection. Installi
 # Demo
 
 We provide demo scripts that demonstrate the process of registering an example brain with the atlas, and visualizing the result. See the [demo] directory for details. The demo takes roughly half an hour from start to finish.
+
+# Reference
+
+The Active Atlas: Combining 3D Anatomical Models with Texture Detectors, Yuncong Chen et al., MICCAI 2017 [[pdf]](https://arxiv.org/pdf/1702.08606.pdf)
+
