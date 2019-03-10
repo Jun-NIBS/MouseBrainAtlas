@@ -7,7 +7,11 @@ import json
 
 # import boto3
 
+<<<<<<< HEAD
 from utilities2015 import execute_command, shell_escape, create_if_not_exists
+=======
+from utilities2015 import execute_command, shell_escape
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 from metadata import *
 
 default_root = dict(localhost='/home/yuncong',
@@ -22,10 +26,13 @@ def upload_to_s3(fp, local_root=None, is_dir=False):
         local_root (str): default to ROOT_DIR
     """
 
+<<<<<<< HEAD
     if not ENABLE_UPLOAD_S3:
 	sys.stderr.write("ENABLE_UPLOAD_S3 is False. Skip uploading to S3.\n")
         return
 
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     # Not using keyword default value because ROOT_DIR might be dynamically assigned rather than set at module importing.
     if local_root is None:
         if '/media/yuncong/YuncongPublic' in fp:
@@ -50,10 +57,13 @@ def download_from_s3(fp, local_root=None, is_dir=False, redownload=False, includ
         local_root (str): default to ROOT_DIR
     """
 
+<<<<<<< HEAD
     if not ENABLE_DOWNLOAD_S3:
         sys.stderr.write("ENABLE_DOWNLOAD_S3 is False. Skip downloading from S3.\n")
         return
 
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     # Not using keyword default value because ROOT_DIR might be dynamically assigned rather than set at module importing.
     if local_root is None:
         if '/media/yuncong/YuncongPublic' in fp:
@@ -265,7 +275,11 @@ def run_distributed5(command, argument_type='single', kwargs_list=None, jobs_per
     if use_aws:
         execute_command('rm -f /home/ubuntu/stderr_*; rm -f /home/ubuntu/stdout_*')
     else:
+<<<<<<< HEAD
         execute_command('rm -f %s; rm -f %s' % (os.path.join(DATA_ROOTDIR, 'mousebrainatlas_tmp', 'stderr_*'), os.path.join(DATA_ROOTDIR, 'mousebrainatlas_tmp', 'stdout_*')))
+=======
+        execute_command('rm -f ~/stderr_*; rm -f ~/stdout_*')
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     if local_only:
         sys.stderr.write("Run locally.\n")
@@ -299,12 +313,18 @@ def run_distributed5(command, argument_type='single', kwargs_list=None, jobs_per
 
     assert argument_type in ['single', 'list', 'list2'], 'argument_type must be one of single, list, list2.'
 
+<<<<<<< HEAD
 
     create_if_not_exists(os.path.join(DATA_ROOTDIR, 'mousebrainatlas_tmp'))
 
     for node_i, (fi, li) in enumerate(first_last_tuples_distribute_over(0, len(kwargs_list_as_list)-1, n_hosts)):
 
         temp_script = os.path.join(DATA_ROOTDIR, 'mousebrainatlas_tmp', 'runall.sh')
+=======
+    for node_i, (fi, li) in enumerate(first_last_tuples_distribute_over(0, len(kwargs_list_as_list)-1, n_hosts)):
+
+        temp_script = '/tmp/runall.sh'
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
         temp_f = open(temp_script, 'w')
 
         for j, (fj, lj) in enumerate(first_last_tuples_distribute_over(fi, li, jobs_per_node)):
@@ -316,8 +336,13 @@ def run_distributed5(command, argument_type='single', kwargs_list=None, jobs_per
                 # It is important to wrap command_templates and kwargs_list_str in apostrphes.
                 # That lets bash treat them as single strings.
                 # Reference: http://stackoverflow.com/questions/15783701/which-characters-need-to-be-escaped-in-bash-how-do-we-know-it
+<<<<<<< HEAD
                 line = "python %(generic_launcher_path)s %(command_template)s %(kwargs_list_str)s" % \
                 {'generic_launcher_path': os.path.join(os.environ['REPO_DIR'], 'utilities', 'sequential_dispatcher.py'),
+=======
+                line = "%(generic_launcher_path)s %(command_template)s %(kwargs_list_str)s" % \
+                {'generic_launcher_path': os.path.join(os.environ['REPO_DIR'], 'src', 'utilities', 'sequential_dispatcher.py'),
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
                 'command_template': shell_escape(command),
                 'kwargs_list_str': shell_escape(json.dumps(kwargs_list_as_list[fj:lj+1]))
                 }
@@ -336,8 +361,15 @@ def run_distributed5(command, argument_type='single', kwargs_list=None, jobs_per
             stdout_template = '/home/ubuntu/stdout_%d.log'
             stderr_template = '/home/ubuntu/stderr_%d.log'
         else:
+<<<<<<< HEAD
             stdout_template = os.path.join(DATA_ROOTDIR, 'mousebrainatlas_tmp', 'stdout_%d.log')
             stderr_template = os.path.join(DATA_ROOTDIR, 'mousebrainatlas_tmp', 'stderr_%d.log')
+=======
+            #stdout_template = '/home/alexn/stdout_%d.log'
+            #stderr_template = '/home/alexn/stderr_%d.log'
+            stdout_template = os.path.join( os.environ['ROOT_DIR'], 'stdout_%d.log' )
+            stderr_template = os.path.join( os.environ['ROOT_DIR'], 'stderr_%d.log' )
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
         
         if local_only:
             stdout_f = open(stdout_template % node_i, "w")

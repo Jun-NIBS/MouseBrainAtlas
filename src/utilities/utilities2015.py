@@ -1,5 +1,8 @@
 import matplotlib
+<<<<<<< HEAD
 matplotlib.use('Agg')
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
 import os
 import csv
@@ -19,9 +22,13 @@ from skimage.io import imread, imsave
 from skimage.util import img_as_ubyte, img_as_float
 from skimage.color import gray2rgb, rgb2gray
 import numpy as np
+<<<<<<< HEAD
 
 import matplotlib.pyplot as plt
 
+=======
+import matplotlib.pyplot as plt
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 try:
     import cv2
 except:
@@ -34,6 +41,7 @@ from skimage.measure import find_contours, regionprops
 
 from skimage.filters import gaussian
 
+<<<<<<< HEAD
 from metadata import ENABLE_UPLOAD_S3, ENABLE_DOWNLOAD_S3, convert_resolution_string_to_um, load_ini
 
 #######################################
@@ -56,6 +64,8 @@ def deprecated(func):
     return new_func
 
 #########################################
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
 def convert_defaultdict_to_dict(d):
     if isinstance(d, defaultdict):
@@ -102,7 +112,11 @@ def compute_gradient_v2(volume, smooth_first=False, dtype=np.float16):
 
         if smooth_first:
             # t = time.time()
+<<<<<<< HEAD
             cropped_v = gaussian(cropped_v.astype(np.float32), 3)
+=======
+            cropped_v = gaussian(cropped_v, 3)
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
             # sys.stderr.write("Smooth: %.2f seconds.\n" % (time.time()-t))
 
         # t = time.time()
@@ -115,6 +129,7 @@ def compute_gradient_v2(volume, smooth_first=False, dtype=np.float16):
 
         return g.astype(dtype), o
 
+<<<<<<< HEAD
 ####################################################################
 
 def convert_2d_transform_forms(transform, out_form):
@@ -205,14 +220,24 @@ def dict_to_csv(d, fp):
     import pandas as pd
     df = pd.DataFrame.from_dict({k: np.array(v).flatten() for k, v in d.iteritems()}, orient='index')
     df.to_csv(fp, header=False)
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
 def load_data(fp, polydata_instead_of_face_vertex_list=True, download_s3=True):
 
     from vis3d_utilities import load_mesh_stl
     from distributed_utilities import download_from_s3
 
+<<<<<<< HEAD
     if ENABLE_DOWNLOAD_S3 and download_s3:
         download_from_s3(fp)
+=======
+    if download_s3:
+        try:
+            download_from_s3(fp)
+        except:
+            sys.stderr.write("Downloading from S3 failed.\n")
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     if fp.endswith('.bp'):
         data = bp.unpack_ndarray_file(fp)
@@ -226,10 +251,13 @@ def load_data(fp, polydata_instead_of_face_vertex_list=True, download_s3=True):
         data = np.loadtxt(fp)
     elif fp.endswith('.png') or fp.endswith('.tif'):
         data = imread(fp)
+<<<<<<< HEAD
     elif fp.endswith('.ini'):
         data = load_ini(fp)
     elif fp.endswith('.csv'):
         data = csv_to_dict(fp)
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     else:
         raise
 
@@ -243,7 +271,11 @@ def save_data(data, fp, upload_s3=True):
     create_parent_dir_if_not_exists(fp)
 
     if fp.endswith('.bp'):
+<<<<<<< HEAD
         bp.pack_ndarray_file(np.ascontiguousarray(data), fp)
+=======
+        bp.pack_ndarray_file(np.ascontiguousarray(data), fp) 
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
         # ascontiguousarray is important, without which sometimes the loaded array will be different from saved.
     elif fp.endswith('.json'):
         save_json(data, fp)
@@ -258,15 +290,22 @@ def save_data(data, fp, upload_s3=True):
             np.savetxt(fp, data)
         else:
             raise
+<<<<<<< HEAD
     elif fp.endswith('.dump'): # sklearn classifiers
         import joblib
         joblib.dump(data, fp)
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     elif fp.endswith('.png') or fp.endswith('.tif') or fp.endswith('.jpg'):
         imsave(fp, data)
     else:
         raise
 
+<<<<<<< HEAD
     if ENABLE_UPLOAD_S3 and upload_s3: # in the future, use only one flag.
+=======
+    if upload_s3:
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
         upload_to_s3(fp)
 
 ##################################################################
@@ -327,7 +366,11 @@ def convert_volume_forms(volume, out_form):
     else:
         raise Exception("out_form %s is not recognized.")
 
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 def volume_origin_to_bbox(v, o):
     """
     Convert a (volume, origin) tuple into a bounding box.
@@ -349,8 +392,12 @@ def plot_by_method_by_structure(data_all_stacks_all_structures, structures, stac
                                 stack_to_color=None, ylabel='', title='', ylim=[0,1],
                                 yspacing=.2, style='scatter',
                                figsize=(20, 6), spacing_btw_stacks=1,
+<<<<<<< HEAD
                                xticks_fontsize=20, xlabel='Structures',
                                legend_loc='best', legend_fontsize=None):
+=======
+                               xticks_fontsize=20):
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     if stack_to_color is None:
         stack_to_color = {stack: random_colors(1)[0] for stack in data_all_stacks_all_structures.keys()}
@@ -361,9 +408,15 @@ def plot_by_method_by_structure(data_all_stacks_all_structures, structures, stac
     plt.figure(figsize=figsize);
     for stack_i, stack in enumerate(stacks):
         data_all_structures = data_all_stacks_all_structures[stack]
+<<<<<<< HEAD
         data_mean = [np.mean(data_all_structures[s]) if s in data_all_structures else 0 for s in structures]
         data_std = [np.std(data_all_structures[s])  if s in data_all_structures else 0 for s in structures]
         plt.bar(stack_i + (n_stacks + spacing_btw_stacks) * np.arange(n_structures), data_mean, yerr=data_std, label=stack, color=np.array(stack_to_color[stack])/255.)
+=======
+        data_mean = [np.mean(data_all_structures[s]) for s in structures]
+        data_std = [np.std(data_all_structures[s]) for s in structures]
+        plt.bar(stack_i + (n_stacks + spacing_btw_stacks) * np.arange(n_structures), data_mean, yerr=data_std, label=stack)
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
         plt.gca().yaxis.grid(True, linestyle='-', which='major', color='grey', alpha=0.5)
         # Hide these grid behind plot objects
@@ -378,11 +431,19 @@ def plot_by_method_by_structure(data_all_stacks_all_structures, structures, stac
     plt.yticks(np.arange(ylim[0], ylim[1] + yspacing, yspacing),
                map(lambda x: '%.2f'%x, np.arange(ylim[0], ylim[1]+yspacing, yspacing)),
                fontsize=20);
+<<<<<<< HEAD
     plt.xlabel(xlabel, fontsize=20);
     plt.ylabel(ylabel, fontsize=20);
     plt.xlim([-1, len(structures) * (n_stacks + spacing_btw_stacks) + 1]);
     plt.ylim(ylim);
     plt.legend(loc=legend_loc, fontsize=legend_fontsize);
+=======
+    plt.xlabel('Structures', fontsize=20);
+    plt.ylabel(ylabel, fontsize=20);
+    plt.xlim([-1, len(structures) * (n_stacks + spacing_btw_stacks) + 1]);
+    plt.ylim(ylim);
+    plt.legend();
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     plt.title(title, fontsize=20);
 
 
@@ -393,7 +454,11 @@ def plot_by_stack_by_structure(data_all_stacks_all_structures, structures,
                               ):
     """
     Plot the input data, with structures as x-axis. Different stacks are represented using different colors.
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     Args:
         style (str): scatter or boxplot.
     """
@@ -409,6 +474,7 @@ def plot_by_stack_by_structure(data_all_stacks_all_structures, structures,
             vals = [data_all_structures[s] if s in data_all_structures else None
                     for i, s in enumerate(structures)]
             ax.scatter(range(len(vals)), vals, marker='o', s=100, label=stack, c=np.array(stack_to_color[stack])/255.);
+<<<<<<< HEAD
             
     elif style == 'boxplot2': # {stack: {structure: [v1,v2,v3...]}}
         
@@ -443,6 +509,15 @@ def plot_by_stack_by_structure(data_all_stacks_all_structures, structures,
              if struct in data_all_stacks_all_structures[stack]]
             for struct in structures]
 
+=======
+    elif style == 'boxplot':
+        
+        D = [[data_all_stacks_all_structures[stack][struct] 
+              for stack in data_all_stacks_all_structures.iterkeys() 
+             if struct in data_all_stacks_all_structures[stack]]
+            for struct in structures]
+        
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
         bplot = plt.boxplot(np.array(D), positions=range(0, len(structures)), patch_artist=True);
 #         for patch in bplot['boxes']:
 #             patch.set_facecolor(np.array(stack_to_color[stack])/255.)
@@ -467,7 +542,11 @@ def plot_by_stack_by_structure(data_all_stacks_all_structures, structures,
     ax.set_ylim([yticks[0], yticks[-1]+yticks[-1]-yticks[-2]]);
     plt.legend();
     ax.set_title(title, fontsize=20);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     return fig, ax
 
 #####################################################################
@@ -717,6 +796,10 @@ def plot_centroid_means_and_covars_3d(instance_centroids,
     # Plot in 3D.
 
     from mpl_toolkits.mplot3d import Axes3D
+<<<<<<< HEAD
+=======
+    import matplotlib.pyplot as plt
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     from metadata import name_unsided_to_color, convert_to_original_name
 
     fig = plt.figure(figsize=(20, 20))
@@ -1522,7 +1605,11 @@ def show_progress_bar(min, max):
     return bar
 
 # from enum import Enum
+<<<<<<< HEAD
 #
+=======
+
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 # class PolygonType(Enum):
 #     CLOSED = 'closed'
 #     OPEN = 'open'
@@ -2277,7 +2364,46 @@ def smart_map(data, keyfunc, func):
 
     return results_inOrigOrder.values()
 
+<<<<<<< HEAD
 
+=======
+boynton_colors = dict(blue=(0,0,255),
+    red=(255,0,0),
+    green=(0,255,0),
+    yellow=(255,255,0),
+    magenta=(255,0,255),
+    pink=(255,128,128),
+    gray=(128,128,128),
+    brown=(128,0,0),
+    orange=(255,128,0))
+
+kelly_colors = dict(vivid_yellow=(255, 179, 0),
+                    strong_purple=(128, 62, 117),
+                    vivid_orange=(255, 104, 0),
+                    very_light_blue=(166, 189, 215),
+                    vivid_red=(193, 0, 32),
+                    grayish_yellow=(206, 162, 98),
+                    medium_gray=(129, 112, 102),
+
+                    # these aren't good for people with defective color vision:
+                    vivid_green=(0, 125, 52),
+                    strong_purplish_pink=(246, 118, 142),
+                    strong_blue=(0, 83, 138),
+                    strong_yellowish_pink=(255, 122, 92),
+                    strong_violet=(83, 55, 122),
+                    vivid_orange_yellow=(255, 142, 0),
+                    strong_purplish_red=(179, 40, 81),
+                    vivid_greenish_yellow=(244, 200, 0),
+                    strong_reddish_brown=(127, 24, 13),
+                    vivid_yellowish_green=(147, 170, 0),
+                    deep_yellowish_brown=(89, 51, 21),
+                    vivid_reddish_orange=(241, 58, 19),
+                    dark_olive_green=(35, 44, 22))
+
+high_contrast_colors = boynton_colors.values() + kelly_colors.values()
+
+sys.path.append(os.path.join(os.environ['REPO_DIR'], 'utilities'))
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 import randomcolor
 
 def random_colors(count):

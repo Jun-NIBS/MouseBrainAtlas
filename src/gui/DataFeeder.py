@@ -39,16 +39,27 @@ def load_qimage(stack, sec, prep_id, resolution, img_version):
 
         if resolution != 'lossless' and resolution != 'raw':
             sys.stderr.write('Load raw and rescale...\n')
+<<<<<<< HEAD
             fp = DataManager.get_image_filepath_v2(stack=stack, section=sec, prep_id=prep_id, resol='raw', version=img_version)
             if not os.path.exists(fp):
                 sys.stderr.write('Image %s with resolution %s, prep %s does not exist.\n' % (fp, resolution, prep_id))
                 raise Exception('Image %s with resolution %s, prep %s does not exist.\n' % (fp, resolution, prep_id))
+=======
+            fp = DataManager.get_image_filepath_v2(stack=stack, section=sec, prep_id=prep_id, resol='lossless', version=img_version)
+            if not os.path.exists(fp):
+                sys.stderr.write('Image %s with resolution %s, prep %s does not exist.\n' % (fp, resolution, prep_id))
+                raise
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
             qimage = QImage(fp)
             raw_pixel_size_um = convert_resolution_string_to_voxel_size(resolution='lossless', stack=stack)
             desired_pixel_size_um = convert_resolution_string_to_voxel_size(resolution=resolution, stack=stack)
             scaling = raw_pixel_size_um / float(desired_pixel_size_um)
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
             if scaling != 1:
                 # Downsample the image for CryoJane data, which is too large and exceeds QPixmap size limit.
                 # sys.stderr.write('Raw qimage bytes = %d\n' % qimage.byteCount())
@@ -255,6 +266,7 @@ class ImageDataFeeder_v2(object):
             elif self.orientation == 'horizontal':
                 self.x_dim = arbitrary_img.width()
                 self.z_dim = arbitrary_img.height()
+<<<<<<< HEAD
             sys.stderr.write("Dimension computed successfully.\n")
         else:
             if not hasattr(self, 'resolution'):
@@ -273,6 +285,8 @@ class ImageDataFeeder_v2(object):
             #     raise Exception("Cannot compute dimension because resolution %s is not in image_cache." % self.resolution)
             # else:
             #     raise
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     def set_resolution(self, resolution):
         print 'resolution set to', resolution
@@ -325,7 +339,11 @@ class ImageDataFeeder_v2(object):
 
                 # wait for the image to load.
                 t1 = time.time()
+<<<<<<< HEAD
                 for t in range(10):
+=======
+                for t in range(100):
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
                     time.sleep(.1)
                     # if sec in self.image_cache[downsample]:
                     if sec in self.image_cache[resolution]:

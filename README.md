@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This toolkit is written in Python 2.7.2 and have been tested on a machine with Intel Xeon W5580 3.20GHz 16-core CPU, 128GB RAM and a Nvidia Titan X GPU, running Linux Ubuntu 16.04. 
 
 ## Installation
@@ -510,3 +511,34 @@ z_midline=6
 │           ├── DEMO998_NtbNormalizedAdaptiveInvertedGammaJpeg_230.jpg
 │           └── DEMO998_NtbNormalizedAdaptiveInvertedGammaJpeg_235.jpg
 ```
+=======
+The Active Mouse Brain Atlas project provides a toolkit for automatic registration of histological series to a standardized brain atlas, based on detecting structures by high-resolution textures. This repository currently contains a demo. Code for the complete pipeline will be released soon.
+
+For details of the usage, refer to the [user guide](doc).
+- [Installation](#installation)
+- [Demo](#demo)
+- [Reference](#reference)
+
+----
+
+# Installation
+
+This system has been tested on Ubuntu 16.04. The feature extraction step can be significantly accelerated using GPU (80 seconds per image using a single Nvidia Titan X, 15 seconds using 8 GPUs, compared to 30 minutes using CPU).
+
+```
+git clone https://github.com/ActiveBrainAtlas/MouseBrainAtlas.git
+cd setup
+pip install -r requirements.txt
+```
+
+Cloning the repository takes about 3 minutes using a 20MB/s connection. Installing requirements takes around 5 minutes.
+
+# Demo
+
+We provide demo scripts that demonstrate the process of registering an example brain with the atlas, and visualizing the result. See the [demo](demo) directory for details. The demo takes roughly half an hour from start to finish.
+
+# Reference
+
+The Active Atlas: Combining 3D Anatomical Models with Texture Detectors, _Yuncong Chen et al._, MICCAI 2017 [[pdf]](https://arxiv.org/pdf/1702.08606.pdf)
+
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92

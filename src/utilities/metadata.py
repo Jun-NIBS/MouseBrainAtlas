@@ -5,6 +5,7 @@ import os, sys
 import numpy as np
 import subprocess
 
+<<<<<<< HEAD
 def load_ini(fp, split_newline=True, convert_none_str=True, section='DEFAULT'):
     """
     Value of string None will be converted to Python None.
@@ -31,11 +32,14 @@ def load_ini(fp, split_newline=True, convert_none_str=True, section='DEFAULT'):
     return input_spec
 
 
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 ########### Data Directories #############
 
 hostname = subprocess.check_output("hostname", shell=True).strip()
 username = subprocess.check_output("whoami", shell=True).strip()
 
+<<<<<<< HEAD
 if 'ENABLE_UPLOAD_S3' in os.environ:
     ENABLE_UPLOAD_S3 = bool(int(os.environ['ENABLE_UPLOAD_S3']))
     sys.stderr.write("ENABLE_UPLOAD_S3 set to %s\n" % ENABLE_UPLOAD_S3)
@@ -49,6 +53,46 @@ if 'ENABLE_DOWNLOAD_S3' in os.environ:
 else:
     ENABLE_DOWNLOAD_S3 = False
     sys.stderr.write("ENABLE_DOWNLOAD_S3 is not set, default to False.\n")
+=======
+# if hostname.endswith('sdsc.edu'):
+#     print 'Setting environment for Gordon'
+#     ROOT_DIR = '/oasis/projects/nsf/csd395/yuncong'
+#     RAW_DATA_DIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_data'
+#     data_dir = '/oasis/projects/nsf/csd395/yuncong/CSHL_data_processed'
+#     DATA_DIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_data_processed'
+#     thumbnail_data_dir = data_dir
+#     THUMBNAIL_DATA_DIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_data_processed'
+#     REGISTRATION_PARAMETERS_ROOTDIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_registration_parameters'
+#     REGISTRATION_VIZ_ROOTDIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_registration_visualization'
+#     VOLUME_ROOTDIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_volumes'
+#     labelingViz_root = '/oasis/projects/nsf/csd395/yuncong/CSHL_annotationsViz'
+#     annotationViz_rootdir = '/oasis/projects/nsf/csd395/yuncong/CSHL_annotationsViz'
+#     annotation_rootdir = '/oasis/projects/nsf/csd395/yuncong/CSHL_data_labelings_losslessAlignCropped/'
+#     annotation_midbrainIncluded_v2_rootdir = '/oasis/projects/nsf/csd395/yuncong/CSHL_labelings_v3/'
+#     ANNOTATION_ROOTDIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_labelings_v3/'
+#     patch_training_features_rootdir = '/home/yuncong/csd395/CSHL_patch_features_Sat16ClassFinetuned_v2_train'
+#     patch_rootdir = '/oasis/projects/nsf/csd395/yuncong/CSHL_data_patches/'
+#     CLF_ROOTDIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_classifiers'
+#     CLF_NISSL_ROOTDIR = '/home/yuncong/csd395/CSHL_patch_features_Sat16ClassFinetuned_v2_classifiers'
+#     CLF_NTBLUE_ROOTDIR = '/home/yuncong/csd395/CSHL_patch_features_Sat16ClassFinetuned_v2_classifiers_neurotraceBlue'
+#     CELLS_ROOTDIR = '/home/yuncong/csd395/CSHL_cells_v2'
+#     DETECTED_CELLS_ROOTDIR = os.path.join(CELLS_ROOTDIR, 'detected_cells')
+#     CELL_EMBEDDING_ROOTDIR = os.path.join(CELLS_ROOTDIR, 'embedding')
+#     D3JS_ROOTDIR = os.path.join(CELLS_ROOTDIR, 'd3js')
+#     CELL_FEATURES_CLF_ROOTDIR = os.path.join(CELLS_ROOTDIR, 'classifiers')
+
+#     PATCH_FEATURES_ROOTDIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_patch_features'
+#     SPARSE_SCORES_ROOTDIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_sparse_scoremaps'
+#     SCOREMAPS_ROOTDIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_dense_scoremaps'
+#     SCOREMAP_VIZ_ROOTDIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_scoremap_viz'
+#     HESSIAN_ROOTDIR = '/oasis/projects/nsf/csd395/yuncong/CSHL_hessians'
+#     WORKSTATION_ROOTDIR = '/media/yuncong/BstemAtlasData/CSHL_data_processed'
+
+#     S3_DATA_BUCKET = 'mousebrainatlas-data'
+#     REPO_DIR = os.environ['REPO_DIR']
+#     ON_AWS = False
+#     ELASTIX_BIN = '/oasis/projects/nsf/csd395/yuncong/elastix_linux64_v4.7/bin/elastix'
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
 if hostname == 'yuncong-MacbookPro':
     print 'Setting environment for Local Macbook Pro'
@@ -56,6 +100,7 @@ if hostname == 'yuncong-MacbookPro':
 
     # REPO_DIR = '/home/yuncong/Brain' # use os.environ['REPO_DIR'] instead
     REPO_DIR = os.environ['REPO_DIR']
+<<<<<<< HEAD
 
     if 'ROOT_DIR' in os.environ:
         ROOT_DIR = os.environ['ROOT_DIR']
@@ -71,6 +116,11 @@ if hostname == 'yuncong-MacbookPro':
         THUMBNAIL_DATA_ROOTDIR = os.environ['THUMBNAIL_DATA_ROOTDIR']
     else:
         THUMBNAIL_DATA_ROOTDIR = DATA_ROOTDIR
+=======
+    ROOT_DIR = '/home/yuncong'
+    DATA_ROOTDIR = '/media/yuncong/YuncongPublic/'
+    THUMBNAIL_DATA_ROOTDIR = ROOT_DIR
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     RAW_DATA_DIR = os.path.join(ROOT_DIR, 'CSHL_data')
     DATA_DIR = os.path.join(DATA_ROOTDIR, 'CSHL_data_processed')
@@ -78,10 +128,15 @@ if hostname == 'yuncong-MacbookPro':
 
     # VOLUME_ROOTDIR = '/home/yuncong/CSHL_volumes'
     VOLUME_ROOTDIR = os.path.join(DATA_ROOTDIR, 'CSHL_volumes')
+<<<<<<< HEAD
     # MESH_ROOTDIR =  '/home/yuncong/CSHL_meshes'
     MESH_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_meshes')
     # REGISTRATION_PARAMETERS_ROOTDIR = '/home/yuncong/CSHL_registration_parameters'
     REGISTRATION_PARAMETERS_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_registration_parameters')
+=======
+    MESH_ROOTDIR =  '/home/yuncong/CSHL_meshes'
+    REGISTRATION_PARAMETERS_ROOTDIR = '/home/yuncong/CSHL_registration_parameters'
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     PATCH_FEATURES_ROOTDIR = os.path.join(DATA_ROOTDIR, 'CSHL_patch_features')
 
@@ -96,7 +151,11 @@ if hostname == 'yuncong-MacbookPro':
     CLASSIFIER_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'classifier_settings.csv')
     DATASET_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'dataset_settings.csv')
     REGISTRATION_SETTINGS_CSV = os.path.join(REPO_DIR, 'registration', 'registration_settings.csv')
+<<<<<<< HEAD
     #PREPROCESS_SETTINGS_CSV = os.path.join(REPO_DIR, 'preprocess', 'preprocess_settings.csv')
+=======
+    PREPROCESS_SETTINGS_CSV = os.path.join(REPO_DIR, 'preprocess', 'preprocess_settings.csv')
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     DETECTOR_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'detector_settings.csv')
 
     SPARSE_SCORES_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_patch_scores')
@@ -106,8 +165,11 @@ if hostname == 'yuncong-MacbookPro':
 
     LABELED_NEURONS_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_labeled_neurons')
 
+<<<<<<< HEAD
     MXNET_MODEL_ROOTDIR = os.path.join(ROOT_DIR, 'mxnet_models')
 
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     ELASTIX_BIN = 'elastix'
 
 
@@ -144,8 +206,12 @@ elif hostname == 'yuncong-Precision-WorkStation-T7500' and username == 'yuncong'
 
     THUMBNAIL_DATA_DIR = os.path.join(THUMBNAIL_DATA_ROOTDIR, 'CSHL_data_processed')
     VOLUME_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_volumes')
+<<<<<<< HEAD
     # MESH_ROOTDIR =  '/home/yuncong/CSHL_meshes'
     MESH_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_meshes')
+=======
+    MESH_ROOTDIR =  '/home/yuncong/CSHL_meshes'
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     # annotation_rootdir =  os.path.join(ROOT_DIR, 'CSHL_data_labelings_losslessAlignCropped')
 #     annotation_midbrainIncluded_v2_rootdir = '/home/yuncong/CSHL_labelings_v3/'
@@ -168,7 +234,11 @@ elif hostname == 'yuncong-Precision-WorkStation-T7500' and username == 'yuncong'
     CLASSIFIER_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'classifier_settings.csv')
     DATASET_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'dataset_settings.csv')
     REGISTRATION_SETTINGS_CSV = os.path.join(REPO_DIR, 'registration', 'registration_settings.csv')
+<<<<<<< HEAD
     #PREPROCESS_SETTINGS_CSV = os.path.join(REPO_DIR, 'preprocess', 'preprocess_settings.csv')
+=======
+    PREPROCESS_SETTINGS_CSV = os.path.join(REPO_DIR, 'preprocess', 'preprocess_settings.csv')
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     DETECTOR_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'detector_settings.csv')
 
     MXNET_MODEL_ROOTDIR = os.path.join(ROOT_DIR, 'mxnet_models')
@@ -206,8 +276,12 @@ elif hostname == 'yuncong-Precision-WorkStation-T7500' and username == 'alexn':
 
     THUMBNAIL_DATA_DIR = os.path.join(THUMBNAIL_DATA_ROOTDIR, 'CSHL_data_processed')
     VOLUME_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_volumes')
+<<<<<<< HEAD
     # MESH_ROOTDIR =  '/home/alexn/CSHL_meshes'
     MESH_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_meshes')
+=======
+    MESH_ROOTDIR =  '/home/alexn/CSHL_meshes'
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     # annotation_rootdir =  os.path.join(ROOT_DIR, 'CSHL_data_labelings_losslessAlignCropped')
 #     annotation_midbrainIncluded_v2_rootdir = '/home/yuncong/CSHL_labelings_v3/'
@@ -230,7 +304,11 @@ elif hostname == 'yuncong-Precision-WorkStation-T7500' and username == 'alexn':
     CLASSIFIER_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'classifier_settings.csv')
     DATASET_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'dataset_settings.csv')
     REGISTRATION_SETTINGS_CSV = os.path.join(REPO_DIR, 'registration', 'registration_settings.csv')
+<<<<<<< HEAD
     #PREPROCESS_SETTINGS_CSV = os.path.join(REPO_DIR, 'preprocess', 'preprocess_settings.csv')
+=======
+    PREPROCESS_SETTINGS_CSV = os.path.join(REPO_DIR, 'preprocess', 'preprocess_settings.csv')
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     DETECTOR_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'detector_settings.csv')
 
     MXNET_MODEL_ROOTDIR = os.path.join(ROOT_DIR, 'mxnet_models')
@@ -305,7 +383,11 @@ elif hostname.startswith('ip'):
     CLASSIFIER_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'classifier_settings.csv')
     DATASET_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'dataset_settings.csv')
     REGISTRATION_SETTINGS_CSV = os.path.join(REPO_DIR, 'registration', 'registration_settings.csv')
+<<<<<<< HEAD
     #PREPROCESS_SETTINGS_CSV = os.path.join(REPO_DIR, 'preprocess', 'preprocess_settings.csv')
+=======
+    PREPROCESS_SETTINGS_CSV = os.path.join(REPO_DIR, 'preprocess', 'preprocess_settings.csv')
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     DETECTOR_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'detector_settings.csv')
 
     MXNET_MODEL_ROOTDIR = os.path.join(ROOT_DIR, 'mxnet_models')
@@ -315,6 +397,7 @@ elif hostname.startswith('ip'):
     CSHL_SPM_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_SPM')
 
 else:
+<<<<<<< HEAD
 
     print 'Setting environment for an unknown machine. Global root paths must be set as env variables.'
 
@@ -363,20 +446,81 @@ else:
     CELL_FEATURES_CLF_ROOTDIR = os.path.join(CELLS_ROOTDIR, 'classifiers')
 
     CLF_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_classifiers')
+=======
+    print 'Setting environment for Precision WorkStation for Alex Newberry'
+    HOST_ID = 'workstation'
+
+    if 'ROOT_DIR' in os.environ:
+        ROOT_DIR = os.environ['ROOT_DIR']
+    else:
+	raise Exception("Must set environment variable ROOT_DIR")
+
+    if 'DATA_ROOTDIR' in os.environ:
+        DATA_ROOTDIR = os.environ['DATA_ROOTDIR']
+    else:
+        raise Exception("Must set environment variable DATA_ROOTDIR")
+
+
+    if 'THUMBNAIL_DATA_ROOTDIR' in os.environ:
+        THUMBNAIL_DATA_ROOTDIR = os.environ['THUMBNAIL_DATA_ROOTDIR']
+    else:
+        raise Exception("Must set environment variable THUMBNAIL_DATA_ROOTDIR")
+
+
+    RAW_DATA_DIR = os.path.join(DATA_ROOTDIR, 'CSHL_data')
+
+    ON_AWS = False
+    S3_DATA_BUCKET = None
+    S3_RAWDATA_BUCKET = None
+
+    REPO_DIR = os.environ['REPO_DIR']
+
+    DATA_DIR = os.path.join(DATA_ROOTDIR, 'CSHL_data_processed')
+
+    THUMBNAIL_DATA_DIR = os.path.join(THUMBNAIL_DATA_ROOTDIR, 'CSHL_data_processed')
+    VOLUME_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_volumes')
+    MESH_ROOTDIR =  os.path.join(ROOT_DIR, 'CSHL_meshes')
+
+    # annotation_rootdir =  os.path.join(ROOT_DIR, 'CSHL_data_labelings_losslessAlignCropped')
+#     annotation_midbrainIncluded_v2_rootdir = '/home/yuncong/CSHL_labelings_v3/'
+    PATCH_FEATURES_ROOTDIR = os.path.join(DATA_ROOTDIR, 'CSHL_patch_features')
+    PATCH_LOCATIONS_ROOTDIR = os.path.join(DATA_ROOTDIR, 'CSHL_patch_locations')
+
+    SCOREMAP_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_scoremaps')
+    SCOREMAP_VIZ_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_scoremap_viz')
+    SPARSE_SCORES_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_patch_scores')
+
+    ANNOTATION_ROOTDIR =  os.path.join(ROOT_DIR, 'CSHL_labelings_v3')
+    ANNOTATION_THALAMUS_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_labelings_thalamus')
+    CLF_ROOTDIR =  os.path.join(DATA_ROOTDIR, 'CSHL_classifiers')
+
+    REGISTRATION_PARAMETERS_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_registration_parameters')
+    REGISTRATION_VIZ_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_registration_visualization')
+
+    KDU_EXPAND_BIN = '/home/yuncong/KDU7A2_Demo_Apps_for_Centos7-x86-64_170827/kdu_expand'
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     CLASSIFIER_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'classifier_settings.csv')
     DATASET_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'dataset_settings.csv')
     REGISTRATION_SETTINGS_CSV = os.path.join(REPO_DIR, 'registration', 'registration_settings.csv')
+<<<<<<< HEAD
     #PREPROCESS_SETTINGS_CSV = os.path.join(REPO_DIR, 'preprocess', 'preprocess_settings.csv')
+=======
+    PREPROCESS_SETTINGS_CSV = os.path.join(REPO_DIR, 'preprocess', 'preprocess_settings.csv')
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     DETECTOR_SETTINGS_CSV = os.path.join(REPO_DIR, 'learning', 'detector_settings.csv')
 
     MXNET_MODEL_ROOTDIR = os.path.join(ROOT_DIR, 'mxnet_models')
 
+<<<<<<< HEAD
     LABELED_NEURONS_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_labeled_neurons')
 
     CSHL_SPM_ROOTDIR = os.path.join(ROOT_DIR, 'CSHL_SPM')
 
 
+=======
+    ELASTIX_BIN = 'elastix'
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
 #################### Resolution conversions ############
 
@@ -416,7 +560,10 @@ def parse_label(label, singular_as_s=False):
     """
     Args:
         singular_as_s (bool): If true, singular structures have side = 'S', otherwise side = None.
+<<<<<<< HEAD
 
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     Returns:
         (structure name, side, surround margin, surround structure name)
     """
@@ -532,7 +679,11 @@ from pandas import read_csv
 dataset_settings = read_csv(DATASET_SETTINGS_CSV, header=0, index_col=0)
 classifier_settings = read_csv(CLASSIFIER_SETTINGS_CSV, header=0, index_col=0)
 registration_settings = read_csv(REGISTRATION_SETTINGS_CSV, header=0, index_col=0)
+<<<<<<< HEAD
 #preprocess_settings = read_csv(PREPROCESS_SETTINGS_CSV, header=0, index_col=0)
+=======
+preprocess_settings = read_csv(PREPROCESS_SETTINGS_CSV, header=0, index_col=0)
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 detector_settings = read_csv(DETECTOR_SETTINGS_CSV, header=0, index_col=0)
 windowing_settings = {1: {"patch_size": 224, "spacing": 56},
                       2: {'patch_size':224, 'spacing':56, 'comment':'larger margin'},
@@ -543,9 +694,13 @@ windowing_settings = {1: {"patch_size": 224, "spacing": 56},
                      7: {'patch_size_um':103.04, 'spacing_um':30, 'comment':'specify size/spacing in terms of microns rather than pixels'},
                      8: {'patch_size_um':206.08, 'spacing_um':30, 'comment':'larger patch'},
                      9: {'patch_size_um':412.16, 'spacing_um':30, 'comment':'larger patch'},
+<<<<<<< HEAD
                     10: {'patch_size_um':824.32, 'spacing_um':30, 'comment':'larger patch'},
                     11: {'patch_size_um':51.52, 'spacing_um':30, 'comment':'larger patch'},
                     12: {'patch_size_um':25.76, 'spacing_um':30, 'comment':'larger patch'},
+=======
+                    10: {'patch_size_um':824.32, 'spacing_um':30, 'comment':'larger patch'}
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
                      }
 
 ############ Class Labels #############
@@ -575,7 +730,11 @@ motor_nuclei_sided_sorted_by_rostral_caudal_position = \
 ['3N_R', '3N_L', '4N_R', '4N_L', '5N_R', '5N_L', '6N_R', '6N_L', '7N_R', '7N_L', 'Amb_R', 'Amb_L', '12N', '10N_R', '10N_L']
 
 structures_sided_sorted_by_size = ['4N_L', '4N_R', '6N_L', '6N_R', 'Amb_L', 'Amb_R', 'PBG_L', 'PBG_R', '10N_L', '10N_R', 'AP', '3N_L', '3N_R', 'LC_L', 'LC_R', 'SNC_L', 'SNC_R', 'Tz_L', 'Tz_R', '7n_L', '7n_R', 'RMC_L', 'RMC_R', '5N_L', '5N_R', 'VCP_L', 'VCP_R', '12N', 'LRt_L', 'LRt_R', '7N_L', '7N_R', 'VCA_L', 'VCA_R', 'VLL_L', 'VLL_R', 'DC_L', 'DC_R', 'Sp5O_L', 'Sp5O_R', 'Sp5I_L', 'Sp5I_R', 'Pn_L', 'Pn_R', 'RtTg', 'SNR_L', 'SNR_R', 'Sp5C_L', 'Sp5C_R', 'IC', 'SC']
+<<<<<<< HEAD
 structures_sided_sorted_by_rostral_caudal_position = ['SNC_R', 'SNC_L', 'SC', 'IC', 'SNR_R', 'SNR_L', 'RMC_R', 'RMC_L', '3N_R', '3N_L', 'PBG_R', 'PBG_L', '4N_R', '4N_L', 'Pn_R', 'Pn_L', 'VLL_R', 'VLL_L', 'RtTg', '5N_R', '5N_L', 'LC_R', 'LC_L', 'Tz_R', 'Tz_L', 'VCA_R', 'VCA_L', '7n_R', '7n_L', '6N_R', '6N_L', 'DC_R', 'DC_L','VCP_R', 'VCP_L', '7N_R', '7N_L', 'Sp5O_R', 'Sp5O_L', 'Amb_R', 'Amb_L', 'Sp5I_R', 'Sp5I_L', 'AP', '12N', '10N_R', '10N_L', 'LRt_R', 'LRt_L', 'Sp5C_R', 'Sp5C_L']
+=======
+structures_sided_sorted_by_rostral_caudal_position = ['SNC_R', 'SNC_L', 'SC', 'SNR_R', 'SNR_L', 'RMC_R', 'RMC_L', '3N_R', '3N_L', 'PBG_R', 'PBG_L', '4N_R', '4N_L', 'Pn_R', 'Pn_L', 'VLL_R', 'VLL_L', 'RtTg', '5N_R', '5N_L', 'LC_R', 'LC_L', 'Tz_R', 'Tz_L', 'VCA_R', 'VCA_L', '7n_R', '7n_L', '6N_R', '6N_L', 'DC_R', 'DC_L','VCP_R', 'VCP_L', '7N_R', '7N_L', 'Sp5O_R', 'Sp5O_L', 'Amb_R', 'Amb_L', 'Sp5I_R', 'Sp5I_L', 'AP', '12N', '10N_R', '10N_L', 'LRt_R', 'LRt_L', 'Sp5C_R', 'Sp5C_L']
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 structures_unsided_sorted_by_rostral_caudal_position = ['SNC', 'SC', 'IC', 'SNR', 'RMC', '3N', 'PBG','4N', 'Pn','VLL','RtTg', '5N', 'LC', 'Tz', 'VCA', '7n', '6N', 'DC', 'VCP', '7N', 'Sp5O', 'Amb', 'Sp5I', 'AP', '12N', '10N', 'LRt', 'Sp5C']
 
 #linear_landmark_names_unsided = ['outerContour']
@@ -609,6 +768,7 @@ XY_PIXEL_DISTANCE_TB_AXIOSCAN = XY_PIXEL_DISTANCE_LOSSLESS_AXIOSCAN * 32
 
 #######################################
 
+<<<<<<< HEAD
 #all_nissl_stacks = ['MD585', 'MD589', 'MD590', 'MD591', 'MD592', 'MD593', 'MD594', 'MD595', 'MD598', 'MD599', 'MD602', 'MD603']
 #all_ntb_stacks = ['MD635']
 #all_dk_ntb_stacks = ['CHATM2', 'CHATM3']
@@ -639,11 +799,55 @@ if os.path.exists(BRAINS_INFO_DIR):
 
 print planar_resolution
 
+=======
+all_nissl_stacks = ['MD585', 'MD589', 'MD590', 'MD591', 'MD592', 'MD593', 'MD594', 'MD595', 'MD598', 'MD599', 'MD602', 'MD603']
+all_ntb_stacks = ['MD635']
+all_dk_ntb_stacks = ['CHATM2', 'CHATM3']
+all_alt_nissl_ntb_stacks = ['MD653', 'MD652', 'MD642']
+all_alt_nissl_tracing_stacks = ['MD657', 'MD658', 'MD661', 'MD662']
+# all_stacks = all_nissl_stacks + all_ntb_stacks
+all_stacks = all_nissl_stacks + all_ntb_stacks + all_alt_nissl_ntb_stacks + all_alt_nissl_tracing_stacks + all_dk_ntb_stacks \
+                + ['DEMO999'] 
+all_annotated_nissl_stacks = ['MD585', 'MD589', 'MD594']
+all_annotated_ntb_stacks = ['MD635']
+all_annotated_stacks = all_annotated_nissl_stacks + all_annotated_ntb_stacks
+
+planar_resolution = {'MD585': XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD589':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD590':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD591':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD592':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD593':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD594':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD595':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD598':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD599':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD602':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD603':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD635':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD653':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD652':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD642':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD657':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD658':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD661':XY_PIXEL_DISTANCE_LOSSLESS,
+                     'MD662':XY_PIXEL_DISTANCE_LOSSLESS,
+                     # 'ChatCryoJane201710': XY_PIXEL_DISTANCE_LOSSLESS_AXIOSCAN,
+                     # 'DmaleAxioscan': XY_PIXEL_DISTANCE_LOSSLESS_AXIOSCAN,
+                     'CHATM2': XY_PIXEL_DISTANCE_LOSSLESS_AXIOSCAN,
+                     'CHATM3': XY_PIXEL_DISTANCE_LOSSLESS_AXIOSCAN,
+                     'DEMO999': XY_PIXEL_DISTANCE_LOSSLESS,
+                    }
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
 ########################################
 
 # prep_id_to_str_2d = {0: 'raw', 1: 'alignedPadded', 2: 'alignedCroppedBrainstem', 3: 'alignedCroppedThalamus', 4: 'alignedNoMargin', 5: 'alignedWithMargin', 6: 'rawCropped'}
+<<<<<<< HEAD
 prep_id_to_str_2d = {0: 'raw', 1: 'alignedPadded', 2: 'alignedBrainstemCrop', 3: 'alignedThalamusCrop', 4: 'alignedNoMargin', 5: 'alignedWithMargin', 6: 'rawCropped', 7: 'rawBeforeRotation'}
+=======
+prep_id_to_str_2d = {0: 'raw', 1: 'alignedPadded', 2: 'alignedBrainstemCrop', 3: 'alignedThalamusCrop', 4: 'alignedNoMargin', 5: 'alignedWithMargin', 6: 'rawCropped'}
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 prep_str_to_id_2d = {s: i for i, s in prep_id_to_str_2d.iteritems()}
 
 #######################################
@@ -653,6 +857,7 @@ NUM_CORES = multiprocessing.cpu_count()
 
 ############## Colors ##############
 
+<<<<<<< HEAD
 boynton_colors = dict(blue=(0,0,255),
     red=(255,0,0),
     green=(0,255,0),
@@ -688,6 +893,9 @@ kelly_colors = dict(vivid_yellow=(255, 179, 0),
 
 high_contrast_colors = boynton_colors.values() + kelly_colors.values()
 
+=======
+from utilities2015 import high_contrast_colors
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 hc_perm = [ 0,  5, 28, 26, 12, 11,  4,  8, 25, 22,  3,  1, 20, 19, 27, 13, 24,
        17, 16, 15,  7, 14, 21, 18, 23,  2, 10,  9,  6]
 high_contrast_colors = [high_contrast_colors[i] for i in hc_perm]
@@ -713,6 +921,10 @@ LEVEL_TO_COLOR_VERTEX2 = {0.1: (0,125,0), 0.25: (0,0,255), 0.5: (125,0,125), 0.7
 orientation_argparse_str_to_imagemagick_str = \
 {'transpose': '-transpose',
  'transverse': '-transverse',
+<<<<<<< HEAD
  'rotate90': '-rotate 90',
  'rotate270': '-rotate 270'
+=======
+ 'rotate90': '-rotate 90'
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 }

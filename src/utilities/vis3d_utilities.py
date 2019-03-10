@@ -5,6 +5,7 @@ import time
 try:
     import vtk
     from vtk.util import numpy_support
+<<<<<<< HEAD
 except:
     sys.stderr.write('No vtk\n')
 
@@ -14,6 +15,13 @@ except:
     sys.stderr.write('No mcubes\n')
 
 from skimage.measure import marching_cubes_classic as marching_cubes, correct_mesh_orientation, mesh_surface_area
+=======
+    import mcubes # https://github.com/pmneila/PyMCubes
+except:
+    sys.stderr.write('No vtk\n')
+
+from skimage.measure import marching_cubes, correct_mesh_orientation, mesh_surface_area
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
 import os
 sys.path.append(os.path.join(os.environ['REPO_DIR'], 'utilities'))
@@ -52,9 +60,12 @@ def rescale_polydata(polydata, factor):
     return mesh_to_polydata(v * factor, f)
 
 def transform_polydata(polydata, transform):
+<<<<<<< HEAD
     """
     Apply transform to polydata.
     """
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     v, f = polydata_to_mesh(polydata)
     from registration_utilities import transform_points
     new_v = transform_points(transform=transform, pts=v)
@@ -882,17 +893,30 @@ def launch_vtk(actors, init_angle='45', window_name=None, window_size=None,
     renderer.SetActiveCamera(camera)
     renderer.ResetCamera()
 
+<<<<<<< HEAD
     # This must be before renWin.render(), otherwise the animation is stuck.
     iren = vtk.vtkRenderWindowInteractor()
     iren.SetRenderWindow(renWin)
 
     my_int_style = MyInteractorStyle(iren=iren, renWin=renWin, snapshot_fn='/tmp/tmp.png', camera=camera)
     iren.SetInteractorStyle(my_int_style) # Have problem closing window if use this
+=======
+    # This must be before  renWin.render(), otherwise the animation is stuck.
+    iren = vtk.vtkRenderWindowInteractor()
+    iren.SetRenderWindow(renWin)
+    int_style = MyInteractorStyle(iren=iren, renWin=renWin, snapshot_fn='/tmp/tmp.png', camera=camera)
+    iren.SetInteractorStyle(int_style) # Have problem closing window if use this
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     for actor in actors:
         if actor is not None:
             renderer.AddActor(actor)
 
+<<<<<<< HEAD
+=======
+    renWin.Render()
+
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     if window_name is not None:
         renWin.SetWindowName(window_name)
 
@@ -916,26 +940,39 @@ def launch_vtk(actors, init_angle='45', window_name=None, window_size=None,
 
     ##################
 
+<<<<<<< HEAD
     renWin.Render()
     renWin.Finalize()
 
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     if interactive:
         # if not animate:
         #     iren.Initialize()
         iren.Start()
     else:
+<<<<<<< HEAD
         iren.Start()
         take_screenshot(renWin, snapshot_fn, magnification=snapshot_magnification)
 
     del my_int_style.iren
     del my_int_style.renWin
+=======
+        take_screenshot(renWin, snapshot_fn, magnification=snapshot_magnification)
+
+    del int_style.iren
+    del int_style.renWin
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     if animate:
         if hasattr(cb, 'iren'):
             del cb.iren
         if hasattr(cb, 'win'):
             del cb.win
+<<<<<<< HEAD
 
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     # In order for window to successfully close, MUST MAKE SURE NO REFERENCE
     # TO IREN AND WIN still remain.
 

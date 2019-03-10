@@ -13,7 +13,11 @@ try:
     import cv2
 except:
     sys.stderr.write('Cannot find cv2\n')
+<<<<<<< HEAD
 #import matplotlib.pyplot as plt
+=======
+import matplotlib.pyplot as plt
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 from multiprocess import Pool
 
 sys.path.append(os.environ['REPO_DIR'] + '/utilities')
@@ -23,10 +27,13 @@ from metadata import *
 from lie import matrix_exp_v
 
 def plot_alignment_results(traj, scores, select_best):
+<<<<<<< HEAD
     """
     Args:
         select_best (str): last_value or max_value
     """
+=======
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     if select_best == 'last_value':
         best_score = scores[-1]
@@ -35,7 +42,11 @@ def plot_alignment_results(traj, scores, select_best):
         best_score = np.max(scores)
         best_param = traj[np.argmax(scores)]
     else:
+<<<<<<< HEAD
         raise Exception('select_best must be last_value or max_value')
+=======
+        raise
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     print 'Best parameters ='
     print best_param.reshape((3,4))
@@ -2144,6 +2155,7 @@ def R_align_two_vectors(a, b):
     return R
 
 
+<<<<<<< HEAD
 def average_location(centroid_allLandmarks_wrt_fixedBrain=None, mean_centroid_allLandmarks_wrt_fixedBrain=None):
     """
     Compute the standardized centroid of every structure.
@@ -2159,10 +2171,28 @@ def average_location(centroid_allLandmarks_wrt_fixedBrain=None, mean_centroid_al
         standard_centroids_wrt_canonical: standardized locations of every structure, relative to the midplane anchor. Paired structures are symmetric relative to the mid-plane defined by centroid and normal.
         instance_centroids_wrt_canonical: the instance centroids in canonical atlas space
         midplane_anchor_wrt_fixedBrain: a point on the mid-sagittal plane that is used as the origin of canonical atlas space.
+=======
+def average_location(centroid_allLandmarks=None, mean_centroid_allLandmarks=None):
+    """
+    Compute the standard centroid of every structure.
+
+    This first estimates the mid-sagittal plane.
+    Then find a standard centroid for each structure, that is closest to the mean and also being symmetric with respect to mid-sagittal plane.
+
+    Args:
+        centroid_allLandmarks (dict {str: (n,3)-array})
+        mean_centroid_allLandmarks (dict {str: (3,)-array})
+
+    Returns:
+        standard_centroids_wrt_canonical: average locations of every structure, relative to the midplane anchor. Paired structures are symmetric relative to the mid-plane defined by centroid and normal.
+        instance_centroids_wrt_canonical: the instance centroids in canonical atlas space
+        midplane_anchor: a point on the mid-sagittal plane
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
         midplane_normal: normal vector of the mid-sagittal plane estimated from centroids in original coordinates. Note that this is NOT the mid-plane normal using canonical coordinates, which by design should be (0,0,1).
         transform_matrix_to_atlasCanonicalSpace: (4,4) matrix that maps to canonical atlas space
         """
 
+<<<<<<< HEAD
     if mean_centroid_allLandmarks_wrt_fixedBrain is None:
         mean_centroid_allLandmarks_wrt_fixedBrain = {name: np.mean(centroids, axis=0) 
                                       for name, centroids in centroid_allLandmarks_wrt_fixedBrain.iteritems()}
@@ -2171,6 +2201,16 @@ def average_location(centroid_allLandmarks_wrt_fixedBrain=None, mean_centroid_al
 
     # Fit a midplane from the midpoints of symmetric landmark centroids
     midpoints_wrt_fixedBrain = {}
+=======
+    if mean_centroid_allLandmarks is None:
+        mean_centroid_allLandmarks = {name: np.mean(centroids, axis=0)
+                                  for name, centroids in centroid_allLandmarks.iteritems()}
+
+    names = set([convert_to_original_name(name_s) for name_s in mean_centroid_allLandmarks.keys()])
+
+    # Fit a midplane from the midpoints of symmetric landmark centroids
+    midpoints = {}
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     for name in names:
         lname = convert_to_left_name(name)
         rname = convert_to_right_name(name)
@@ -2179,6 +2219,7 @@ def average_location(centroid_allLandmarks_wrt_fixedBrain=None, mean_centroid_al
 
 #         # maybe ignoring singular instances is better
 #         if len(names) == 2:
+<<<<<<< HEAD
         if lname in mean_centroid_allLandmarks_wrt_fixedBrain and rname in mean_centroid_allLandmarks_wrt_fixedBrain:
             midpoints_wrt_fixedBrain[name] = .5 * mean_centroid_allLandmarks_wrt_fixedBrain[lname] + .5 * mean_centroid_allLandmarks_wrt_fixedBrain[rname]
         else:
@@ -2189,10 +2230,26 @@ def average_location(centroid_allLandmarks_wrt_fixedBrain=None, mean_centroid_al
     print 'Mid-sagittal plane normal vector =', midplane_normal, '@ Mid-sagittal plane anchor wrt fixed wholebrain =', midplane_anchor_wrt_fixedBrain
 
     R_fixedWholebrain_to_canonical = R_align_two_vectors(midplane_normal, (0, 0, 1))
+=======
+        if lname in mean_centroid_allLandmarks and rname in mean_centroid_allLandmarks:
+            midpoints[name] = .5 * mean_centroid_allLandmarks[lname] + .5 * mean_centroid_allLandmarks[rname]
+        else:
+            midpoints[name] = mean_centroid_allLandmarks[name]
+
+    # print midpoints
+
+    midplane_normal, midplane_anchor = fit_plane(np.c_[midpoints.values()])
+
+    print 'Mid-sagittal plane normal vector =', midplane_normal
+    print 'Mid-sagittal plane anchor =', midplane_anchor
+
+    R_to_canonical = R_align_two_vectors(midplane_normal, (0, 0, 1))
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
 
     # points_midplane_oriented = {name: np.dot(R_to_canonical, p - midplane_anchor)
     #                             for name, p in mean_centroid_allLandmarks.iteritems()}
 
+<<<<<<< HEAD
     transform_matrix_fixedWholebrain_to_atlasCanonicalSpace = consolidate(params=np.column_stack([R_fixedWholebrain_to_canonical, np.zeros((3,))]),
                 centroid_m=midplane_anchor_wrt_fixedBrain,
                centroid_f=(0,0,0))
@@ -2216,6 +2273,28 @@ def average_location(centroid_allLandmarks_wrt_fixedBrain=None, mean_centroid_al
     
     # Enforce symmetry
 
+=======
+    transform_matrix_to_atlasCanonicalSpace = consolidate(params=np.column_stack([R_to_canonical, np.zeros((3,))]),
+                centroid_m=midplane_anchor,
+               centroid_f=(0,0,0))
+
+    print 'Transform matrix to canonical atlas space ='
+    print transform_matrix_to_atlasCanonicalSpace
+
+    print 'Angular deviation around y axis (degree) =', np.rad2deg(np.arccos(midplane_normal[2]))
+
+    points_midplane_oriented = {name: transform_points(p, transform=transform_matrix_to_atlasCanonicalSpace)
+                                for name, p in mean_centroid_allLandmarks.iteritems()}
+
+    if centroid_allLandmarks is not None:
+    
+        instance_centroid_rel2atlasCanonicalSpace = \
+    {n: transform_points(s,transform=transform_matrix_to_atlasCanonicalSpace)
+    for n, s in centroid_allLandmarks.iteritems()}
+    else:
+        instance_centroid_rel2atlasCanonicalSpace = None
+    
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
     canonical_locations = {}
 
     for name in names:
@@ -2233,5 +2312,9 @@ def average_location(centroid_allLandmarks_wrt_fixedBrain=None, mean_centroid_al
             x, y, _ = points_midplane_oriented[name]
             canonical_locations[name] = np.r_[x, y, 0]
 
+<<<<<<< HEAD
     return canonical_locations, instance_centroid_rel2atlasCanonicalSpace, \
 midplane_anchor_wrt_fixedBrain, midplane_normal, transform_matrix_fixedWholebrain_to_atlasCanonicalSpace
+=======
+    return canonical_locations, instance_centroid_rel2atlasCanonicalSpace, midplane_anchor, midplane_normal, transform_matrix_to_atlasCanonicalSpace
+>>>>>>> e174b20f3f06449810cebdb53ef770adb570df92
